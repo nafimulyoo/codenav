@@ -1,11 +1,9 @@
-export default function DashboardLayout({
-  children,
-}: Readonly<{
+import AdminPanelLayout from "@/components/admin-panel/admin-panel-layout";
+
+export default function DemoLayout({
+  children
+}: {
   children: React.ReactNode;
-}>) {
-  return (
-      <>
-        {children}
-      </>
-  );
+}) {
+  return <AdminPanelLayout>{children}</AdminPanelLayout>;
 }

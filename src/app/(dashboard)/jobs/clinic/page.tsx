@@ -11,9 +11,9 @@ import {
   BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
 
-export default function ProfilePage() {
+export default function ClinicPage() {
   return (
-    <ContentLayout title="Profile">
+    <ContentLayout title="Career Clinic">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -23,7 +23,15 @@ export default function ProfilePage() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Profile</BreadcrumbPage>
+            <BreadcrumbLink asChild>
+              <Link href="/jobs">Jobs</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <BreadcrumbPage>Career Clinic</BreadcrumbPage>
+            </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
