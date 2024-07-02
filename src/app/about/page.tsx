@@ -41,7 +41,7 @@ export default function HomePage() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
             </h1>
             <span className="max-w-[750px] text-center text-lg font-light text-foreground">
-              It has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </span>
             <div className="flex w-full items-center justify-center space-x-4 py-4 md:pb-6">
               <Button variant="default" asChild>
