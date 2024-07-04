@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { UserAuthFormSignIn } from "@/components/user-auth-form-signin";
+import { UserAuthFormSignIn } from "@/components/auth/user-auth-form-signin";
 
 
 export default function SignInPage() {

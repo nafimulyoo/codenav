@@ -20,8 +20,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+import { signOutUser } from "@/lib/firebase/authService";
+import { useRouter } from "next/navigation";
 
 export function UserNav() {
+  const router = useRouter();
+
+  async function handleSignOut() {
+    try {
+      await signOutUser();
+      router.push("/signin");
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  }
+
   return (
     <DropdownMenu>
       <TooltipProvider disableHoverableContent>
@@ -68,7 +81,7 @@ export function UserNav() {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="hover:cursor-pointer" onClick={() => {}}>
+        <DropdownMenuItem className="hover:cursor-pointer" onClick={handleSignOut}>
           <LogOut className="w-4 h-4 mr-3 text-muted-foreground" />
           Sign out
         </DropdownMenuItem>

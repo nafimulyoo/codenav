@@ -1,25 +1,46 @@
 "use client"
 
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { signIn, signInWithGoogle } from "@/lib/firebase/authService"
+import { useRouter } from "next/navigation"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function UserAuthFormSignUp({ className, ...props }: UserAuthFormProps) {
+export function UserAuthFormSignIn({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
+  const [email, setEmail] = React.useState<string>("")
+  const [password, setPassword] = React.useState<string>("")
+  const router = useRouter()
 
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault()
     setIsLoading(true)
 
-    setTimeout(() => {
+    try {
+      await signIn(email, password)
+      router.push("/home")
+    } catch (error) {
+      console.error("Error signing in:", error)
+    } finally {
       setIsLoading(false)
-    }, 3000)
+    }
+  }
+
+  async function handleGoogleSignIn() {
+    setIsLoading(true)
+    try {
+      await signInWithGoogle()
+      router.push("/home")
+    } catch (error) {
+      console.error("Error signing in with Google:", error)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -27,70 +48,31 @@ export function UserAuthFormSignUp({ className, ...props }: UserAuthFormProps) {
       <form onSubmit={onSubmit}>
         <div className="grid gap-4">
           <div className="grid gap-2">
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-              <Label htmlFor="first-name">
-                First Name
-              </Label>
+            <div>
+              <Label htmlFor="email">Email</Label>
               <Input
-                id="first-name"
-                placeholder="Enter your first name"
+                id="email"
+                placeholder="Enter your email"
+                type="email"
+                autoCapitalize="none"
+                autoComplete="email"
+                autoCorrect="off"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 disabled={isLoading}
               />
-              </div>
-              <div>
-              <Label htmlFor="last-name">
-                Last Name
-              </Label>
+            </div>
+            <div>
+              <Label htmlFor="password">Password</Label>
               <Input
-                id="last-name"
-                placeholder="Enter your last name"
+                id="password"
+                placeholder="Enter your password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 disabled={isLoading}
               />
-              </div>
             </div>
-
-            <div>
-            <Label htmlFor="first-email">
-              Email
-            </Label>
-            <Input
-              id="email"
-              placeholder="Enter your email"
-              type="email"
-              autoCapitalize="none"
-              autoComplete="email"
-              autoCorrect="off"
-              disabled={isLoading}
-            />
-            </div>
-            
-            <div>
-
-            <Label htmlFor="password">
-              Password
-            </Label>
-            <Input
-              id="password"
-              placeholder="Enter your password"
-              type="password"
-              disabled={isLoading}
-            />
-            </div>
-
-            <div>
-
-            <Label htmlFor="confirm-password">
-              Confirm Password
-            </Label>
-            <Input
-              id="confirm-password"
-              placeholder="Enter your password again"
-              type="password"
-              disabled={isLoading}
-            />
-            </div>
-
           </div>
           <Button disabled={isLoading} className="mt-2">
             {isLoading && (
@@ -110,7 +92,7 @@ export function UserAuthFormSignUp({ className, ...props }: UserAuthFormProps) {
           </span>
         </div>
       </div>
-      <Button variant="outline" type="button" disabled={isLoading}>
+      <Button variant="outline" type="button" disabled={isLoading} onClick={handleGoogleSignIn}>
         {isLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (
