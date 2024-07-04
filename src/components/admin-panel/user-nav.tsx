@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Home, LogOut, User } from "lucide-react";
 
@@ -23,8 +24,30 @@ import {
 import { signOutUser } from "@/lib/firebase/authService";
 import { useRouter } from "next/navigation";
 
+import { db } from "@/lib/firebase/firebase";
+import { doc, getDoc } from 'firebase/firestore';
+import { auth } from "@/lib/firebase/firebase";
+
 export function UserNav() {
   const router = useRouter();
+  const [userData, setUserData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const user = auth.currentUser;
+      if (user) {
+        const userDocRef = doc(db, 'users', user.uid);
+        const userDoc = await getDoc(userDocRef);
+        if (userDoc.exists()) {
+          setUserData(userDoc.data());
+        }
+      }
+      setLoading(false);
+    };
+
+    fetchUserData();
+  }, []);
 
   async function handleSignOut() {
     try {
@@ -33,6 +56,10 @@ export function UserNav() {
     } catch (error) {
       console.error("Error signing out:", error);
     }
+  }
+
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
   return (
@@ -47,7 +74,10 @@ export function UserNav() {
               >
                 <Avatar className="h-8 w-8">
                   <AvatarImage src="#" alt="Avatar" />
-                  <AvatarFallback className="bg-transparent">JD</AvatarFallback>
+                  <AvatarFallback className="bg-transparent">
+                    {userData?.firstName?.charAt(0)}
+                    {userData?.lastName?.charAt(0)}
+                  </AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
@@ -59,9 +89,9 @@ export function UserNav() {
       <DropdownMenuContent className="w-56" align="end" forceMount>
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">John Doe</p>
+            <p className="text-sm font-medium leading-none">{userData?.firstName} {userData?.lastName}</p>
             <p className="text-xs leading-none text-muted-foreground">
-              johndoe@example.com
+              {userData?.email}
             </p>
           </div>
         </DropdownMenuLabel>
