@@ -108,7 +108,7 @@ export default function Profile() {
                   <p className="text-sm font-medium">Hours Learned</p>
                   <p className="text-2xl font-bold">56</p>
                 </div>
-                <div className="p-4 text-center bg-accentrounded-md">
+                <div className="p-4 text-center bg-accent rounded-md">
                   <p className="text-sm font-medium">Skills Achieved</p>
                   <p className="text-2xl font-bold">7</p>
                 </div>

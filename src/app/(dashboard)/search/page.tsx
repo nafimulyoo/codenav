@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import PlaceholderContent from "@/components/demo/placeholder-content";
+import Search from "@/app/(dashboard)/search/components/search";
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {
   Breadcrumb,
@@ -27,7 +27,7 @@ export default function SearchPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <PlaceholderContent />
+      <Search />
     </ContentLayout>
   );
 }
