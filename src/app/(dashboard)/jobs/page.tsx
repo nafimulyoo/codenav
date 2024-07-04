@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { cookies } from "next/headers"
+import { Job } from "@/app/(dashboard)/jobs/components/job";
+import { jobs } from "@/app/(dashboard)/jobs/data";
 
-import PlaceholderContent from "@/components/demo/placeholder-content";
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,8 +14,14 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export default function JobsPage() {
+   const layout = cookies().get("react-resizable-panels:layout")
+  const collapsed = cookies().get("react-resizable-panels:collapsed")
+
+  const defaultLayout = layout ? JSON.parse(layout.value) : undefined
+  const defaultCollapsed = collapsed ? JSON.parse(collapsed.value) : undefined
+
   return (
-    <ContentLayout title="Jobs Search">
+    <ContentLayout title="Jobs">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -27,7 +35,16 @@ export default function JobsPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <PlaceholderContent />
+      <main>
+        <div className="hidden flex-col md:flex">
+          <Job
+            jobs={jobs}
+            defaultLayout={defaultLayout}
+            defaultCollapsed={defaultCollapsed}
+            navCollapsedSize={4}
+          />
+        </div>
+      </main>
     </ContentLayout>
   );
 }

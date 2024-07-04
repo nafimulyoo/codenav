@@ -1,5 +1,5 @@
-import AdminPanelLayout from "@/components/admin-panel/admin-panel-layout";
-import AuthMiddleware from "@/components/auth/auth-middleware";
+import AdminPanelLayout from "@/app/(dashboard)/components/admin-panel-layout";
+import AuthMiddleware from "@/app/(auth)/components/auth-middleware";
 
 export default function DemoLayout({
   children

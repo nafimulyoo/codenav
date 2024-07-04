@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { cookies } from "next/headers"
+import { Course } from "@/app/(dashboard)/learn/components/course";
+import { courses } from "@/app/(dashboard)/learn/data";
 
-import PlaceholderContent from "@/components/demo/placeholder-content";
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,6 +14,12 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export default function LearnPage() {
+   const layout = cookies().get("react-resizable-panels:layout")
+  const collapsed = cookies().get("react-resizable-panels:collapsed")
+
+  const defaultLayout = layout ? JSON.parse(layout.value) : undefined
+  const defaultCollapsed = collapsed ? JSON.parse(collapsed.value) : undefined
+
   return (
     <ContentLayout title="Learning">
       <Breadcrumb>
@@ -27,7 +35,16 @@ export default function LearnPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <PlaceholderContent />
+      <main>
+        <div className="hidden flex-col md:flex">
+          <Course
+            courses={courses}
+            defaultLayout={defaultLayout}
+            defaultCollapsed={defaultCollapsed}
+            navCollapsedSize={4}
+          />
+        </div>
+      </main>
     </ContentLayout>
   );
 }

@@ -4,9 +4,9 @@ import { PanelsTopLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/hooks/use-store";
 import { Button } from "@/components/ui/button";
-import { Menu } from "@/components/admin-panel/menu";
+import { Menu } from "@/app/(dashboard)/components/menu";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
-import { SidebarToggle } from "@/components/admin-panel/sidebar-toggle";
+import { SidebarToggle } from "@/app/(dashboard)/components/sidebar-toggle";
 
 export function Sidebar() {
   const sidebar = useStore(useSidebarToggle, (state) => state);
