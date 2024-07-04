@@ -12,6 +12,7 @@ import {
   TooltipTrigger,
   TooltipProvider
 } from "@/components/ui/tooltip";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,19 +35,24 @@ export function UserNav() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      const user = auth.currentUser;
-      if (user) {
-        const userDocRef = doc(db, 'users', user.uid);
-        const userDoc = await getDoc(userDocRef);
-        if (userDoc.exists()) {
-          setUserData(userDoc.data());
-        }
+    const fetchUserData = async (user: any) => {
+      const userDocRef = doc(db, "users", user.uid);
+      const userDoc = await getDoc(userDocRef);
+      if (userDoc.exists()) {
+        setUserData(userDoc.data());
       }
       setLoading(false);
     };
 
-    fetchUserData();
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        fetchUserData(user);
+      } else {
+        setLoading(false);
+      }
+    });
+
+    return () => unsubscribe();
   }, []);
 
   async function handleSignOut() {
@@ -58,8 +64,9 @@ export function UserNav() {
     }
   }
 
+  // TODO: Loading
   if (loading) {
-    return <div>Loading...</div>;
+    return <Skeleton className="relative h-8 w-8 rounded-full" />;
   }
 
   return (
