@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Home from "@/app/(dashboard)/home/components/home";
 import PlaceholderContent from "@/components/demo/placeholder-content";
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {
@@ -23,7 +24,7 @@ export default function HomePage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <PlaceholderContent />
+      <Home />
     </ContentLayout>
   );
 }
