@@ -60,7 +60,7 @@ CodeNav is a career development app designed to help developers advance their ca
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Key Features</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mt-4">Discover the Power of Our AI Solution <WandSparkles className="h-12 w-12 inline-block ml-3"/></h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mt-4">Discover the Power of Our AI Solution <WandSparkles className="h-12 w-12 inline-block ml-2"/></h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Our innovative AI-driven platform offers a wide range of features to help developers achieve their career goals. Explore the key capabilities that set us apart.
               </p>
@@ -125,7 +125,7 @@ CodeNav is a career development app designed to help developers advance their ca
               <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm">Testimonials</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Customers Say</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Hear from our satisfied customers and learn how our solution has transformed their businesses.
+                Hear from our satisfied customers and learn how our solution has transformed their career.
               </p>
             </div>
           </div>
@@ -192,47 +192,92 @@ CodeNav is a career development app designed to help developers advance their ca
           <div className="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl">
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.svg?height=300&width=400")}
+              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
             >
-              <img
-                src="/placeholder.svg"
-                width={400}
-                height={300}
-                alt="Screenshot 1"
+              <Image
+                src="/placeholder.png"
+                width={640}
+                height={360}
+                alt="Learning Roadmap"
                 className="rounded-lg object-cover"
               />
               <div className="absolute bottom-4 left-4 rounded-lg bg-background/70 px-3 py-1 text-sm text-card-foreground">
-                Screenshot 1
+                Learning Roadmap
               </div>
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.svg?height=300&width=400")}
+              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
             >
-              <img
-                src="/placeholder.svg"
-                width={400}
-                height={300}
-                alt="Screenshot 2"
+              <Image
+                src="/placeholder.png"
+                width={640}
+                height={360}
+                alt="Interest Finder"
                 className="rounded-lg object-cover"
               />
               <div className="absolute bottom-4 left-4 rounded-lg bg-background/70 px-3 py-1 text-sm text-card-foreground">
-                Screenshot 2
+                Interest Finder
               </div>
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.svg?height=300&width=400")}
+              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
             >
-              <img
-                src="/placeholder.svg"
-                width={400}
-                height={300}
-                alt="Screenshot 3"
+              <Image
+                src="/placeholder.png"
+                width={640}
+                height={360}
+                alt="Interview Trainer"
                 className="rounded-lg object-cover"
               />
               <div className="absolute bottom-4 left-4 rounded-lg bg-background/70 px-3 py-1 text-sm text-card-foreground">
-                Screenshot 3
+                Interview Trainer
+              </div>
+            </div>
+            <div
+              className="relative cursor-pointer"
+              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+            >
+              <Image
+                src="/placeholder.png"
+                width={640}
+                height={360}
+                alt="Learning Courses"
+                className="rounded-lg object-cover"
+              />
+              <div className="absolute bottom-4 left-4 rounded-lg bg-background/70 px-3 py-1 text-sm text-card-foreground">
+                Learning Courses
+              </div>
+            </div>
+            <div
+              className="relative cursor-pointer"
+              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+            >
+              <Image
+                src="/placeholder.png"
+                width={640}
+                height={360}
+                alt="Learning Assistant"
+                className="rounded-lg object-cover"
+              />
+              <div className="absolute bottom-4 left-4 rounded-lg bg-background/70 px-3 py-1 text-sm text-card-foreground">
+                Learning Assistant
+              </div>
+            </div>
+            <div
+              className="relative cursor-pointer"
+              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+            >
+              <Image
+                src="/placeholder.png"
+                width={640}
+                height={360}
+                alt="CV Clinic"
+                className="rounded-lg object-cover"
+              />
+              <div className="absolute bottom-4 left-4 rounded-lg bg-background/70 px-3 py-1 text-sm text-card-foreground">
+                CV Clinic
               </div>
             </div>
           </div>
@@ -241,8 +286,8 @@ CodeNav is a career development app designed to help developers advance their ca
       {isModalOpen && (
         <Dialog open={isModalOpen} onOpenChange={handleModalClose}>
           <DialogContent className="p-0">
-            <img
-              src="/placeholder.svg"
+            <Image
+              src="/placeholder.png"
               width={800}
               height={600}
               alt="Zoomed Screenshot"
