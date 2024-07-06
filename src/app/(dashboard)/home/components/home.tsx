@@ -117,7 +117,7 @@ export default function Home() {
   onClick={() => toggleCategory('Software Development')}
 >
   <Laptop className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>Software Development</span>
   </div>
 </Button>
@@ -127,7 +127,7 @@ export default function Home() {
   onClick={() => toggleCategory('Network and Infrastructure')}
 >
   <Network size={18} className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>Network and Infrastructure</span>
   </div>
 </Button>
@@ -137,7 +137,7 @@ export default function Home() {
   onClick={() => toggleCategory('Cyber Security')}
 >
   <ShieldCheck className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>Cyber Security</span>
   </div>
 </Button>
@@ -147,7 +147,7 @@ export default function Home() {
   onClick={() => toggleCategory('Data Science')}
 >
   <BarChart3 className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>Data Science</span>
   </div>
 </Button>
@@ -157,7 +157,7 @@ export default function Home() {
   onClick={() => toggleCategory('DevOps')}
 >
   <Workflow className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>DevOps</span>
   </div>
 </Button>
@@ -167,7 +167,7 @@ export default function Home() {
   onClick={() => toggleCategory('AI and Machine Learning')}
 >
   <Brain className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>AI and Machine Learning</span>
   </div>
 </Button>
@@ -177,18 +177,18 @@ export default function Home() {
   onClick={() => toggleCategory('UI/UX Design')}
 >
   <PencilRuler className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>UI/UX Design</span>
   </div>
 </Button>
 <Button
-  variant={activeCategories.includes('IT Management and Administration') ? 'default' : 'outline'}
+  variant={activeCategories.includes('IT Management') ? 'default' : 'outline'}
   className="flex flex-col items-center h-24"
-  onClick={() => toggleCategory('IT Management and Administration')}
+  onClick={() => toggleCategory('IT Management')}
 >
   <ListChecks className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
-    <span>IT Management and Administration</span>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
+    <span>IT Management</span>
   </div>
 </Button>
 <Button
@@ -197,7 +197,7 @@ export default function Home() {
   onClick={() => toggleCategory('Robotics and IoT')}
 >
   <Bot className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>Robotics and IoT</span>
   </div>
 </Button>
@@ -207,7 +207,7 @@ export default function Home() {
   onClick={() => toggleCategory('VR and AR')}
 >
   <View className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>VR and AR</span>
   </div>
 </Button>
@@ -217,7 +217,7 @@ export default function Home() {
   onClick={() => toggleCategory('Programming and Scripting')}
 >
   <CodeXml className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>Programming and Scripting</span>
   </div>
 </Button>
@@ -227,7 +227,7 @@ export default function Home() {
   onClick={() => toggleCategory('Database Management')}
 >
   <Database className="w-8 h-8 mb-2" />
-  <div className="w-full text-center leading-tight" style={{ whiteSpace: 'normal' }}>
+  <div className="w-full text-center leading-tight text-sm" style={{ whiteSpace: 'normal' }}>
     <span>Database Management</span>
   </div>
 </Button>

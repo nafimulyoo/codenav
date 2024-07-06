@@ -43,7 +43,7 @@ export default function Search() {
         <Card className="group">
 
           <Image
-            src="/placeholder.svg"
+            src="/placeholder.png"
             alt="Course image"
             width={400}
             height={225}
@@ -69,7 +69,7 @@ export default function Search() {
         <Card className="group">
           
           <Image
-            src="/placeholder.svg"
+            src="/placeholder.png"
             alt="Job image"
             width={400}
             height={225}
@@ -94,7 +94,7 @@ export default function Search() {
         <Card className="group">
           
           <Image
-            src="/placeholder.svg"
+            src="/placeholder.png"
             alt="Competition image"
             width={400}
             height={225}
@@ -119,7 +119,7 @@ export default function Search() {
         <Card className="group">
           
           <Image
-            src="/placeholder.svg"
+            src="/placeholder.png"
             alt="Course image"
             width={400}
             height={225}
@@ -144,7 +144,7 @@ export default function Search() {
         <Card className="group">
           
           <Image
-            src="/placeholder.svg"
+            src="/placeholder.png"
             alt="Job image"
             width={400}
             height={225}
@@ -169,7 +169,7 @@ export default function Search() {
         <Card className="group">
           
           <Image
-            src="/placeholder.svg"
+            src="/placeholder.png"
             alt="Competition image"
             width={400}
             height={225}
