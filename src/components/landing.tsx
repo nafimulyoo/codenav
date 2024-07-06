@@ -122,7 +122,7 @@ CodeNav is a career development app designed to help developers advance their ca
         <div className="container space-y-12 px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
+              <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm">Testimonials</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Customers Say</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Hear from our satisfied customers and learn how our solution has transformed their businesses.
@@ -168,7 +168,7 @@ CodeNav is a career development app designed to help developers advance their ca
                 </Avatar>
                 <div>
                   <h4 className="text-lg font-semibold">Ilham Hazetra</h4>
-                  <p className="text-muted-foreground">CTO, Stark Industries</p>
+                  <p className="text-muted-foreground">CTO, Slurp Industries</p>
                 </div>
               </div>
               <p className="text-muted-foreground">
