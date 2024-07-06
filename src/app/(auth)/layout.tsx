@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PanelsTopLeft } from "lucide-react";
+import CodeNavIcon from "@/components/code-nav-icon";
 import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { AppFooter } from "@/components/app-footer";
 import { Button } from "@/components/ui/button";
@@ -19,7 +19,7 @@ export default function DemoLayout({
             href="/"
             className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
-            <PanelsTopLeft className="w-6 h-6 mr-3" />
+            <CodeNavIcon className="w-8 h-6 mb-1.5 mr-1" />
             <span className="font-bold">CodeNav</span>
             <span className="sr-only">CodeNav</span>
           </Link>

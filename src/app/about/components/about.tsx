@@ -83,6 +83,13 @@ export default function About() {
             </div>
           </div>
         </div>
+        <div className="container relative">
+          <section className="mx-auto flex max-w-[980px] flex-col items-center pt-20">
+            <span className="max-w-[750px] text-center text-lg font-light text-foreground italic">
+            {"\"We design our application with the utmost dedication to our users' needs. Our goal is to provide personalized, AI-driven solutions that empower developers to achieve their career aspirations efficiently and effectively. Your success is our mission.\""}
+            </span>
+          </section>
+        </div>
       </section>
     </div>
   )

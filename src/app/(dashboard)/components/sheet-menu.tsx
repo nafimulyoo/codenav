@@ -9,6 +9,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import CodeNavIcon from "@/components/code-nav-icon";
 
 export function SheetMenu() {
   return (
@@ -26,8 +27,8 @@ export function SheetMenu() {
             asChild
           >
             <Link href="/home" className="flex items-center gap-2">
-              <PanelsTopLeft className="w-6 h-6 mr-1" />
-              <h1 className="font-bold text-lg">CodeNav</h1>
+              
+              <h1 className="font-bold text-4xl"><CodeNavIcon className="w-16 h-10 mr-1 mb-2.5 inline-block" />CodeNav</h1>
             </Link>
           </Button>
         </SheetHeader>

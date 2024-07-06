@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PanelsTopLeft } from "lucide-react";
+import CodeNavIcon  from "@/components/code-nav-icon";
 import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import { AppFooter } from "@/components/app-footer";
@@ -17,7 +17,7 @@ export default function LandingPage() {
             href="/"
             className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
-            <PanelsTopLeft className="w-6 h-6 mr-3" />
+            <CodeNavIcon className="w-8 h-6 mb-1.5 mr-1" />
             <span className="font-bold">CodeNav</span>
             <span className="sr-only">CodeNav</span>
           </Link>
@@ -38,7 +38,6 @@ export default function LandingPage() {
       </header>
       <main className="min-h-[calc(100vh-57px-97px)] flex-1">
         <Landing/>
-
       </main>
       <AppFooter/>
     </div>

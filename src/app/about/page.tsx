@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PanelsTopLeft } from "lucide-react";
+import CodeNavIcon from "@/components/code-nav-icon";
 import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import { AppFooter } from "@/components/app-footer";
@@ -19,7 +19,7 @@ export default function AboutPage() {
             href="/"
             className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
-            <PanelsTopLeft className="w-6 h-6 mr-3" />
+            <CodeNavIcon className="w-8 h-6 mb-1.5 mr-1" />
             <span className="font-bold">CodeNav</span>
             <span className="sr-only">CodeNav</span>
           </Link>
@@ -40,13 +40,6 @@ export default function AboutPage() {
       </header>
       <main className="min-h-[calc(100vh-57px-97px)] flex-1">
         <About/>
-        <div className="container relative pb-10">
-          <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-6">
-            <span className="max-w-[750px] text-center text-lg font-light text-foreground">
-              It has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </span>
-          </section>
-        </div>
       </main>
       <AppFooter/>
     </div>
