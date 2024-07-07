@@ -47,6 +47,7 @@ import {
     CodeXml,
     Database,
   } from "lucide-react";
+import { list } from 'postcss';
 
 export default function Survey() {
     const [responses, setResponses]: any = useState({});
@@ -61,11 +62,11 @@ export default function Survey() {
     function generateNarration(questions: any, answers: any) {
         let narration = '';
       
-        questions.forEach(question => {
+        questions.forEach((question: { type: string; title: any; summary_narrative: any; questions: { id: string | number; question: any; }[]; }) => {
           if (question.type === 'narrative') {
             narration += `${question.title}:\n${question.summary_narrative}\n`;
             
-            question.questions.forEach(subQuestion => {
+            question.questions.forEach((subQuestion: { id: string | number; question: any; }) => {
               if (answers[subQuestion.id]) {
                 narration += `${subQuestion.question}\nAnswer: ${answers[subQuestion.id]}\n`;
               }
