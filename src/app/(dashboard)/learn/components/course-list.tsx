@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
-import { Course } from "@/app/(dashboard)/learn/data"
+import { Course } from "@/app/data/course_data"
 import { useCourse } from "@/app/(dashboard)/learn/use-course"
 
 interface CourseListProps {

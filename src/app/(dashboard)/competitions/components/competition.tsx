@@ -32,7 +32,7 @@ import {
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { CompetitionDisplay } from "@/app/(dashboard)/competitions/components/competition-display"
 import { CompetitionList } from "@/app/(dashboard)/competitions/components/competition-list"
-import { type Competition } from "@/app/(dashboard)/competitions/data"
+import { type Competition } from "@/app/data/competition_data"
 import { useCompetition } from "@/app/(dashboard)/competitions/use-competition"
 
 interface CompetitionProps {

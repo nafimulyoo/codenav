@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cookies } from "next/headers"
 import { Competition } from "@/app/(dashboard)/competitions/components/competition";
-import { competitions } from "@/app/(dashboard)/competitions/data";
+import { competitions } from "@/app/data/competition_data";
 
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {

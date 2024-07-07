@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cookies } from "next/headers"
 import { Course } from "@/app/(dashboard)/learn/components/course";
-import { courses } from "@/app/(dashboard)/learn/data";
+import { courses } from "@/app/data/course_data";
 
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {

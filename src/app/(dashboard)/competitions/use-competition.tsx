@@ -1,6 +1,6 @@
 import { atom, useAtom } from "jotai"
 
-import { Competition, competitions } from "@/app/(dashboard)/competitions/data"
+import { Competition, competitions } from "@/app/data/competition_data"
 
 type Config = {
   selected: Competition["id"] | null

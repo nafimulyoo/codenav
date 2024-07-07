@@ -32,7 +32,7 @@ import {
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { JobDisplay } from "@/app/(dashboard)/jobs/components/job-display"
 import { JobList } from "@/app/(dashboard)/jobs/components/job-list";
-import { type Job } from "@/app/(dashboard)/jobs/data";
+import { type Job } from "@/app/data/job_data";
 import { useJob } from "@/app/(dashboard)/jobs/use-job";
 
 interface JobProps {

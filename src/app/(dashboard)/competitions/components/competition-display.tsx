@@ -32,7 +32,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Competition } from "@/app/(dashboard)/competitions/data"
+import { Competition } from "@/app/data/competition_data"
 
 interface CompetitionDisplayProps {
   competition: Competition | null

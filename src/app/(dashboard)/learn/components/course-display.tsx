@@ -32,7 +32,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Course } from "@/app/(dashboard)/learn/data"
+import { Course } from "@/app/data/course_data"
 
 interface CourseDisplayProps {
   course: Course | null

@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-export default function Component() {
+export default function Chatbot() {
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader className="flex items-center justify-between px-4 py-3 border-b">
@@ -54,7 +54,7 @@ export default function Component() {
   )
 }
 
-function MoveHorizontalIcon(props) {
+function MoveHorizontalIcon(props: any) {
   return (
     <svg
       {...props}
@@ -76,7 +76,7 @@ function MoveHorizontalIcon(props) {
 }
 
 
-function SendIcon(props) {
+function SendIcon(props: any) {
   return (
     <svg
       {...props}

@@ -1,6 +1,6 @@
 import { atom, useAtom } from "jotai"
 
-import { Course, courses } from "@/app/(dashboard)/learn/data"
+import { Course, courses } from "@/app/data/course_data"
 
 type Config = {
   selected: Course["id"] | null

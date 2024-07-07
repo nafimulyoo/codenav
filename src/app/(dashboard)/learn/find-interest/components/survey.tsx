@@ -29,7 +29,7 @@ export function AlertDemo() {
 }
 
 
-import survey_questions from '@/app/(dashboard)/learn/find-interest/data';
+import survey_questions from '@/app/data/survey_data';
 import { auth } from "@/lib/firebase/firebase";
 import { Textarea } from '@/components/ui/textarea';
 

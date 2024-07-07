@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cookies } from "next/headers"
 import { Job } from "@/app/(dashboard)/jobs/components/job";
-import { jobs } from "@/app/(dashboard)/jobs/data";
+import { jobs } from "@/app/data/job_data";
 
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {

@@ -32,7 +32,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Job } from "@/app/(dashboard)/jobs/data"
+import { Job } from "@/app/data/job_data"
 
 interface JobDisplayProps {
   job: Job | null

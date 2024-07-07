@@ -32,7 +32,7 @@ import {
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { CourseDisplay } from "@/app/(dashboard)/learn/components/course-display"
 import { CourseList } from "@/app/(dashboard)/learn/components/course-list"
-import { type Course } from "@/app/(dashboard)/learn/data"
+import { type Course } from "@/app/data/course_data"
 import { useCourse } from "@/app/(dashboard)/learn/use-course"
 
 interface CourseProps {

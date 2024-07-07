@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
-import { Competition } from "@/app/(dashboard)/competitions/data"
+import { Competition } from "@/app/data/competition_data"
 import { useCompetition } from "@/app/(dashboard)/competitions/use-competition"
 
 interface CompetitionListProps {
