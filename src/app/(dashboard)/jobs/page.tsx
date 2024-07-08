@@ -13,6 +13,7 @@ import {
   BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
 
+
 export default function JobsPage() {
    const layout = cookies().get("react-resizable-panels:layout")
   const collapsed = cookies().get("react-resizable-panels:collapsed")

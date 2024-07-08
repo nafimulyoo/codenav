@@ -1,175 +1,544 @@
 export const courses = [
-    {
-      id: "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
-      name: "William Smith",
-      email: "williamsmith@example.com",
-      subject: "Meeting Tomorrow",
-      text: "Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and have some ideas I'd like to share. It's crucial that we align on our next steps to ensure the project's success.\n\nPlease come prepared with any questions or insights you may have. Looking forward to our meeting!\n\nBest regards, William",
-      date: "2023-10-22T09:00:00",
-      read: true,
-      labels: ["meeting", "work", "important"],
-    },
-    {
-      id: "110e8400-e29b-11d4-a716-446655440000",
-      name: "Alice Smith",
-      email: "alicesmith@example.com",
-      subject: "Re: Project Update",
-      text: "Thank you for the project update. It looks great! I've gone through the report, and the progress is impressive. The team has done a fantastic job, and I appreciate the hard work everyone has put in.\n\nI have a few minor suggestions that I'll include in the attached document.\n\nLet's discuss these during our next meeting. Keep up the excellent work!\n\nBest regards, Alice",
-      date: "2023-10-22T10:30:00",
-      read: true,
-      labels: ["work", "important"],
-    },
-    {
-      id: "3e7c3f6d-bdf5-46ae-8d90-171300f27ae2",
-      name: "Bob Johnson",
-      email: "bobjohnson@example.com",
-      subject: "Weekend Plans",
-      text: "Any plans for the weekend? I was thinking of going hiking in the nearby mountains. It's been a while since we had some outdoor fun.\n\nIf you're interested, let me know, and we can plan the details. It'll be a great way to unwind and enjoy nature.\n\nLooking forward to your response!\n\nBest, Bob",
-      date: "2023-04-10T11:45:00",
-      read: true,
-      labels: ["personal"],
-    },
-    {
-      id: "61c35085-72d7-42b4-8d62-738f700d4b92",
-      name: "Emily Davis",
-      email: "emilydavis@example.com",
-      subject: "Re: Question about Budget",
-      text: "I have a question about the budget for the upcoming project. It seems like there's a discrepancy in the allocation of resources.\n\nI've reviewed the budget report and identified a few areas where we might be able to optimize our spending without compromising the project's quality.\n\nI've attached a detailed analysis for your reference. Let's discuss this further in our next meeting.\n\nThanks, Emily",
-      date: "2023-03-25T13:15:00",
-      read: false,
-      labels: ["work", "budget"],
-    },
-    {
-      id: "8f7b5db9-d935-4e42-8e05-1f1d0a3dfb97",
-      name: "Michael Wilson",
-      email: "michaelwilson@example.com",
-      subject: "Important Announcement",
-      text: "I have an important announcement to make during our team meeting. It pertains to a strategic shift in our approach to the upcoming product launch. We've received valuable feedback from our beta testers, and I believe it's time to make some adjustments to better meet our customers' needs.\n\nThis change is crucial to our success, and I look forward to discussing it with the team. Please be prepared to share your insights during the meeting.\n\nRegards, Michael",
-      date: "2023-03-10T15:00:00",
-      read: false,
-      labels: ["meeting", "work", "important"],
-    },
-    {
-      id: "1f0f2c02-e299-40de-9b1d-86ef9e42126b",
-      name: "Sarah Brown",
-      email: "sarahbrown@example.com",
-      subject: "Re: Feedback on Proposal",
-      text: "Thank you for your feedback on the proposal. It looks great! I'm pleased to hear that you found it promising. The team worked diligently to address all the key points you raised, and I believe we now have a strong foundation for the project.\n\nI've attached the revised proposal for your review.\n\nPlease let me know if you have any further comments or suggestions. Looking forward to your response.\n\nBest regards, Sarah",
-      date: "2023-02-15T16:30:00",
-      read: true,
-      labels: ["work"],
-    },
-    {
-      id: "17c0a96d-4415-42b1-8b4f-764efab57f66",
-      name: "David Lee",
-      email: "davidlee@example.com",
-      subject: "New Project Idea",
-      text: "I have an exciting new project idea to discuss with you. It involves expanding our services to target a niche market that has shown considerable growth in recent months.\n\nI've prepared a detailed proposal outlining the potential benefits and the strategy for execution.\n\nThis project has the potential to significantly impact our business positively. Let's set up a meeting to dive into the details and determine if it aligns with our current goals.\n\nBest regards, David",
-      date: "2023-01-28T17:45:00",
-      read: false,
-      labels: ["meeting", "work", "important"],
-    },
-    {
-      id: "2f0130cb-39fc-44c4-bb3c-0a4337edaaab",
-      name: "Olivia Wilson",
-      email: "oliviawilson@example.com",
-      subject: "Vacation Plans",
-      text: "Let's plan our vacation for next month. What do you think? I've been thinking of visiting a tropical paradise, and I've put together some destination options.\n\nI believe it's time for us to unwind and recharge. Please take a look at the options and let me know your preferences.\n\nWe can start making arrangements to ensure a smooth and enjoyable trip.\n\nExcited to hear your thoughts! Olivia",
-      date: "2022-12-20T18:30:00",
-      read: true,
-      labels: ["personal"],
-    },
-    {
-      id: "de305d54-75b4-431b-adb2-eb6b9e546014",
-      name: "James Martin",
-      email: "jamesmartin@example.com",
-      subject: "Re: Conference Registration",
-      text: "I've completed the registration for the conference next month. The event promises to be a great networking opportunity, and I'm looking forward to attending the various sessions and connecting with industry experts.\n\nI've also attached the conference schedule for your reference.\n\nIf there are any specific topics or sessions you'd like me to explore, please let me know. It's an exciting event, and I'll make the most of it.\n\nBest regards, James",
-      date: "2022-11-30T19:15:00",
-      read: true,
-      labels: ["work", "conference"],
-    },
-    {
-      id: "7dd90c63-00f6-40f3-bd87-5060a24e8ee7",
-      name: "Sophia White",
-      email: "sophiawhite@example.com",
-      subject: "Team Dinner",
-      text: "Let's have a team dinner next week to celebrate our success. We've achieved some significant milestones, and it's time to acknowledge our hard work and dedication.\n\nI've made reservations at a lovely restaurant, and I'm sure it'll be an enjoyable evening.\n\nPlease confirm your availability and any dietary preferences. Looking forward to a fun and memorable dinner with the team!\n\nBest, Sophia",
-      date: "2022-11-05T20:30:00",
-      read: false,
-      labels: ["meeting", "work"],
-    },
-    {
-      id: "99a88f78-3eb4-4d87-87b7-7b15a49a0a05",
-      name: "Daniel Johnson",
-      email: "danieljohnson@example.com",
-      subject: "Feedback Request",
-      text: "I'd like your feedback on the latest project deliverables. We've made significant progress, and I value your input to ensure we're on the right track.\n\nI've attached the deliverables for your review, and I'm particularly interested in any areas where you think we can further enhance the quality or efficiency.\n\nYour feedback is invaluable, and I appreciate your time and expertise. Let's work together to make this project a success.\n\nRegards, Daniel",
-      date: "2022-10-22T09:30:00",
-      read: false,
-      labels: ["work"],
-    },
-    {
-      id: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-      name: "Ava Taylor",
-      email: "avataylor@example.com",
-      subject: "Re: Meeting Agenda",
-      text: "Here's the agenda for our meeting next week. I've included all the topics we need to cover, as well as time allocations for each.\n\nIf you have any additional items to discuss or any specific points to address, please let me know, and we can integrate them into the agenda.\n\nIt's essential that our meeting is productive and addresses all relevant matters.\n\nLooking forward to our meeting! Ava",
-      date: "2022-10-10T10:45:00",
-      read: true,
-      labels: ["meeting", "work"],
-    },
-    {
-      id: "c1a0ecb4-2540-49c5-86f8-21e5ce79e4e6",
-      name: "William Anderson",
-      email: "williamanderson@example.com",
-      subject: "Product Launch Update",
-      text: "The product launch is on track. I'll provide an update during our call. We've made substantial progress in the development and marketing of our new product.\n\nI'm excited to share the latest updates with you during our upcoming call. It's crucial that we coordinate our efforts to ensure a successful launch. Please come prepared with any questions or insights you may have.\n\nLet's make this product launch a resounding success!\n\nBest regards, William",
-      date: "2022-09-20T12:00:00",
-      read: false,
-      labels: ["meeting", "work", "important"],
-    },
-    {
-      id: "ba54eefd-4097-4949-99f2-2a9ae4d1a836",
-      name: "Mia Harris",
-      email: "miaharris@example.com",
-      subject: "Re: Travel Itinerary",
-      text: "I've received the travel itinerary. It looks great! Thank you for your prompt assistance in arranging the details. I've reviewed the schedule and the accommodations, and everything seems to be in order. I'm looking forward to the trip, and I'm confident it'll be a smooth and enjoyable experience.\n\nIf there are any specific activities or attractions you recommend at our destination, please feel free to share your suggestions.\n\nExcited for the trip! Mia",
-      date: "2022-09-10T13:15:00",
-      read: true,
-      labels: ["personal", "travel"],
-    },
-    {
-      id: "df09b6ed-28bd-4e0c-85a9-9320ec5179aa",
-      name: "Ethan Clark",
-      email: "ethanclark@example.com",
-      subject: "Team Building Event",
-      text: "Let's plan a team-building event for our department. Team cohesion and morale are vital to our success, and I believe a well-organized team-building event can be incredibly beneficial. I've done some research and have a few ideas for fun and engaging activities.\n\nPlease let me know your thoughts and availability. We want this event to be both enjoyable and productive.\n\nTogether, we'll strengthen our team and boost our performance.\n\nRegards, Ethan",
-      date: "2022-08-25T15:30:00",
-      read: false,
-      labels: ["meeting", "work"],
-    },
-    {
-      id: "d67c1842-7f8b-4b4b-9be1-1b3b1ab4611d",
-      name: "Chloe Hall",
-      email: "chloehall@example.com",
-      subject: "Re: Budget Approval",
-      text: "The budget has been approved. We can proceed with the project. I'm delighted to inform you that our budget proposal has received the green light from the finance department. This is a significant milestone, and it means we can move forward with the project as planned.\n\nI've attached the finalized budget for your reference. Let's ensure that we stay on track and deliver the project on time and within budget.\n\nIt's an exciting time for us! Chloe",
-      date: "2022-08-10T16:45:00",
-      read: true,
-      labels: ["work", "budget"],
-    },
-    {
-      id: "6c9a7f94-8329-4d70-95d3-51f68c186ae1",
-      name: "Samuel Turner",
-      email: "samuelturner@example.com",
-      subject: "Weekend Hike",
-      text: "Who's up for a weekend hike in the mountains? I've been craving some outdoor adventure, and a hike in the mountains sounds like the perfect escape. If you're up for the challenge, we can explore some scenic trails and enjoy the beauty of nature.\n\nI've done some research and have a few routes in mind.\n\nLet me know if you're interested, and we can plan the details.\n\nIt's sure to be a memorable experience! Samuel",
-      date: "2022-07-28T17:30:00",
-      read: false,
-      labels: ["personal"],
-    },
-  ]
-  
-  export type Course = (typeof courses)[number]
-  
+  {
+    saved: true,
+    id: 1,
+    title: "Software Development",
+    teacher: "John Doe",
+    labels: ["Software Development"],
+    description: "Learn the basics of software development, including coding, debugging, and testing applications.",
+    duration: "4 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to Software Development",
+        type: "video",
+        duration: "15 mins",
+        content: "https://example.com/video1",
+        caption: "Introduction to the field of software development.",
+        description: "An overview of what software development entails and the importance of this field."
+      },
+      {
+        step: 2,
+        title: "Programming Languages Overview",
+        type: "text",
+        duration: "10 mins",
+        content: "Introduction to Programming Languages",
+        description: "Learn about various programming languages and their applications."
+      },
+      {
+        step: 3,
+        title: "Coding Basics",
+        type: "video",
+        duration: "20 mins",
+        content: "https://example.com/video2",
+        caption: "Basics of coding in software development.",
+        description: "Understand the fundamental concepts of coding, including syntax and logic."
+      },
+      {
+        step: 4,
+        title: "Debugging Techniques",
+        type: "text",
+        duration: "15 mins",
+        content: "Debugging Techniques",
+        description: "Learn the techniques used to identify and fix bugs in software."
+      }
+    ]
+  },
+  {
+    saved: false,
+    id: 2,
+    title: "Network and Infrastructure",
+    teacher: "Jane Smith",
+    labels: ["Network and Infrastructure"],
+    description: "Understand the fundamentals of network configuration, management, and infrastructure maintenance.",
+    duration: "5 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to Networking",
+        type: "video",
+        duration: "10 mins",
+        content: "https://example.com/video3",
+        caption: "Introduction to networking concepts.",
+        description: "An overview of the basic concepts and components of networking."
+      },
+      {
+        step: 2,
+        title: "Network Components",
+        type: "text",
+        duration: "15 mins",
+        content: "Network Components Overview",
+        description: "Detailed explanation of various network components and their functions."
+      },
+      {
+        step: 3,
+        title: "Network Setup",
+        type: "video",
+        duration: "25 mins",
+        content: "https://example.com/video4",
+        caption: "Setting up a network.",
+        description: "Learn the steps involved in setting up a network, including hardware and software configuration."
+      },
+      {
+        step: 4,
+        title: "Infrastructure Management",
+        type: "text",
+        duration: "20 mins",
+        content: "Infrastructure Management Best Practices",
+        description: "Best practices for managing and maintaining IT infrastructure."
+      }
+    ]
+  },
+  {
+    saved: false,
+    id: 3,
+    title: "Cyber Security",
+    teacher: "Alice Johnson",
+    labels: ["Cyber Security"],
+    description: "Learn how to protect systems and data from cyber threats and implement security measures.",
+    duration: "6 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to Cyber Security",
+        type: "video",
+        duration: "15 mins",
+        content: "https://example.com/video5",
+        caption: "Introduction to cyber security.",
+        description: "An overview of the importance of cyber security and basic concepts."
+      },
+      {
+        step: 2,
+        title: "Cyber Threats Overview",
+        type: "text",
+        duration: "20 mins",
+        content: "Introduction to Cyber Threats",
+        description: "Learn about different types of cyber threats and their impact."
+      },
+      {
+        step: 3,
+        title: "Security Measures",
+        type: "video",
+        duration: "30 mins",
+        content: "https://example.com/video6",
+        caption: "Implementing security measures.",
+        description: "Detailed explanation of various security measures to protect systems and data."
+      },
+      {
+        step: 4,
+        title: "Security Tools and Protocols",
+        type: "text",
+        duration: "25 mins",
+        content: "Security Protocols and Tools",
+        description: "Overview of tools and protocols used in cyber security."
+      }
+    ]
+  },
+  {
+    saved: false,
+    id: 4,
+    title: "Data Science",
+    teacher: "Bob Brown",
+    labels: ["Data Science"],
+    description: "Explore data collection, analysis, and visualization techniques to gain valuable insights.",
+    duration: "8 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to Data Science",
+        type: "video",
+        duration: "20 mins",
+        content: "https://example.com/video7",
+        caption: "Introduction to data science.",
+        description: "An overview of the field of data science and its importance."
+      },
+      {
+        step: 2,
+        title: "Data Collection Methods",
+        type: "text",
+        duration: "25 mins",
+        content: "Data Collection Methods",
+        description: "Learn about various methods used to collect data for analysis."
+      },
+      {
+        step: 3,
+        title: "Data Analysis Techniques",
+        type: "video",
+        duration: "35 mins",
+        content: "https://example.com/video8",
+        caption: "Techniques for analyzing data.",
+        description: "Detailed explanation of techniques used to analyze data and derive insights."
+      },
+      {
+        step: 4,
+        title: "Data Visualization Tools",
+        type: "text",
+        duration: "30 mins",
+        content: "Data Visualization Tools",
+        description: "Overview of tools used to visualize data and present findings."
+      }
+    ]
+  },
+  {
+    saved: false,
+    id: 5,
+    title: "DevOps",
+    teacher: "Carol White",
+    labels: ["DevOps"],
+    description: "Learn the principles of DevOps, including continuous integration and delivery, and automation tools.",
+    duration: "7 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to DevOps",
+        type: "video",
+        duration: "15 mins",
+        content: "https://example.com/video9",
+        caption: "Introduction to DevOps.",
+        description: "An overview of DevOps principles and practices."
+      },
+      {
+        step: 2,
+        title: "Continuous Integration Basics",
+        type: "text",
+        duration: "20 mins",
+        content: "Continuous Integration Basics",
+        description: "Learn the basics of continuous integration and its importance in DevOps."
+      },
+      {
+        step: 3,
+        title: "Automation Tools Overview",
+        type: "video",
+        duration: "30 mins",
+        content: "https://example.com/video10",
+        caption: "Overview of automation tools.",
+        description: "Detailed explanation of various tools used for automation in DevOps."
+      },
+      {
+        step: 4,
+        title: "DevOps Best Practices",
+        type: "text",
+        duration: "25 mins",
+        content: "DevOps Best Practices",
+        description: "Best practices for implementing DevOps in an organization."
+      }
+    ]
+  },
+  {
+    saved: false,
+    id: 6,
+    title: "AI and Machine Learning",
+    teacher: "David Green",
+    labels: ["AI and Machine Learning"],
+    description: "Get started with AI and machine learning concepts, including algorithms and practical applications.",
+    duration: "6 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to AI and ML",
+        type: "video",
+        duration: "20 mins",
+        content: "https://example.com/video11",
+        caption: "Introduction to AI and machine learning.",
+        description: "An overview of artificial intelligence and machine learning concepts."
+      },
+      {
+        step: 2,
+        title: "Machine Learning Basics",
+        type: "text",
+        duration: "25 mins",
+        content: "Introduction to Machine Learning",
+        description: "Learn the basics of machine learning and its applications."
+      },
+      {
+        step: 3,
+        title: "AI Algorithms",
+        type: "video",
+        duration: "35 mins",
+        content: "https://example.com/video12",
+        caption: "Understanding AI algorithms.",
+        description: "Detailed explanation of various algorithms used in AI and machine learning."
+      },
+      {
+        step: 4,
+        title: "Practical Applications of AI",
+        type: "text",
+        duration: "30 mins",
+        content: "AI Algorithms and Models",
+        description: "Explore the practical applications of AI in different industries."
+      }
+    ]
+  },
+  {
+    saved: false,
+    id: 7,
+    title: "UI/UX Design",
+    teacher: "Eve Martinez",
+    labels: ["UI/UX Design"],
+    description: "Learn the essentials of UI/UX design, including user research, wireframing, and prototyping.",
+    duration: "4 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to UI/UX Design",
+        type: "video",
+        duration: "15 mins",
+        content: "https://example.com/video13",
+        caption: "Introduction to UI/UX design.",
+        description: "An overview of the principles of user interface and user experience design."
+      },
+      {
+        step: 2,
+        title: "User Research Techniques",
+        type: "text",
+        duration: "20 mins",
+        content: "User Research Techniques",
+        description: "Learn techniques for conducting user research to inform design decisions."
+      },
+      {
+        step: 3,
+        title: "Wireframing Basics",
+        type: "video",
+        duration: "25 mins",
+        content: "https://example.com/video14",
+        caption: "Basics of wireframing.",
+        description: "Understand the basics of creating wireframes for user interfaces."
+      },
+      {
+        step: 4,
+        title: "Prototyping Techniques",
+        type: "text",
+        duration: "30 mins",
+        content: "Wireframing and Prototyping",
+        description: "Learn how to create prototypes to test and refine designs."
+      }
+    ]
+  },
+  {
+    saved: true,
+    id: 8,
+    title: "IT Management",
+    teacher: "Frank Harris",
+    labels: ["IT Management"],
+    description: "Understand IT management principles, including project management, leadership, and strategic planning.",
+    duration: "5 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to IT Management",
+        type: "video",
+        duration: "15 mins",
+        content: "https://example.com/video15",
+        caption: "Introduction to IT management.",
+        description: "An overview of the principles and practices of IT management."
+      },
+      {
+        step: 2,
+        title: "Project Management Basics",
+        type: "text",
+        duration: "20 mins",
+        content: "Project Management Basics",
+        description: "Learn the basics of project management and its importance in IT."
+      },
+      {
+        step: 3,
+        title: "Leadership in IT",
+        type: "video",
+        duration: "25 mins",
+        content: "https://example.com/video16",
+        caption: "Leadership in IT.",
+        description: "Understand the role of leadership in IT management."
+      },
+      {
+        step: 4,
+        title: "Strategic Planning for IT",
+        type: "text",
+        duration: "30 mins",
+        content: "Leadership and Communication",
+        description: "Learn how to create and implement strategic plans for IT departments."
+      }
+    ]
+  },
+  {
+    saved: true,
+    id: 9,
+    title: "Robotics and IoT",
+    teacher: "Grace Wilson",
+    labels: ["Robotics and IoT"],
+    description: "Explore the basics of robotics and the Internet of Things (IoT), including hardware and software integration.",
+    duration: "6 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to Robotics",
+        type: "video",
+        duration: "20 mins",
+        content: "https://example.com/video17",
+        caption: "Introduction to robotics.",
+        description: "An overview of robotics, including key concepts and components."
+      },
+      {
+        step: 2,
+        title: "Robotics Frameworks",
+        type: "text",
+        duration: "25 mins",
+        content: "Introduction to Robotics",
+        description: "Learn about various frameworks used in robotics development."
+      },
+      {
+        step: 3,
+        title: "IoT Protocols",
+        type: "video",
+        duration: "30 mins",
+        content: "https://example.com/video18",
+        caption: "Protocols used in IoT.",
+        description: "Understand the protocols and standards used in the Internet of Things."
+      },
+      {
+        step: 4,
+        title: "Applications of Robotics and IoT",
+        type: "text",
+        duration: "35 mins",
+        content: "IoT Protocols and Applications",
+        description: "Explore practical applications of robotics and IoT in various industries."
+      }
+    ]
+  },
+  {
+    saved: true,
+    id: 10,
+    title: "VR and AR",
+    teacher: "Henry Johnson",
+    labels: ["VR and AR"],
+    description: "Learn the fundamentals of Virtual Reality (VR) and Augmented Reality (AR), including development tools and techniques.",
+    duration: "8 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to VR and AR",
+        type: "video",
+        duration: "20 mins",
+        content: "https://example.com/video19",
+        caption: "Introduction to VR and AR.",
+        description: "An overview of Virtual Reality and Augmented Reality technologies."
+      },
+      {
+        step: 2,
+        title: "VR and AR Basics",
+        type: "text",
+        duration: "25 mins",
+        content: "Introduction to VR and AR",
+        description: "Learn the basics of VR and AR development and their applications."
+      },
+      {
+        step: 3,
+        title: "VR/AR Development Tools",
+        type: "video",
+        duration: "35 mins",
+        content: "https://example.com/video20",
+        caption: "Tools for developing VR and AR.",
+        description: "Detailed explanation of tools used for developing VR and AR applications."
+      },
+      {
+        step: 4,
+        title: "Creating VR/AR Applications",
+        type: "text",
+        duration: "30 mins",
+        content: "VR/AR Development Tools",
+        description: "Learn how to create VR and AR applications using various development tools."
+      }
+    ]
+  },
+  {
+    saved: true,
+    id: 11,
+    title: "Programming and Scripting",
+    teacher: "Isabella Clark",
+    labels: ["Programming and Scripting"],
+    description: "Start learning programming and scripting languages, including syntax, logic, and basic algorithms.",
+    duration: "6 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to Programming",
+        type: "video",
+        duration: "20 mins",
+        content: "https://example.com/video21",
+        caption: "Introduction to programming concepts.",
+        description: "An overview of basic programming concepts and languages."
+      },
+      {
+        step: 2,
+        title: "Programming Languages Overview",
+        type: "text",
+        duration: "25 mins",
+        content: "Introduction to Programming Languages",
+        description: "Detailed explanation of various programming languages and their uses."
+      },
+      {
+        step: 3,
+        title: "Basic Algorithms",
+        type: "video",
+        duration: "30 mins",
+        content: "https://example.com/video22",
+        caption: "Introduction to basic algorithms.",
+        description: "Learn the basics of algorithms and how to implement them."
+      },
+      {
+        step: 4,
+        title: "Writing Scripts",
+        type: "text",
+        duration: "35 mins",
+        content: "Writing Scripts",
+        description: "Learn how to write scripts to automate tasks and solve problems."
+      }
+    ]
+  },
+  {
+    saved: true,
+    id: 12,
+    title: "Database Management",
+    teacher: "Jacob Lewis",
+    labels: ["Database Management"],
+    description: "Database management involves storing, managing, and maintaining data to ensure its availability, security, and optimal performance.",
+    duration: "5 weeks",
+    content: [
+      {
+        step: 1,
+        title: "Introduction to Database Management",
+        type: "video",
+        duration: "20 mins",
+        content: "https://example.com/video23",
+        caption: "Overview of database management.",
+        description: "An overview of database management principles and practices."
+      },
+      {
+        step: 2,
+        title: "SQL Basics",
+        type: "text",
+        duration: "25 mins",
+        content: "Introduction to SQL",
+        description: "Learn the basics of SQL and how to use it for database management."
+      },
+      {
+        step: 3,
+        title: "Data Modeling",
+        type: "video",
+        duration: "30 mins",
+        content: "https://example.com/video24",
+        caption: "Introduction to data modeling.",
+        description: "Learn about data modeling techniques and their applications."
+      },
+      {
+        step: 4,
+        title: "Database Performance Tuning",
+        type: "text",
+        duration: "35 mins",
+        content: "Database Performance Tuning",
+        description: "Learn techniques for optimizing database performance."
+      }
+    ]
+  }
+]
+
+export type Course = (typeof courses)[number]

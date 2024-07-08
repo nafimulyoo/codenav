@@ -47,7 +47,6 @@ import {
     CodeXml,
     Database,
   } from "lucide-react";
-import { list } from 'postcss';
 
 export default function Survey() {
     const [responses, setResponses]: any = useState({});
@@ -103,9 +102,11 @@ export default function Survey() {
     };
 
     useEffect(() => {
-        // id is 
-        handleChange(`${survey_questions[step].id.toString()}.1`, value);
-    }, [step, value]);
+        setResponses({
+            ...responses,
+            [`${survey_questions[step].id.toString()}.1`]: value,
+        });
+    }, [step, value, responses]);
 
     const getInterestWithAI = async (data: any) => {
         try {

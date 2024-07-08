@@ -71,13 +71,6 @@ export function getMenuList(pathname: string): Group[] {
           ]
         },
         {
-          href: "/competitions",
-          label: "Competitions",
-          active: pathname.includes("/competitions"),
-          icon: Trophy,
-          submenus: []
-        },
-        {
           href: "/profile",
           label: "Profile",
           active: pathname.includes("/profile"),

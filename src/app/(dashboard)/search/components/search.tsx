@@ -23,7 +23,6 @@ export default function Search() {
           <DropdownMenuContent align="start" className="w-48">
             <DropdownMenuItem>Courses</DropdownMenuItem>
             <DropdownMenuItem>Jobs</DropdownMenuItem>
-            <DropdownMenuItem>Competitions</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
@@ -32,7 +31,7 @@ export default function Search() {
           <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <Input
             type="search"
-            placeholder="Search courses, jobs, or competitions..."
+            placeholder="Search courses and jobs."
             className="pl-10 pr-16 h-10 w-full rounded-md bg-muted focus:ring-primary focus:border-primary"
           />
         </div>
@@ -95,31 +94,6 @@ export default function Search() {
           
           <Image
             src="/placeholder.png"
-            alt="Competition image"
-            width={400}
-            height={225}
-            className="rounded-t-md object-cover w-full h-40 group-hover:opacity-80 transition-opacity"
-          />
-          <CardContent className="p-4">
-            <h3 className="text-lg font-semibold mb-2">Hackathon 2023</h3>
-            <p className="text-sm text-muted-foreground line-clamp-2">
-              Join our annual hackathon and compete for prizes and recognition.
-            </p>
-            <div className="flex items-center justify-between mt-4">
-              <div className="text-sm text-muted-foreground">
-                <CalendarIcon className="w-4 h-4 inline-block mr-1" />
-                <span>June 1-3</span>
-              </div>
-              <div className="text-sm font-medium text-primary">$1,000</div>
-            </div>
-          </CardContent>
-        </Card>
-        </Link>
-        <Link href="/course">
-        <Card className="group">
-          
-          <Image
-            src="/placeholder.png"
             alt="Course image"
             width={400}
             height={225}
@@ -161,31 +135,6 @@ export default function Search() {
                 <span>San Francisco</span>
               </div>
               <div className="text-sm font-medium text-primary">$80k - $100k</div>
-            </div>
-          </CardContent>
-        </Card>
-        </Link>
-        <Link href="/course">
-        <Card className="group">
-          
-          <Image
-            src="/placeholder.png"
-            alt="Competition image"
-            width={400}
-            height={225}
-            className="rounded-t-md object-cover w-full h-40 group-hover:opacity-80 transition-opacity"
-          />
-          <CardContent className="p-4">
-            <h3 className="text-lg font-semibold mb-2">Startup Pitch Competition</h3>
-            <p className="text-sm text-muted-foreground line-clamp-2">
-              Pitch your startup idea and compete for funding and mentorship.
-            </p>
-            <div className="flex items-center justify-between mt-4">
-              <div className="text-sm text-muted-foreground">
-                <CalendarIcon className="w-4 h-4 inline-block mr-1" />
-                <span>July 15-17</span>
-              </div>
-              <div className="text-sm font-medium text-primary">$5,000</div>
             </div>
           </CardContent>
         </Card>

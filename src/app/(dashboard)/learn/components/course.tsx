@@ -2,17 +2,7 @@
 
 import * as React from "react"
 import {
-  AlertCircle,
-  Archive,
-  ArchiveX,
-  File,
-  Inbox,
-  MessagesSquare,
   Search,
-  Send,
-  ShoppingCart,
-  Trash2,
-  Users2,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -92,7 +82,7 @@ export function Course({
               <CourseList items={courses} />
             </TabsContent>
             <TabsContent value="saved" className="m-0">
-              <CourseList items={courses.filter((item) => !item.read)} />
+              <CourseList items={courses.filter((item) => !item.saved)} />
             </TabsContent>
           </Tabs>
         </ResizablePanel>

@@ -2,17 +2,7 @@
 
 import * as React from "react"
 import {
-  AlertCircle,
-  Archive,
-  ArchiveX,
-  File,
-  Inbox,
-  MessagesSquare,
   Search,
-  Send,
-  ShoppingCart,
-  Trash2,
-  Users2,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -58,7 +48,7 @@ export function Job({
             sizes
           )}`
         }}
-        className="h-full max-h-[800px] items-stretch"
+        className="h-full max-h-[540px] items-stretch"
       >
         <ResizablePanel defaultSize={defaultLayout[0]} minSize={30}>
           <Tabs defaultValue="all">
@@ -92,7 +82,7 @@ export function Job({
               <JobList items={jobs} />
             </TabsContent>
             <TabsContent value="saved" className="m-0">
-              <JobList items={jobs.filter((item) => !item.read)} />
+              <JobList items={jobs.filter((item) => !item.saved)} />
             </TabsContent>
           </Tabs>
         </ResizablePanel>
