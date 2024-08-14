@@ -23,16 +23,9 @@ import {
 } from "lucide-react";
 
 import Link from "next/link";
+import { useUserCategories } from "@/hooks/use-user-data";
 export default function Home() {
-  const [activeCategories, setActiveCategories]: any = useState([]);
-
-  const toggleCategory = (category: any) => {
-    if (activeCategories.includes(category)) {
-      setActiveCategories(activeCategories.filter((c: any) => c !== category));
-    } else {
-      setActiveCategories([...activeCategories, category]);
-    }
-  };
+  const {activeCategories, toggleCategory}: any = useUserCategories();
 
   return (
     <div className="min-h-screen text-foreground">

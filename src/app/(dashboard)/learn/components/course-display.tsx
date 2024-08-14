@@ -1,33 +1,20 @@
 import {
-  Archive,
-  MoreVertical,
-  Trash2,
+  Bookmark,
+  BookmarkX,
+  Text,
+  Video,
 } from "lucide-react"
 
-import {
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Label } from "@/components/ui/label"
+
+import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Switch } from "@/components/ui/switch"
-import { Textarea } from "@/components/ui/textarea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Course } from "@/app/data/course_data"
+import { Course, courses } from "@/app/data/course_data"
 
 interface CourseDisplayProps {
   course: Course | null
@@ -37,77 +24,167 @@ export function CourseDisplay({ course }: CourseDisplayProps) {
   const today = new Date()
 
   return (
-    <div className="flex h-full flex-col">
-      <div className="flex items-center p-2">
+    <div>
+      {course ? (
+        <div>
+          <div className="flex items-center p-2">
         <div className="flex items-center gap-2">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!course}>
-                <Archive className="h-4 w-4" />
-                <span className="sr-only">Archive</span>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>Archive</TooltipContent>
-          </Tooltip>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!course}>
-                <Trash2 className="h-4 w-4" />
-                <span className="sr-only">Move to trash</span>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>Move to trash</TooltipContent>
-          </Tooltip>
+        {
+              course?.saved ? (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" disabled={!course}>
+                      <Bookmark className="h-4 w-4" />
+                      <span className="sr-only">Save</span>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>Save</TooltipContent>
+                </Tooltip>
+              ) : (
+                <Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="icon" disabled={!course}>
+                        <BookmarkX className="h-4 w-4" />
+                        <span className="sr-only">Unsave</span>
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>Unsave</TooltipContent>
+                  </Tooltip>
+                </Tooltip>
+              )
+            }
         </div>
-        <Separator orientation="vertical" className="mx-2 h-6" />
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" disabled={!course}>
-              <MoreVertical className="h-4 w-4" />
-              <span className="sr-only">More</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem>Mark as unread</DropdownMenuItem>
-            <DropdownMenuItem>Star thread</DropdownMenuItem>
-            <DropdownMenuItem>Add label</DropdownMenuItem>
-            <DropdownMenuItem>Mute thread</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Separator orientation="vertical" className="mx-2 h-6 my-2" />
       </div>
       <Separator />
-      {course ? (
-        <div className="flex flex-1 flex-col">
-          <div className="flex items-start p-4">
-            <div className="flex items-start gap-4 text-sm">
-              <Avatar>
-                <AvatarImage alt={course.title} />
-                <AvatarFallback>
-                  {course.title
-                    .split(" ")
-                    .map((chunk: any) => chunk[0])
-                    .join("")}
-                </AvatarFallback>
-              </Avatar>
-              <div className="grid gap-1">
-                <div className="font-semibold">{course.title}</div>
-                <div className="line-clamp-1 text-xs">{course.teacher}</div>
-                <div className="line-clamp-1 text-xs">
-                  <span className="font-medium">Reply-To:</span>asd
-                </div>
+        <div className="grid gap-6 md:grid-cols-[1fr_auto] my-8 mx-8">
+          <div className="space-y-4">
+            <div>
+              <h2 className="text-3xl font-bold">{course?.title}</h2>
+              <p className="text-muted-foreground">
+                {course?.description}
+              </p>
+            </div>
+            <div className="flex flex-wrap">
+                {course?.labels.map((label: any) => (
+                  <Badge variant="secondary" className="mr-8" key={label}>
+                    {label}
+                  </Badge>
+                ))}
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <UserIcon className="h-5 w-5 text-muted-foreground" />
+                <span>{course?.teacher}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ClockIcon className="h-5 w-5 text-muted-foreground" />
+                <span>{course?.duration}</span>
               </div>
             </div>
           </div>
-          <Separator />
-          <div className="flex-1 whitespace-pre-wrap p-4 text-sm">
-            {course.description}
+        </div>
+          <div className="px-6 text-center w-full ">
+            <Button className="w-full">Enroll Now</Button>
+          </div>
+        <div className="border-t border-border pt-6 mt-8 mx-8" >
+          <h3 className="text-xl font-bold">Course Contents</h3>
+          <div className="grid gap-4 mt-4">
+          {course?.content.map((content: any) => (
+                  <div className="flex items-start gap-4" key={content.step}>
+                  <div className="bg-primary rounded-md p-2 flex items-center justify-center">
+                    
+                  {
+                    content.type == "text" && (
+                    <Text className="h-6 w-6 text-primary-foreground" />
+                  ) 
+                  }
+                  {
+                    content.type == "video" && (
+                    (<Video className="h-6 w-6 text-primary-foreground" />)
+                  )
+                  }
+                  </div>
+                  <div>
+                    <h4 className="text-md font-medium">{content.title}</h4>
+                    <p className="text-muted-foreground">
+                      {content.description}
+                    </p>
+                  </div>
+                </div>
+                ))}
+  
+            
           </div>
         </div>
+      </div>
       ) : (
         <div className="p-8 text-center text-muted-foreground">
           No message selected
         </div>
       )}
     </div>
+  )
+}
+
+function BookIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+    </svg>
+  )
+}
+
+
+function ClockIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
+  )
+}
+
+
+function UserIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
   )
 }

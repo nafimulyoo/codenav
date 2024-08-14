@@ -1,20 +1,18 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from 'react';
-import { db } from '@/lib/firebase/firebase';
-import { doc, updateDoc } from 'firebase/firestore';
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 
-import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
+import { CheckCheck } from "lucide-react";
 
-import { CheckCheck } from "lucide-react"
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/components/ui/alert"
+} from "@/components/ui/alert";
 
 export function AlertDemo() {
   return (
@@ -25,13 +23,13 @@ export function AlertDemo() {
         Your response has been submitted successfully. Thank you for participating in the survey.
       </AlertDescription>
     </Alert>
-  )
+  );
 }
 
 
 import survey_questions from '@/app/data/survey_data';
-import { auth } from "@/lib/firebase/firebase";
 import { Textarea } from '@/components/ui/textarea';
+import { useUserCategories } from '@/hooks/use-user-data';
 
 import {
     Laptop,
@@ -52,11 +50,9 @@ export default function Survey() {
     const [responses, setResponses]: any = useState({});
     const [step, setStep]: any = useState(0);
     const [showResults, setShowResults]: any = useState(false);
-    const [interests, setInterests]: any = useState([]);
     const [value, setValue]: any = useState("");
     const [startQuestion, setStartQuestion]: any = useState(false);
-
-    const [activeCategories, setActiveCategories]: any = useState([]);
+    const { activeCategories, toggleCategory, updateCategories } = useUserCategories();
 
     function generateNarration(questions: any, answers: any) {
         let narration = '';
@@ -75,69 +71,56 @@ export default function Survey() {
         });
       
         return narration;
-      }
-
-    const toggleCategory = (category: any) => {
-      if (activeCategories.includes(category)) {
-        setActiveCategories(activeCategories.filter((c: any) => c !== category));
-      } else {
-        setActiveCategories([...activeCategories, category]);
-      }
-    };
+    }
 
     const restartSurvey = () => {
         setResponses({});
         setStep(0);
         setShowResults(false);
-        setInterests([]);
         setValue("");
         setStartQuestion(false);
     };
 
     const handleChange = (id: any, value: any) => {
-        setResponses({
-            ...responses,
+        setResponses((prevResponses: any) => ({
+            ...prevResponses,
             [id]: value,
-        });
+        }));
     };
 
     useEffect(() => {
-        setResponses({
-            ...responses,
+        setResponses((prevResponses: any) => ({
+            ...prevResponses,
             [`${survey_questions[step].id.toString()}.1`]: value,
-        });
-    }, [step, value, responses]);
+        }));
+    }, [step, value]);
 
     const getInterestWithAI = async (data: any) => {
         try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: data,
+            console.log('sending request..');
+            const response = await fetch('/api/interest-finder', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ message: data }),
             });
+      
             const result = await response.json();
-            return ["Software Development", "Network and Infrastructure"];
-        } catch (error) {
-            return [];
-        }
+            return result.result;
+          } catch (error) {
+            console.error('Error submitting survey:', error);
+          }
     };
 
     const handleSubmit = async () => {
         const narration = generateNarration(survey_questions, responses);
-        console.log(narration)
-        const interests: any = await getInterestWithAI(narration);
-        setInterests(interests);
-
-        const user: any = auth.currentUser;
-        const userDocRef: any = doc(db, 'users', user.uid);
-        await updateDoc(userDocRef, {
-            interests: interests,
-            survey_response: responses,
-        });
+        console.log(narration);
+        const interestsFromAI: any = await getInterestWithAI(narration);
+        console.log(interestsFromAI);
         
-        setActiveCategories(interests);
+        updateCategories(interestsFromAI);
+        
         setShowResults(true);
     };
 
@@ -163,7 +146,6 @@ export default function Survey() {
     };
 
     const currentQuestion: any = survey_questions[step];
-
     if (!startQuestion) {
         return (
             <div className="mx-12 mt-12 w-full max-w-5xl ">
@@ -594,7 +576,7 @@ export default function Survey() {
                 </div>
                 </Button>
             </div>
-            <Button className="mt-8" onClick={() => {restartSurvey()}}>Restart Survey</Button>
+            <Button className="mt-8" onClick={() => {restartSurvey();}}>Restart Survey</Button>
             </div>
         );
     }
