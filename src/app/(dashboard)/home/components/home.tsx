@@ -71,9 +71,9 @@ export default function Home() {
         </section>
         <section>
           <h2 className="text-2xl font-bold">Featured Roadmap</h2>
-          <Button className="mt-2">
-            Generate Personalized Roadmap with AI
-          </Button>
+          <Link href="/learn/roadmap/generator">
+            <Button className="mt-2">Generate Personalized Roadmap with AI</Button>
+          </Link>
           <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 lg:grid-cols-4">
             <Card>
               <Image

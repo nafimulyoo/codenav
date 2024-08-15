@@ -26,7 +26,7 @@ export default function HomePage() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbLink asChild>
-              <Link href="/home">Learning</Link>
+              <Link href="/learn">Learning</Link>
             </BreadcrumbLink>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
