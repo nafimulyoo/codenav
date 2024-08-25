@@ -1,27 +1,15 @@
 import { VertexAI } from '@google-cloud/vertexai';
 import { NextResponse } from 'next/server';
 
-
-function getGCPCredentials() {
-  // for Vercel, use environment variables
-  return process.env.GCP_PRIVATE_KEY
-    ? {
-        credentials: {
-          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-          private_key: process.env.GCP_PRIVATE_KEY,
-        },
-        projectId: process.env.GCP_PROJECT_ID,
-      }
-      // for local development, use gcloud CLI
-    : {};
-};
-
 export async function POST(request) {
   try {
     const { message } = await request.json();
 
-    const vertex_ai = new VertexAI({project: '972945849581', location: 'us-central1', googleAuthOptions: {
-     credentials: getGCPCredentials(),
+    const vertex_ai = new VertexAI({ project: '972945849581', location: 'us-central1', googleAuthOptions: {
+      credentials: {
+          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
+          private_key: process.env.GCP_PRIVATE_KEY
+        }
     }});
     const model = 'projects/972945849581/locations/us-central1/endpoints/7319261989128110080';
     

@@ -1,19 +1,6 @@
 import { VertexAI } from '@google-cloud/vertexai';
 import { NextResponse } from 'next/server';
 
-function getGCPCredentials() {
-  // for Vercel, use environment variables
-  return process.env.GCP_PRIVATE_KEY
-    ? {
-        credentials: {
-          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-          private_key: process.env.GCP_PRIVATE_KEY,
-        },
-        projectId: process.env.GCP_PROJECT_ID,
-      }
-      // for local development, use gcloud CLI
-    : {};
-};
 
 export async function POST(request) {
   try {
