@@ -5,14 +5,14 @@ export async function POST(request) {
   try {
     const { message } = await request.json();
 
-    const vertex_ai = new VertexAI({ project: '972945849581', location: 'us-central1', googleAuthOptions: {
+    const vertex_ai = new VertexAI({ project: "codenav-5d344", location: 'us-central1', googleAuthOptions: {
       credentials: {
         type: "service_account",
         project_id: "codenav-5d344",
         private_key_id: "703e28e0cf8e6631c998b729f63ca547f883653d",
         client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
         private_key: process.env.GCP_PRIVATE_KEY
-        }
+      }
     }});
     const model = 'projects/972945849581/locations/us-central1/endpoints/7319261989128110080';
     
