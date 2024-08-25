@@ -8,7 +8,7 @@ export async function POST(request) {
     const { message } = await request.json();
 
     const vertex_ai = new VertexAI({ project: '972945849581', location: 'us-central1', googleAuthOptions: {
-      projectId: '972945849581',
+      projectId: 'codenav-5d344',
       credentials: {
           client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
           private_key: process.env.GCP_PRIVATE_KEY
