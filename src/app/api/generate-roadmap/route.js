@@ -2,7 +2,7 @@ import { VertexAI } from '@google-cloud/vertexai';
 import { NextResponse } from 'next/server';
 
 
-getGCPCredentials = () => {
+function getGCPCredentials() {
   // for Vercel, use environment variables
   return process.env.GCP_PRIVATE_KEY
     ? {
