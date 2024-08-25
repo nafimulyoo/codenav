@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import ReactFlow, { Controls, Background, Handle } from 'reactflow';
+import ReactFlow, { Controls, Background, Handle, Position } from 'reactflow';
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {
   Breadcrumb,
@@ -28,6 +28,7 @@ type Resource = {
 type NodeData = {
   label: string;
   resources: Resource[];
+  reasoning: string;
 };
 
 type Node = {
@@ -57,7 +58,7 @@ const CustomNode = ({ data }: { data: NodeData }) => {
 
   return (
     <div style={{ position: 'relative', textAlign: 'center' }}>
-      <Handle type="target" position="top" style={{ background: '#555', top: -5 }} />
+      <Handle type="target" position={"top" as Position} style={{ background: '#555', top: -5 }} />
       <div
         style={{
           padding: '10px',
@@ -90,7 +91,6 @@ const CustomNode = ({ data }: { data: NodeData }) => {
 
             <li>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span>Reasoning: </span>
                 <span style={{ marginLeft: '4px' }}>{data.reasoning}</span>
               </div>
             </li>
@@ -107,7 +107,7 @@ const CustomNode = ({ data }: { data: NodeData }) => {
           </ul>
         </div>
       )}
-      <Handle type="source" position="bottom" style={{ background: '#555', bottom: -5 }} />
+      <Handle type="source" position={'bottom' as Position} style={{ background: '#555', bottom: -5 }} />
     </div>
   );
 };
@@ -237,7 +237,6 @@ export default function HomePage() {
             edges={roadmap.edges}
             nodeTypes={{ customNode: CustomNode }}
             fitView
-            vertical
           >
             <Controls />
             <Background />
