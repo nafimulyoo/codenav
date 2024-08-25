@@ -5,14 +5,16 @@ export async function POST(request) {
   try {
     const { message } = await request.json();
 
-    const vertex_ai = new VertexAI({ project: process.env.GCP_PROJECT_ID, location: 'us-central1', googleAuthOptions: {
-      projectId: 'codenav-5d344',
+    const vertex_ai = new VertexAI({ project: '972945849581', location: 'us-central1', googleAuthOptions: {
       credentials: {
-          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-          private_key: process.env.GCP_PRIVATE_KEY
+        type: "service_account",
+        project_id: "codenav-5d344",
+        private_key_id: "703e28e0cf8e6631c998b729f63ca547f883653d",
+        client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
+        private_key: process.env.GCP_PRIVATE_KEY
         }
     }});
-    const model = `projects/${process.env.GCP_PROJECT_ID}/locations/us-central1/endpoints/7319261989128110080`;
+    const model = 'projects/972945849581/locations/us-central1/endpoints/7319261989128110080';
     
     const prompt = `You are an AI designed to generate detailed learning roadmaps for various subjects. Your task is to produce a structured JSON output that matches the format of a "Roadmap" object, including both nodes and edges representing the steps in the learning process.
 
