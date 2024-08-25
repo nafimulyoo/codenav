@@ -14,7 +14,7 @@ export async function POST(request) {
           private_key: process.env.GCP_PRIVATE_KEY
         }
     }});
-    const model = 'projects/972945849581/locations/us-central1/endpoints/9046075786875895808';
+    const model = `projects/${process.env.GCP_PROJECT_ID}/locations/us-central1/endpoints/9046075786875895808`;
 
     const textsi_1 = {
       text: `

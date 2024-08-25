@@ -12,7 +12,7 @@ export async function POST(request) {
           private_key: process.env.GCP_PRIVATE_KEY
         }
     }});
-    const model = 'projects/972945849581/locations/us-central1/endpoints/7319261989128110080';
+    const model = `projects/${process.env.GCP_PROJECT_ID}/locations/us-central1/endpoints/7319261989128110080`;
     
     const prompt = `You are an AI designed to generate detailed learning roadmaps for various subjects. Your task is to produce a structured JSON output that matches the format of a "Roadmap" object, including both nodes and edges representing the steps in the learning process.
 
