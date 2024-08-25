@@ -7,14 +7,14 @@ export async function POST(request) {
 
     const { message } = await request.json();
 
-    const vertex_ai = new VertexAI({ project: process.env.GCP_PROJECT_ID, location: 'us-central1', googleAuthOptions: {
-      projectId: process.env.GCP_PROJECT_ID,
+    const vertex_ai = new VertexAI({ project: '972945849581', location: 'us-central1', googleAuthOptions: {
+      projectId: '972945849581',
       credentials: {
           client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
           private_key: process.env.GCP_PRIVATE_KEY
         }
     }});
-    const model = `projects/${process.env.GCP_PROJECT_ID}/locations/us-central1/endpoints/9046075786875895808`;
+    const model = 'projects/972945849581/locations/us-central1/endpoints/9046075786875895808';
 
     const textsi_1 = {
       text: `
