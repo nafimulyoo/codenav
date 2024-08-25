@@ -4,6 +4,8 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/providers/theme-provider";
 
+
+
 export default function RootLayout({
   children
 }: Readonly<{

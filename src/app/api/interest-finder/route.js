@@ -1,15 +1,30 @@
 import { VertexAI } from '@google-cloud/vertexai';
 import { NextResponse } from 'next/server';
 
+export const getGCPCredentials = () => {
+  // for Vercel, use environment variables
+  return process.env.GCP_PRIVATE_KEY
+    ? {
+        credentials: {
+          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
+          private_key: process.env.GCP_PRIVATE_KEY,
+        },
+        projectId: process.env.GCP_PROJECT_ID,
+      }
+      // for local development, use gcloud CLI
+    : {};
+};
+
 export async function POST(request) {
   try {
-    console.log('hit');
+
     const { message } = await request.json();
 
-    const vertex_ai = new VertexAI({ project: '972945849581', location: 'us-central1' });
+    const vertex_ai = new VertexAI({ project: '972945849581', location: 'us-central1', googleAuthOptions: {
+      credentials: getGCPCredentials(),
+     }});
     const model = 'projects/972945849581/locations/us-central1/endpoints/9046075786875895808';
 
-    console.log('1');
     const textsi_1 = {
       text: `
         Purpose: To classify users based on their multilabel interests in various IT fields, as identified through the narratives provided by the users. The analysis of the text input will result in an array of relevant interest categories.
@@ -72,7 +87,6 @@ export async function POST(request) {
       },
     });
 
-    console.log('12');
     console.log(message);
     const chat = generativeModel.startChat();
     const result = await chat.sendMessage(message);
