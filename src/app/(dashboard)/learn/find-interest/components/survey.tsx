@@ -102,7 +102,7 @@ export default function Survey() {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://codenav.vercel.app/',
+                'Access-Control-Allow-Origin': '*',
               },
               body: JSON.stringify({ message: data }),
             });

@@ -1,0 +1,39 @@
+[debug] [2024-08-27T14:16:23.306Z] ----------------------------------------------------------------------
+[debug] [2024-08-27T14:16:23.352Z] Command:       /home/nafimulyo/.nvm/versions/node/v20.11.0/bin/node /home/nafimulyo/.nvm/versions/node/v20.11.0/bin/firebase deploy --only functions
+[debug] [2024-08-27T14:16:23.354Z] CLI Version:   13.15.4
+[debug] [2024-08-27T14:16:23.354Z] Platform:      linux
+[debug] [2024-08-27T14:16:23.355Z] Node Version:  v20.11.0
+[debug] [2024-08-27T14:16:23.356Z] Time:          Tue Aug 27 2024 21:16:23 GMT+0700 (Western Indonesia Time)
+[debug] [2024-08-27T14:16:23.358Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-27T14:16:23.668Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-27T14:16:23.669Z] > authorizing via signed-in user (rxnafimulyo@gmail.com)
+[debug] [2024-08-27T14:16:23.670Z] [iam] checking project codenav-5d344 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-08-27T14:16:23.675Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/codenav-5d344:testIamPermissions [none]
+[debug] [2024-08-27T14:16:23.675Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/codenav-5d344:testIamPermissions x-goog-quota-user=projects/codenav-5d344
+[debug] [2024-08-27T14:16:23.676Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codenav-5d344:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-08-27T14:16:24.968Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/codenav-5d344:testIamPermissions 200
+[debug] [2024-08-27T14:16:24.969Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codenav-5d344:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-08-27T14:16:24.970Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/codenav-5d344/serviceAccounts/codenav-5d344@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-08-27T14:16:24.971Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/codenav-5d344/serviceAccounts/codenav-5d344@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-08-27T14:16:26.384Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/codenav-5d344/serviceAccounts/codenav-5d344@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-08-27T14:16:26.385Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/codenav-5d344/serviceAccounts/codenav-5d344@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'codenav-5d344'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-08-27T14:16:26.391Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codenav-5d344 [none]
+[debug] [2024-08-27T14:16:26.815Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codenav-5d344 200
+[debug] [2024-08-27T14:16:26.816Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codenav-5d344 {"projectId":"codenav-5d344","projectNumber":"972945849581","displayName":"codenav","name":"projects/codenav-5d344","resources":{"hostingSite":"codenav-5d344","realtimeDatabaseInstance":"codenav-5d344-default-rtdb"},"state":"ACTIVE","etag":"1_40da52e2-81f6-4c10-b47f-c4884f2edcf7"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-08-27T14:16:26.822Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-08-27T14:16:26.822Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/codenav-5d344
+[debug] [2024-08-27T14:16:26.826Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-08-27T14:16:26.827Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/codenav-5d344
+[debug] [2024-08-27T14:16:26.830Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/cloudbuild.googleapis.com [none]
+[debug] [2024-08-27T14:16:26.831Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/cloudbuild.googleapis.com x-goog-quota-user=projects/codenav-5d344
+[debug] [2024-08-27T14:16:26.834Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/artifactregistry.googleapis.com [none]
+[debug] [2024-08-27T14:16:26.835Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codenav-5d344/services/artifactregistry.googleapis.com x-goog-quota-user=projects/codenav-5d344

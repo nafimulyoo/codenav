@@ -235,6 +235,7 @@ exports.generateLearningRoadmap = onRequest(
     res.json({ roadmap: roadmapData });
   } catch (error) {
     console.error('Error generating content:', error);
+    res.set('Access-Control-Allow-Origin', '*');
     res.status(500).json({ message: 'Failed to generate content', error: error.message });
   }
 });
@@ -316,6 +317,7 @@ exports.generateInterestClassification = onRequest(
     const responseArray = JSON.parse(responseText);
 
     res.json({ result: responseArray });
+    res.set('Access-Control-Allow-Origin', '*');
   } catch (error) {
     console.error('Error generating content:', error);
     res.status(500).json({ message: 'Failed to generate content', error: error.message });
