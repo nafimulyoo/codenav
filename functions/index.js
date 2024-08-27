@@ -8,7 +8,9 @@ const vertexAiClient = new VertexAI({
 });
 
 // Function to generate a learning roadmap
-exports.generateLearningRoadmap = onRequest(async (req, res) => {
+exports.generateLearningRoadmap = onRequest(
+  { cors: true },
+  async (req, res) => {
   try {
     const { message } = req.body;
 
@@ -238,7 +240,9 @@ exports.generateLearningRoadmap = onRequest(async (req, res) => {
 });
 
 // Function to classify interests based on narrative input
-exports.generateInterestClassification = onRequest(async (req, res) => {
+exports.generateInterestClassification = onRequest(
+  { cors: true },
+  async (req, res) => {
   try {
     const { message } = req.body;
 

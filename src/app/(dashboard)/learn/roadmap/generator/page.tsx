@@ -171,6 +171,7 @@ export default function HomePage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://codenav.vercel.app/',
         },
         body: JSON.stringify({ message: goal }),
       });
