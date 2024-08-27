@@ -5,15 +5,31 @@ export async function POST(request) {
   try {
     const { message } = await request.json();
 
-    const vertex_ai = new VertexAI({ project: "972945849581", location: 'us-central1', googleAuthOptions: {
-      credentials: {
-        type: "service_account",
-        project_id: "972945849581",
-        private_key_id: "703e28e0cf8e6631c998b729f63ca547f883653d",
-        client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-        private_key: process.env.GCP_PRIVATE_KEY
-      }
-    }});
+    let vertex_ai;
+
+    if (process.env.GCP_SERVICE_ACCOUNT_EMAIL && process.env.GCP_PRIVATE_KEY && process.env.GCP_PROJECT_ID) {
+      // Production environment - use environment variables for authentication
+      const auth = new GoogleAuth({
+        credentials: {
+          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
+          private_key: process.env.GCP_PRIVATE_KEY.replace(/\\n/g, '\n'),
+        },
+        projectId: process.env.GCP_PROJECT_ID,
+      });
+
+      vertex_ai = new VertexAI({
+        project: process.env.GCP_PROJECT_ID,
+        location: 'us-central1',
+        googleAuth: auth, // Pass the manually created auth instance
+      });
+    } else {
+      // Local development environment - use default authentication (no environment variables)
+      vertex_ai = new VertexAI({
+        project: "972945849581", // Replace with your local project ID if necessary
+        location: 'us-central1',
+      });
+    }
+
     const model = 'projects/972945849581/locations/us-central1/endpoints/7319261989128110080';
     
     const prompt = `You are an AI designed to generate detailed learning roadmaps for various subjects. Your task is to produce a structured JSON output that matches the format of a "Roadmap" object, including both nodes and edges representing the steps in the learning process.
