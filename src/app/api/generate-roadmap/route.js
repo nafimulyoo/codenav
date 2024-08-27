@@ -6,21 +6,16 @@ export async function POST(request) {
   try {
     const { message } = await request.json();
 
-    let vertex_ai;
-
-  
-    const auth = new GoogleAuth({
-      credentials: {
-        client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-        private_key: process.env.GCP_PRIVATE_KEY,
-      },
-      projectId: process.env.GCP_PROJECT_ID,
-    });
-
-    vertex_ai = new VertexAI({
+    let vertex_ai = new VertexAI({
       project: process.env.GCP_PROJECT_ID,
       location: 'us-central1',
-      googleAuth: auth,
+      googleAuthOptions: {
+        credentials: {
+          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
+          private_key: process.env.GCP_PRIVATE_KEY,
+        },
+        scope: 'https://www.googleapis.com/auth/cloud-platform',
+      }
     });
 
     const model = 'projects/972945849581/locations/us-central1/endpoints/7319261989128110080';
