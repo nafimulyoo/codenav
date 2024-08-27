@@ -1,5 +1,6 @@
 import { VertexAI } from '@google-cloud/vertexai';
 import { NextResponse } from 'next/server';
+import { GoogleAuth } from 'google-auth-library';
 
 export async function POST(request) {
   try {
