@@ -13,7 +13,7 @@ export async function POST(request) {
       const auth = new GoogleAuth({
         credentials: {
           client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-          private_key: process.env.GCP_PRIVATE_KEY.replace(/\\n/g, '\n'),
+          private_key: process.env.GCP_PRIVATE_KEY
         },
         projectId: process.env.GCP_PROJECT_ID,
       });
