@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "codenav-5d344"
+  },
+  "targets": {},
+  "etags": {
+    "codenav-5d344": {
+      "extensionInstances": {}
+    }
+  },
+  "dataconnectEmulatorConfig": {}
+}

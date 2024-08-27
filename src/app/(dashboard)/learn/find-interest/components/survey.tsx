@@ -98,7 +98,7 @@ export default function Survey() {
     const getInterestWithAI = async (data: any) => {
         try {
             console.log('sending request..');
-            const response = await fetch('/api/interest-finder', {
+            const response = await fetch('https://generateinterestclassification-jcwlynaixa-uc.a.run.app', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

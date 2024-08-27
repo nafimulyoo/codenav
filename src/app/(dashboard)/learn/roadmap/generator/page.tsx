@@ -167,7 +167,7 @@ export default function HomePage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/generate-roadmap', {
+      const response = await fetch('https://generatelearningroadmap-jcwlynaixa-uc.a.run.app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
