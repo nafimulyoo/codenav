@@ -10,28 +10,22 @@ export async function POST(request) {
 
     let vertex_ai;
 
-    if (process.env.GCP_SERVICE_ACCOUNT_EMAIL && process.env.GCP_PRIVATE_KEY && process.env.GCP_PROJECT_ID) {
+   
       // Production environment - use environment variables for authentication
-      const auth = new GoogleAuth({
-        credentials: {
-          client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-          private_key: process.env.GCP_PRIVATE_KEY,
-        },
-        projectId: process.env.GCP_PROJECT_ID,
-      });
+    const auth = new GoogleAuth({
+      credentials: {
+        client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
+        private_key: process.env.GCP_PRIVATE_KEY,
+      },
+      projectId: process.env.GCP_PROJECT_ID,
+    });
 
-      vertex_ai = new VertexAI({
-        project: process.env.GCP_PROJECT_ID,
-        location: 'us-central1',
-        googleAuth: auth,
-      });
-    } else {
-      // Local development environment - use default authentication (no environment variables)
-      vertex_ai = new VertexAI({
-        project: "972945849581", // Replace with your local project ID if necessary
-        location: 'us-central1',
-      });
-    }
+    vertex_ai = new VertexAI({
+      project: process.env.GCP_PROJECT_ID,
+      location: 'us-central1',
+      googleAuth: auth,
+    });
+  
 
     const model = 'projects/972945849581/locations/us-central1/endpoints/9046075786875895808';
 
