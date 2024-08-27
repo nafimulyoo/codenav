@@ -18,6 +18,8 @@ export async function POST(request) {
         projectId: process.env.GCP_PROJECT_ID,
       });
 
+      console.log("auth", auth)
+
       vertex_ai = new VertexAI({
         project: process.env.GCP_PROJECT_ID,
         location: 'us-central1',
