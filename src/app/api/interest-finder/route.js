@@ -15,7 +15,7 @@ export async function POST(request) {
       const auth = new GoogleAuth({
         credentials: {
           client_email: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
-          private_key: process.env.GCP_PRIVATE_KEY
+          private_key: process.env.GCP_PRIVATE_KEY.replace(/\\n/g, '\n'),
         },
         projectId: process.env.GCP_PROJECT_ID,
       });
@@ -23,7 +23,7 @@ export async function POST(request) {
       vertex_ai = new VertexAI({
         project: process.env.GCP_PROJECT_ID,
         location: 'us-central1',
-        googleAuth: auth, // Pass the manually created auth instance
+        googleAuth: auth,
       });
     } else {
       // Local development environment - use default authentication (no environment variables)
