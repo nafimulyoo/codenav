@@ -12,7 +12,8 @@ export default function Search() {
   return (
     <div className="w-full mx-auto px-4 md:px-6 py-8">
         <div className="flex items-center gap-4">
-        <h2 className="text-2xl font-bold">Search</h2>
+        <h2 className="text-2xl font-bold">Search <span className="text-muted-foreground">(Not Implemented Yet)</span></h2>
+        
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="flex items-center gap-2">
@@ -75,7 +76,7 @@ export default function Search() {
             className="rounded-t-md object-cover w-full h-40 group-hover:opacity-80 transition-opacity"
           />
           <CardContent className="p-4">
-            <h3 className="text-lg font-semibold mb-2">Frontend Developer</h3>
+            <h3 className="text-lg font-semibold mb-2">Frontend Developer - Remote</h3>
             <p className="text-sm text-muted-foreground line-clamp-2">
               Seeking an experienced frontend developer to join our growing team.
             </p>

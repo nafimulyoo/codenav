@@ -110,9 +110,9 @@ export default function Landing() {
               </Link>
               <Link href="/home" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
               <ScrollText className="mb-4 h-8 w-8 text-primary" />
-                <h3 className="text-xl font-semibold">CV Clinic</h3>
+                <h3 className="text-xl font-semibold">CV Helper</h3>
                 <p className="text-muted-foreground">
-                Optimize your resume with our AI-powered CV clinic, providing suggestions and improvements to help you stand out to employers.
+                Optimize your resume with our AI-powered CV Helper, providing suggestions and improvements to help you stand out to employers.
                 </p>
               </Link>
             </div>
@@ -169,7 +169,7 @@ export default function Landing() {
                 </div>
               </div>
               <p className="text-muted-foreground">
-                {"\"I've used several career development tools, but none compare to CodeNav. The AI interview trainer helped me prepare for my recent job change, and the CV clinic provided invaluable feedback on my resume. CodeNav truly sets itself apart with its AI-driven approach.\""}
+                {"\"I've used several career development tools, but none compare to CodeNav. The AI interview trainer helped me prepare for my recent job change, and the CV Helper provided invaluable feedback on my resume. CodeNav truly sets itself apart with its AI-driven approach.\""}
               </p>
             </Card>
             <Card className="p-6 space-y-4">
@@ -287,11 +287,11 @@ export default function Landing() {
                 src="/home/interest-finder.png"
                 width={640}
                 height={360}
-                alt="CV Clinic"
+                alt="CV Helper"
                 className="rounded-lg object-cover"
               />
               <div className="absolute bottom-4 left-4 rounded-lg bg-background/70 px-3 py-1 text-sm text-card-foreground">
-                CV Clinic
+                CV Helper
               </div>
             </div>
           </div>

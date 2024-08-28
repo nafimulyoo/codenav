@@ -45,7 +45,8 @@ export default function Profile() {
 
     return (
       <div className="flex flex-col w-full min-h-screen p-4 md:p-10">
-        <header className="flex items-center justify-between pb-6 ">
+        <h1 className="text-3xl font-bold mt-4">Your Statistics <span className="text-muted-foreground">(Not Implemented Yet)</span></h1>
+        <header className="flex items-center justify-between pb-6 mt-8">
           <div className="flex items-center space-x-4">
             <Avatar>
               <AvatarImage src="/placeholder-user.jpg" />
