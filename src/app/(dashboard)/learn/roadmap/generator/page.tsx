@@ -238,6 +238,7 @@ export default function HomePage() {
             edges={roadmap.edges}
             nodeTypes={{ customNode: CustomNode }}
             fitView
+            nodesDraggable={true}
           >
             <Controls />
             <Background />

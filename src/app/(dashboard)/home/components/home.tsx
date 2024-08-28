@@ -35,11 +35,11 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
             <Card className="flex flex-col md:flex-row">
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/interview-preparation.webp"
                 height={400}
                 width={640}
                 alt="Interview Preparation"
-                className="w-full h-32 md:w-1/3 object-cover"
+                className="w-full h-32 md:w-1/3 object-cover rounded-lg my-auto ml-2"
               />
               <div className="p-4">
                 <h2 className="text-xl font-semibold">Interview Preparation</h2>
@@ -52,11 +52,11 @@ export default function Home() {
             </Card>
             <Card className="flex flex-col md:flex-row">
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/cv-clinic.jpg"
                 height={400}
                 width={640}
                 alt="CV Clinic"
-                className="w-full h-32 md:w-1/3 object-cover"
+                className="w-full h-32 md:w-1/3 object-cover rounded-lg my-auto ml-2"
               />
               <div className="p-4">
                 <h2 className="text-xl font-semibold">CV Clinic</h2>
@@ -77,11 +77,11 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 lg:grid-cols-4">
             <Card>
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/cyber-security-expert.jpg"
                 height={400}
                 width={640}
                 alt="Cyber Security Expert"
-                className="w-full h-32 object-cover"
+                className="w-full h-32 object-cover rounded-lg"
               />
               <div className="p-4">
                 <Avatar>
@@ -98,11 +98,11 @@ export default function Home() {
             </Card>
             <Card>
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/devops-intermediate.jpg"
                 height={400}
                 width={640}
                 alt="DevOps Intermediate"
-                className="w-full h-32 object-cover"
+                className="w-full h-32 object-cover rounded-lg"
               />
               <div className="p-4">
                 <Avatar>
@@ -119,11 +119,11 @@ export default function Home() {
             </Card>
             <Card>
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/ai-and-machine-learning.jpg"
                 height={400}
                 width={640}
-                alt="AI and Machine Learning"
-                className="w-full object-cover"
+                alt="Project Management"
+                className="w-full h-32 object-cover rounded-lg"
               />
               <div className="p-4">
                 <Avatar>
@@ -140,11 +140,11 @@ export default function Home() {
             </Card>
             <Card>
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/project-management.jpg"
                 height={400}
                 width={640}
                 alt="Project Management"
-                className="w-full h-32 object-cover"
+                className="w-full h-32 object-cover rounded-lg"
               />
               <div className="p-4">
                 <Avatar>
@@ -374,11 +374,11 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
             <Card className="flex flex-col md:flex-row">
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/agile-project-management.jpeg"
                 height={400}
                 width={640}
                 alt="Agile Project Management"
-                className="w-full h-32 md:w-1/3 object-cover"
+                className="w-full h-32 md:w-1/3 object-cover rounded-lg"
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold">
@@ -391,11 +391,11 @@ export default function Home() {
             </Card>
             <Card className="flex flex-col md:flex-row">
               <Image
-                src="/placeholder.svg"
+                src="/dashboard/python-fundamentals.webp"
                 height={400}
                 width={640}
                 alt="Python Fundamentals"
-                className="w-full h-32 md:w-1/3 object-cover"
+                className="w-full h-32 md:w-1/3 object-cover rounded-lg"
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold">Python Fundamentals</h3>

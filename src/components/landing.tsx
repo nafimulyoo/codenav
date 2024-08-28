@@ -5,7 +5,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 import { BrainCircuit, Lightbulb, Route, ScrollText, MessageSquareHeart, Headset, Book, WandSparkles, Zap, Users } from "lucide-react"
 import CodeNavIcon from "@/components/code-nav-icon";
@@ -35,7 +35,7 @@ export default function Landing() {
             <div>
                 <p className="max-w-[600px] text-foreground md:text-2xl font-semibold -mt-6">Powered by AI <BrainCircuit className="ml-1 inline-block pb-1 h-12" /> </p>
             </div>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl">
+            <p className="max-w-[600px] text-muted-foreground md:text-lg">
                 CodeNav is a career development app designed to help developers advance their careers through personalized and AI-driven solutions. It streamlines the learning process, enhances skill acquisition, and provides tailored guidance to ensure developers achieve their career goals efficiently and effectively.
             </p>
             <Link
@@ -47,11 +47,11 @@ export default function Landing() {
             </Link>
           </div>
           <Image
-            src="/placeholder.png"
-            width={500}
-            height={400}
+            src="/home/header.jpg"
+            width={640}
+            height={640}
             alt="Hero Image"
-            className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+            className="mx-auto overflow-hidden rounded-xl object-cover aspect-video"
           />
         </div>
       </section>
@@ -206,10 +206,10 @@ export default function Landing() {
           <div className="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl">
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+              onClick={() => handleImageClick("/home/roadmap-generator.png")}
             >
               <Image
-                src="/placeholder.png"
+                src="/home/roadmap-generator.png"
                 width={640}
                 height={360}
                 alt="Learning Roadmap"
@@ -221,10 +221,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+              onClick={() => handleImageClick("/home/interest-finder.png")}
             >
               <Image
-                src="/placeholder.png"
+                src="/home/interest-finder.png"
                 width={640}
                 height={360}
                 alt="Interest Finder"
@@ -236,10 +236,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+              onClick={() => handleImageClick("/home/interest-finder.png")}
             >
               <Image
-                src="/placeholder.png"
+                src="/home/interest-finder.png"
                 width={640}
                 height={360}
                 alt="Interview Trainer"
@@ -251,10 +251,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+              onClick={() => handleImageClick("/home/interest-finder.png")}
             >
               <Image
-                src="/placeholder.png"
+                src="/home/interest-finder.png"
                 width={640}
                 height={360}
                 alt="Learning Courses"
@@ -266,10 +266,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+              onClick={() => handleImageClick("/home/interest-finder.png")}
             >
               <Image
-                src="/placeholder.png"
+                src="/home/interest-finder.png"
                 width={640}
                 height={360}
                 alt="Learning Assistant"
@@ -281,10 +281,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/placeholder.png?height=360&width=640")}
+              onClick={() => handleImageClick("/home/interest-finder.png")}
             >
               <Image
-                src="/placeholder.png"
+                src="/home/interest-finder.png"
                 width={640}
                 height={360}
                 alt="CV Clinic"
@@ -300,8 +300,9 @@ export default function Landing() {
       {isModalOpen && (
         <Dialog open={isModalOpen} onOpenChange={handleModalClose}>
           <DialogContent className="p-0">
+            <DialogTitle></DialogTitle> 
             <Image
-              src="/placeholder.png"
+              src={selectedImage}
               width={800}
               height={600}
               alt="Zoomed Screenshot"
