@@ -1,0 +1,802 @@
+[
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"UX researcher\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"User research methodologies and usability testing\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in user research?\", \"objective\": \"To evaluate the candidate's expertise in research methodologies.\"}, \"3\": {\"question\": \"How do you conduct usability testing?\", \"objective\": \"To assess the candidate's knowledge of testing procedures.\"}, \"4\": {\"question\": \"Can you provide an example of a research project that impacted design decisions?\", \"objective\": \"To gauge the candidate's impact on product design.\"}, \"5\": {\"question\": \"What tools do you use for user research and data analysis?\", \"objective\": \"To understand the candidate's familiarity with research tools.\"}, \"6\": {\"question\": \"How do you communicate your research findings to stakeholders?\", \"objective\": \"To evaluate the candidate's communication skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"network engineer\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Network security and infrastructure management\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in network security?\", \"objective\": \"To evaluate the candidate's expertise in securing networks.\"}, \"3\": {\"question\": \"How do you handle network infrastructure management?\", \"objective\": \"To assess the candidate's experience in managing network systems.\"}, \"4\": {\"question\": \"Can you provide an example of a complex network you designed?\", \"objective\": \"To gauge the candidate's design skills in networking.\"}, \"5\": {\"question\": \"What tools do you use for network monitoring and diagnostics?\", \"objective\": \"To understand the candidate's familiarity with network tools.\"}, \"6\": {\"question\": \"How do you ensure network compliance with security standards?\", \"objective\": \"To evaluate the candidate's knowledge of security protocols.\"}, \"7\": {\"question\": \"Describe a time when you had to troubleshoot a major network issue.\", \"objective\": \"To assess the candidate's problem-solving skills.\"}, \"8\": {\"question\": \"What strategies do you use to prevent network downtime?\", \"objective\": \"To evaluate the candidate's proactive approach to network management.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"content strategist\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Content planning and SEO\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in content strategy?\", \"objective\": \"To evaluate the candidate's understanding of content planning.\"}, \"3\": {\"question\": \"How do you create content that is SEO-friendly?\", \"objective\": \"To assess the candidate's knowledge of SEO principles.\"}, \"4\": {\"question\": \"Can you provide an example of a successful content campaign?\", \"objective\": \"To gauge the candidate's experience in content creation.\"}, \"5\": {\"question\": \"What tools do you use for content analysis and performance tracking?\", \"objective\": \"To understand the candidate's familiarity with content strategy tools.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"product manager\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Product lifecycle management and stakeholder engagement\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in managing product lifecycles?\", \"objective\": \"To evaluate the candidate's expertise in product management.\"}, \"3\": {\"question\": \"How do you prioritize features in a product roadmap?\", \"objective\": \"To assess the candidate's decision-making skills in product planning.\"}, \"4\": {\"question\": \"Can you provide an example of a product launch you managed?\", \"objective\": \"To gauge the candidate's experience in product launch management.\"}, \"5\": {\"question\": \"What tools do you use for managing product development?\", \"objective\": \"To understand the candidate's familiarity with product management tools.\"}, \"6\": {\"question\": \"How do you handle stakeholder engagement throughout the product lifecycle?\", \"objective\": \"To evaluate the candidate's communication and negotiation skills.\"}, \"7\": {\"question\": \"Describe a time when you had to pivot product strategy due to market changes.\", \"objective\": \"To assess the candidate's adaptability to market dynamics.\"}, \"8\": {\"question\": \"What strategies do you use to ensure product-market fit?\", \"objective\": \"To evaluate the candidate's approach to product validation.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"customer support specialist\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Handling customer complaints and inquiries\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"How do you handle a difficult customer?\", \"objective\": \"To evaluate the candidate's problem-solving and communication skills.\"}, \"3\": {\"question\": \"Can you give an example of a time you resolved a customer complaint effectively?\", \"objective\": \"To assess the candidate's experience in customer service.\"}, \"4\": {\"question\": \"What tools do you use to track customer interactions?\", \"objective\": \"To gauge the candidate's familiarity with customer support tools.\"}, \"5\": {\"question\": \"How do you prioritize tasks in a high-pressure environment?\", \"objective\": \"To evaluate the candidate's time management skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"operations manager\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Supply chain management and logistics\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in supply chain management?\", \"objective\": \"To evaluate the candidate's expertise in supply chain operations.\"}, \"3\": {\"question\": \"How do you handle logistics challenges in a global supply chain?\", \"objective\": \"To assess the candidate's problem-solving skills in logistics.\"}, \"4\": {\"question\": \"Can you describe a time you optimized an operational process?\", \"objective\": \"To gauge the candidate's experience in process improvement.\"}, \"5\": {\"question\": \"What tools do you use for managing supply chain data?\", \"objective\": \"To understand the candidate's familiarity with supply chain management tools.\"}, \"6\": {\"question\": \"How do you manage risk in supply chain operations?\", \"objective\": \"To evaluate the candidate's approach to risk management.\"}, \"7\": {\"question\": \"Describe a time you collaborated with other departments to achieve operational goals.\", \"objective\": \"To assess the candidate's teamwork and collaboration skills.\"}, \"8\": {\"question\": \"What strategies do you use to ensure cost efficiency in operations?\", \"objective\": \"To evaluate the candidate's cost management strategies.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"software tester\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Automated testing and quality assurance\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with automated testing?\", \"objective\": \"To evaluate the candidate's knowledge of testing automation.\"}, \"3\": {\"question\": \"Describe a challenging bug you found and how you resolved it.\", \"objective\": \"To gauge the candidate's problem-solving skills in software testing.\"}, \"4\": {\"question\": \"What tools do you use for test management and bug tracking?\", \"objective\": \"To understand the candidate's familiarity with testing tools.\"}, \"5\": {\"question\": \"How do you ensure comprehensive test coverage?\", \"objective\": \"To assess the candidate's approach to test planning.\"}, \"6\": {\"question\": \"How do you handle regression testing in agile development?\", \"objective\": \"To evaluate the candidate's experience with agile testing practices.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"financial analyst\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Financial modeling and investment analysis\", \"question_count\": 9}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with financial modeling?\", \"objective\": \"To evaluate the candidate's proficiency in financial modeling techniques.\"}, \"3\": {\"question\": \"How do you analyze investment opportunities?\", \"objective\": \"To assess the candidate's approach to investment analysis.\"}, \"4\": {\"question\": \"Can you provide an example of a financial analysis project you worked on?\", \"objective\": \"To gauge the candidate's hands-on experience in financial analysis.\"}, \"5\": {\"question\": \"What tools do you use for financial analysis and forecasting?\", \"objective\": \"To understand the candidate's familiarity with financial tools.\"}, \"6\": {\"question\": \"How do you manage risk in investment decisions?\", \"objective\": \"To evaluate the candidate's risk management skills.\"}, \"7\": {\"question\": \"Describe a time when your financial analysis influenced a significant decision.\", \"objective\": \"To assess the candidate's impact on business outcomes.\"}, \"8\": {\"question\": \"How do you stay updated on financial markets and economic trends?\", \"objective\": \"To evaluate the candidate's commitment to continuous learning.\"}, \"9\": {\"question\": \"What metrics do you use to measure financial performance?\", \"objective\": \"To assess the candidate's knowledge of key financial indicators.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"digital marketer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Social media campaigns and PPC advertising\", \"question_count\": 7}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in managing social media campaigns?\", \"objective\": \"To evaluate the candidate's expertise in social media marketing.\"}, \"3\": {\"question\": \"How do you optimize PPC advertising for maximum ROI?\", \"objective\": \"To assess the candidate's knowledge of pay-per-click advertising strategies.\"}, \"4\": {\"question\": \"Can you provide an example of a successful digital marketing campaign you led?\", \"objective\": \"To gauge the candidate's experience in digital marketing.\"}, \"5\": {\"question\": \"What tools do you use for tracking and analyzing marketing performance?\", \"objective\": \"To understand the candidate's familiarity with marketing analytics tools.\"}, \"6\": {\"question\": \"How do you adapt marketing strategies to changing consumer behavior?\", \"objective\": \"To evaluate the candidate's adaptability to market trends.\"}, \"7\": {\"question\": \"Describe a time when you had to manage a marketing crisis.\", \"objective\": \"To assess the candidate's crisis management skills in a marketing context.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"data analyst\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Data visualization and SQL\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with data visualization tools?\", \"objective\": \"To evaluate the candidate's proficiency in data visualization.\"}, \"3\": {\"question\": \"How do you write efficient SQL queries for data analysis?\", \"objective\": \"To assess the candidate's SQL skills.\"}, \"4\": {\"question\": \"Can you provide an example of a data analysis project you completed?\", \"objective\": \"To gauge the candidate's experience in data analysis.\"}, \"5\": {\"question\": \"What tools do you use for data cleaning and preprocessing?\", \"objective\": \"To understand the candidate's familiarity with data preparation tools.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"project manager\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Agile project management and risk assessment\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in managing Agile projects?\", \"objective\": \"To evaluate the candidate's familiarity with Agile methodologies.\"}, \"3\": {\"question\": \"How do you perform risk assessments in project management?\", \"objective\": \"To assess the candidate's approach to risk management.\"}, \"4\": {\"question\": \"Can you describe a challenging project you managed and how you overcame obstacles?\", \"objective\": \"To gauge the candidate's problem-solving skills in project management.\"}, \"5\": {\"question\": \"What tools do you use for project planning and tracking?\", \"objective\": \"To understand the candidate's familiarity with project management tools.\"}, \"6\": {\"question\": \"How do you ensure stakeholder alignment throughout a project?\", \"objective\": \"To evaluate the candidate's communication and stakeholder management skills.\"}, \"7\": {\"question\": \"Describe a time when you had to adjust a project's scope or timeline.\", \"objective\": \"To assess the candidate's adaptability and decision-making skills.\"}, \"8\": {\"question\": \"What strategies do you use to keep a team motivated and productive?\", \"objective\": \"To evaluate the candidate's leadership skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"cloud engineer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"AWS and Azure deployments\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with AWS and Azure?\", \"objective\": \"To evaluate the candidate's expertise in cloud platforms.\"}, \"3\": {\"question\": \"How do you design scalable and secure cloud infrastructure?\", \"objective\": \"To assess the candidate's knowledge of cloud architecture principles.\"}, \"4\": {\"question\": \"Can you provide an example of a cloud deployment you managed?\", \"objective\": \"To gauge the candidate's experience in cloud engineering.\"}, \"5\": {\"question\": \"What tools do you use for monitoring and managing cloud resources?\", \"objective\": \"To understand the candidate's familiarity with cloud management tools.\"}, \"6\": {\"question\": \"How do you handle cloud cost optimization?\", \"objective\": \"To evaluate the candidate's skills in managing cloud expenses.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"content writer\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"SEO and blog writing\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with SEO content writing?\", \"objective\": \"To evaluate the candidate's knowledge of SEO principles.\"}, \"3\": {\"question\": \"Can you provide an example of a blog post you wrote that performed well?\", \"objective\": \"To gauge the candidate's writing skills and impact.\"}, \"4\": {\"question\": \"What tools do you use for content research and planning?\", \"objective\": \"To understand the candidate's familiarity with content creation tools.\"}, \"5\": {\"question\": \"How do you adapt your writing style for different audiences?\", \"objective\": \"To assess the candidate's versatility as a writer.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"product designer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"UI/UX design and prototyping\", \"question_count\": 7}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in UI/UX design?\", \"objective\": \"To evaluate the candidate's proficiency in design principles.\"}, \"3\": {\"question\": \"How do you approach user-centered design?\", \"objective\": \"To assess the candidate's knowledge of user experience design.\"}, \"4\": {\"question\": \"Can you provide an example of a successful product design project?\", \"objective\": \"To gauge the candidate's experience in product design.\"}, \"5\": {\"question\": \"What tools do you use for prototyping and wireframing?\", \"objective\": \"To understand the candidate's familiarity with design tools.\"}, \"6\": {\"question\": \"How do you incorporate user feedback into your designs?\", \"objective\": \"To evaluate the candidate's iterative design process.\"}, \"7\": {\"question\": \"Describe a time when you had to balance user needs with business goals.\", \"objective\": \"To assess the candidate's decision-making skills in design.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"network engineer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Cisco and Juniper certifications\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What is your experience with Cisco and Juniper network equipment?\", \"objective\": \"To evaluate the candidate's hands-on experience with major networking hardware.\"}, \"3\": {\"question\": \"Describe a network you have designed or maintained.\", \"objective\": \"To gauge the candidate's experience in network design and management.\"}, \"4\": {\"question\": \"How do you approach network security management?\", \"objective\": \"To assess the candidate's knowledge of network security practices.\"}, \"5\": {\"question\": \"What tools do you use for network monitoring and troubleshooting?\", \"objective\": \"To understand the candidate's familiarity with network monitoring tools.\"}, \"6\": {\"question\": \"Describe a time when you resolved a major network outage.\", \"objective\": \"To evaluate the candidate's problem-solving skills under pressure.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"product manager\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Agile methodologies and product lifecycle\", \"question_count\": 10}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"How do you manage the product lifecycle from conception to launch?\", \"objective\": \"To evaluate the candidate's experience with end-to-end product management.\"}, \"3\": {\"question\": \"Describe your experience with Agile methodologies.\", \"objective\": \"To assess the candidate's familiarity with Agile frameworks.\"}, \"4\": {\"question\": \"How do you handle conflicting priorities among stakeholders?\", \"objective\": \"To evaluate the candidate's conflict resolution skills.\"}, \"5\": {\"question\": \"Can you provide an example of a successful product launch you led?\", \"objective\": \"To gauge the candidate's leadership and project management skills.\"}, \"6\": {\"question\": \"What metrics do you use to measure product success?\", \"objective\": \"To understand the candidate's approach to performance measurement.\"}, \"7\": {\"question\": \"How do you incorporate customer feedback into product development?\", \"objective\": \"To assess the candidate's ability to balance user needs with business goals.\"}, \"8\": {\"question\": \"Describe a time when a product did not meet its goals. What did you learn?\", \"objective\": \"To evaluate the candidate's adaptability and learning mindset.\"}, \"9\": {\"question\": \"What tools do you use for product roadmapping and backlog management?\", \"objective\": \"To gauge the candidate's familiarity with product management tools.\"}, \"10\": {\"question\": \"How do you stay current with market trends and user needs?\", \"objective\": \"To assess the candidate's commitment to continuous learning and market awareness.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"HR specialist\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Recruitment and onboarding processes\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with recruitment?\", \"objective\": \"To evaluate the candidate's understanding of recruitment processes.\"}, \"3\": {\"question\": \"How do you manage the onboarding process for new hires?\", \"objective\": \"To gauge the candidate's knowledge of effective onboarding practices.\"}, \"4\": {\"question\": \"What tools do you use for tracking applicants and managing hiring workflows?\", \"objective\": \"To understand the candidate's familiarity with HR tools and systems.\"}, \"5\": {\"question\": \"How do you ensure compliance with employment laws during the hiring process?\", \"objective\": \"To assess the candidate's knowledge of employment law and compliance.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"UX researcher\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"User testing and A/B testing\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your approach to user testing.\", \"objective\": \"To understand the candidate's experience with user-centered research methodologies.\"}, \"3\": {\"question\": \"How do you conduct A/B testing to improve user experience?\", \"objective\": \"To evaluate the candidate's knowledge of A/B testing and its application in UX.\"}, \"4\": {\"question\": \"Can you provide an example of a UX research project that influenced a design decision?\", \"objective\": \"To assess the candidate's impact through user research.\"}, \"5\": {\"question\": \"What tools do you use for collecting and analyzing user data?\", \"objective\": \"To gauge the candidate's familiarity with UX research tools.\"}, \"6\": {\"question\": \"How do you ensure unbiased results in user research?\", \"objective\": \"To evaluate the candidate's understanding of research ethics and methodology.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"accountant\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Taxation and financial reporting\", \"question_count\": 7}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What is your experience with financial reporting and compliance?\", \"objective\": \"To evaluate the candidate's expertise in financial reporting standards.\"}, \"3\": {\"question\": \"How do you manage and optimize tax planning for a company?\", \"objective\": \"To assess the candidate's knowledge of tax strategies.\"}, \"4\": {\"question\": \"Describe a time when you identified a significant financial discrepancy. How did you handle it?\", \"objective\": \"To gauge the candidate's analytical and problem-solving skills.\"}, \"5\": {\"question\": \"What software tools do you use for financial analysis and reporting?\", \"objective\": \"To understand the candidate's familiarity with financial tools.\"}, \"6\": {\"question\": \"How do you stay updated on changes in tax laws and regulations?\", \"objective\": \"To assess the candidate's commitment to continuous learning.\"}, \"7\": {\"question\": \"What are the key performance indicators (KPIs) you track in financial management?\", \"objective\": \"To evaluate the candidate's approach to financial performance measurement.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"mechanical engineer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"CAD design and product development\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with CAD software for mechanical design?\", \"objective\": \"To evaluate the candidate's proficiency in CAD tools.\"}, \"3\": {\"question\": \"Describe a product development project you have worked on.\", \"objective\": \"To understand the candidate's hands-on experience in product development.\"}, \"4\": {\"question\": \"How do you ensure quality and safety in mechanical design?\", \"objective\": \"To assess the candidate's knowledge of safety standards and quality control.\"}, \"5\": {\"question\": \"What methods do you use for stress testing and analysis?\", \"objective\": \"To evaluate the candidate's understanding of mechanical analysis.\"}, \"6\": {\"question\": \"How do you handle revisions and iterations in a design project?\", \"objective\": \"To gauge the candidate's adaptability and iterative design skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"legal advisor\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Corporate law and contract negotiation\", \"question_count\": 9}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in corporate law?\", \"objective\": \"To evaluate the candidate's expertise in corporate legal matters.\"}, \"3\": {\"question\": \"Describe a complex contract negotiation you managed.\", \"objective\": \"To assess the candidate's negotiation skills.\"}, \"4\": {\"question\": \"How do you ensure compliance with regulatory standards in corporate transactions?\", \"objective\": \"To evaluate the candidate's knowledge of compliance requirements.\"}, \"5\": {\"question\": \"What strategies do you use for risk management in legal contexts?\", \"objective\": \"To understand the candidate's approach to risk management.\"}, \"6\": {\"question\": \"Can you provide an example of a case where you advised a client on legal strategy?\", \"objective\": \"To gauge the candidate's experience in legal strategy development.\"}, \"7\": {\"question\": \"How do you stay updated on changes in laws and regulations?\", \"objective\": \"To assess the candidate's commitment to continuous learning.\"}, \"8\": {\"question\": \"What tools do you use for legal research and case management?\", \"objective\": \"To understand the candidate's familiarity with legal tools.\"}, \"9\": {\"question\": \"Describe a time when you had to manage a conflict of interest in a case.\", \"objective\": \"To evaluate the candidate's ethical decision-making skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"data scientist\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Machine learning and statistical modeling\", \"question_count\": 10}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with statistical modeling.\", \"objective\": \"To evaluate the candidate's expertise in statistical techniques.\"}, \"3\": {\"question\": \"How do you choose the right machine learning model for a given problem?\", \"objective\": \"To assess the candidate's decision-making skills in model selection.\"}, \"4\": {\"question\": \"Can you explain a complex data analysis project you worked on?\", \"objective\": \"To understand the candidate's analytical thinking.\"}, \"5\": {\"question\": \"What tools and libraries do you prefer for data science tasks?\", \"objective\": \"To gauge the candidate's familiarity with data science tools.\"}, \"6\": {\"question\": \"How do you handle missing or noisy data in your analysis?\", \"objective\": \"To evaluate the candidate's data preprocessing skills.\"}, \"7\": {\"question\": \"Describe a time when your analysis led to a significant business decision.\", \"objective\": \"To assess the candidate's impact on business outcomes.\"}, \"8\": {\"question\": \"What are your strategies for ensuring data privacy and security?\", \"objective\": \"To understand the candidate's approach to data governance.\"}, \"9\": {\"question\": \"How do you stay updated on the latest trends in data science?\", \"objective\": \"To evaluate the candidate's commitment to continuous learning.\"}, \"10\": {\"question\": \"What metrics do you use to evaluate the performance of a machine learning model?\", \"objective\": \"To assess the candidate's knowledge of model evaluation techniques.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"healthcare administrator\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Hospital operations and patient management\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in hospital administration?\", \"objective\": \"To evaluate the candidate's expertise in healthcare management.\"}, \"3\": {\"question\": \"How do you manage patient flow and resource allocation?\", \"objective\": \"To assess the candidate's problem-solving skills in hospital operations.\"}, \"4\": {\"question\": \"Describe a time when you implemented a new process to improve efficiency.\", \"objective\": \"To gauge the candidate's experience in process improvement.\"}, \"5\": {\"question\": \"What tools do you use for managing healthcare operations?\", \"objective\": \"To understand the candidate's familiarity with healthcare management tools.\"}, \"6\": {\"question\": \"How do you ensure compliance with healthcare regulations?\", \"objective\": \"To evaluate the candidate's knowledge of regulatory requirements.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"environmental scientist\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Climate change research and environmental policy\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with climate change research.\", \"objective\": \"To evaluate the candidate's expertise in environmental science.\"}, \"3\": {\"question\": \"How do you develop and implement environmental policies?\", \"objective\": \"To assess the candidate's knowledge of policy development.\"}, \"4\": {\"question\": \"Can you provide an example of a successful environmental project you managed?\", \"objective\": \"To gauge the candidate's project management skills in environmental contexts.\"}, \"5\": {\"question\": \"What tools do you use for environmental data analysis?\", \"objective\": \"To understand the candidate's familiarity with environmental science tools.\"}, \"6\": {\"question\": \"How do you handle conflicting data in climate research?\", \"objective\": \"To assess the candidate's problem-solving skills in research.\"}, \"7\": {\"question\": \"Describe a time when your research influenced policy decisions.\", \"objective\": \"To evaluate the candidate's impact on environmental policy.\"}, \"8\": {\"question\": \"What strategies do you use to communicate complex scientific findings to the public?\", \"objective\": \"To assess the candidate's communication skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"software architect\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Microservices architecture and cloud platforms\", \"question_count\": 9}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with microservices architecture.\", \"objective\": \"To evaluate the candidate's knowledge of modern software architectures.\"}, \"3\": {\"question\": \"How do you design scalable software systems?\", \"objective\": \"To assess the candidate's ability to handle scalability challenges.\"}, \"4\": {\"question\": \"Can you provide an example of a complex software system you architected?\", \"objective\": \"To gauge the candidate's experience in software design.\"}, \"5\": {\"question\": \"What tools and platforms do you prefer for cloud-based software development?\", \"objective\": \"To understand the candidate's familiarity with cloud platforms.\"}, \"6\": {\"question\": \"How do you ensure security and compliance in software architecture?\", \"objective\": \"To evaluate the candidate's knowledge of security best practices.\"}, \"7\": {\"question\": \"Describe a time when you had to refactor an existing system for better performance.\", \"objective\": \"To assess the candidate's problem-solving skills.\"}, \"8\": {\"question\": \"What strategies do you use to manage technical debt in a large-scale project?\", \"objective\": \"To understand the candidate's approach to technical debt management.\"}, \"9\": {\"question\": \"How do you stay current with emerging software architecture trends?\", \"objective\": \"To evaluate the candidate's commitment to continuous learning.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"data engineer\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"ETL processes and data pipelines\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with ETL processes?\", \"objective\": \"To evaluate the candidate's understanding of data extraction, transformation, and loading.\"}, \"3\": {\"question\": \"How do you design and manage data pipelines?\", \"objective\": \"To assess the candidate's knowledge of data engineering practices.\"}, \"4\": {\"question\": \"Can you provide an example of a data pipeline you built?\", \"objective\": \"To gauge the candidate's hands-on experience in data engineering.\"}, \"5\": {\"question\": \"What tools and frameworks do you use for data integration?\", \"objective\": \"To understand the candidate's familiarity with data engineering tools.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"marketing strategist\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Digital marketing and content strategy\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in digital marketing?\", \"objective\": \"To evaluate the candidate's expertise in digital marketing strategies.\"}, \"3\": {\"question\": \"How do you develop a content strategy that aligns with business goals?\", \"objective\": \"To assess the candidate's ability to create effective content strategies.\"}, \"4\": {\"question\": \"Describe a marketing campaign you managed and its outcome.\", \"objective\": \"To gauge the candidate's experience in campaign management.\"}, \"5\": {\"question\": \"What tools do you use for tracking and analyzing marketing performance?\", \"objective\": \"To understand the candidate's familiarity with marketing analytics tools.\"}, \"6\": {\"question\": \"How do you adapt marketing strategies to changing consumer behavior?\", \"objective\": \"To evaluate the candidate's adaptability to market trends.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"cybersecurity analyst\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Threat detection and incident response\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with threat detection?\", \"objective\": \"To evaluate the candidate's expertise in identifying cyber threats.\"}, \"3\": {\"question\": \"How do you respond to a security incident?\", \"objective\": \"To assess the candidate's incident response skills.\"}, \"4\": {\"question\": \"Can you describe a major cybersecurity threat you handled?\", \"objective\": \"To gauge the candidate's hands-on experience in cybersecurity.\"}, \"5\": {\"question\": \"What tools do you use for monitoring and analyzing network security?\", \"objective\": \"To understand the candidate's familiarity with cybersecurity tools.\"}, \"6\": {\"question\": \"How do you stay updated on the latest cybersecurity threats and trends?\", \"objective\": \"To evaluate the candidate's commitment to continuous learning.\"}, \"7\": {\"question\": \"What strategies do you use to prevent data breaches?\", \"objective\": \"To assess the candidate's proactive approach to security.\"}, \"8\": {\"question\": \"Describe a time when you collaborated with other teams to resolve a security issue.\", \"objective\": \"To gauge the candidate's teamwork and communication skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"data engineer\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Big data tools and ETL processes\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with big data tools like Hadoop or Spark.\", \"objective\": \"To evaluate the candidate's technical expertise in big data technologies.\"}, \"3\": {\"question\": \"How do you design and implement ETL processes?\", \"objective\": \"To assess the candidate's knowledge of ETL process design and data integration.\"}, \"4\": {\"question\": \"What challenges have you faced when working with large datasets?\", \"objective\": \"To understand the candidate's problem-solving skills with big data.\"}, \"5\": {\"question\": \"How do you ensure data quality and consistency?\", \"objective\": \"To evaluate the candidate's approach to maintaining data integrity.\"}, \"6\": {\"question\": \"Can you explain a data pipeline project you've managed?\", \"objective\": \"To gauge the candidate's experience in managing data pipelines.\"}, \"7\": {\"question\": \"How do you optimize data storage for performance and cost?\", \"objective\": \"To understand the candidate's ability to balance performance with cost-efficiency.\"}, \"8\": {\"question\": \"What strategies do you use for data security in large-scale data environments?\", \"objective\": \"To assess the candidate's knowledge of data security best practices.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"digital marketer\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Social media campaigns and analytics\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with social media campaigns?\", \"objective\": \"To evaluate the candidate's familiarity with social media marketing.\"}, \"3\": {\"question\": \"How do you use analytics to measure campaign performance?\", \"objective\": \"To assess the candidate's data-driven approach to digital marketing.\"}, \"4\": {\"question\": \"Can you provide an example of a successful campaign you managed?\", \"objective\": \"To understand the candidate's practical experience in campaign management.\"}, \"5\": {\"question\": \"What tools do you use for digital marketing analytics?\", \"objective\": \"To gauge the candidate's knowledge of marketing analytics tools.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"mobile app developer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"iOS and Android development\", \"question_count\": 7}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have in developing mobile applications for iOS and Android?\", \"objective\": \"To evaluate the candidate's expertise in mobile development for multiple platforms.\"}, \"3\": {\"question\": \"How do you handle cross-platform compatibility issues?\", \"objective\": \"To assess the candidate's problem-solving skills in dealing with platform-specific challenges.\"}, \"4\": {\"question\": \"Can you describe a mobile app you developed from scratch?\", \"objective\": \"To understand the candidate's end-to-end development experience.\"}, \"5\": {\"question\": \"What are your preferred tools and frameworks for mobile development?\", \"objective\": \"To gauge the candidate's familiarity with the current tools and frameworks.\"}, \"6\": {\"question\": \"How do you ensure the security of mobile applications?\", \"objective\": \"To evaluate the candidate's understanding of mobile app security practices.\"}, \"7\": {\"question\": \"What strategies do you use for optimizing app performance?\", \"objective\": \"To understand the candidate's approach to performance optimization in mobile apps.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"IT support specialist\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Help desk and troubleshooting experience\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have working on a help desk?\", \"objective\": \"To evaluate the candidate's practical experience in providing IT support.\"}, \"3\": {\"question\": \"How do you prioritize and manage multiple support requests?\", \"objective\": \"To assess the candidate's time management and multitasking skills.\"}, \"4\": {\"question\": \"Describe a complex technical issue you resolved recently.\", \"objective\": \"To gauge the candidate's problem-solving and troubleshooting abilities.\"}, \"5\": {\"question\": \"What tools or software do you use for IT support?\", \"objective\": \"To understand the candidate's familiarity with IT support tools and technologies.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"business analyst\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Stakeholder management and data analysis\", \"question_count\": 10}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with stakeholder management.\", \"objective\": \"To evaluate the candidate's experience in managing stakeholder expectations and relationships.\"}, \"3\": {\"question\": \"What tools do you use for data analysis and visualization?\", \"objective\": \"To assess the candidate's proficiency with data analysis tools.\"}, \"4\": {\"question\": \"How do you approach gathering and documenting business requirements?\", \"objective\": \"To understand the candidate's methodology in requirements gathering.\"}, \"5\": {\"question\": \"Can you provide an example of a project where your analysis led to significant business improvements?\", \"objective\": \"To gauge the candidate's impact through data-driven decision-making.\"}, \"6\": {\"question\": \"What strategies do you use to communicate complex data insights to non-technical stakeholders?\", \"objective\": \"To assess the candidate's communication skills with diverse audiences.\"}, \"7\": {\"question\": \"How do you handle conflicting stakeholder requirements?\", \"objective\": \"To evaluate the candidate's conflict resolution skills.\"}, \"8\": {\"question\": \"What are the key performance indicators (KPIs) you typically track in a project?\", \"objective\": \"To understand the candidate's approach to measuring project success.\"}, \"9\": {\"question\": \"Describe a time you had to pivot your analysis due to unexpected data findings.\", \"objective\": \"To assess the candidate's adaptability and analytical thinking.\"}, \"10\": {\"question\": \"How do you ensure data quality and accuracy in your reports?\", \"objective\": \"To evaluate the candidate's approach to data integrity.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"machine learning engineer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Experience with reinforcement learning\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Can you explain your experience with reinforcement learning?\", \"objective\": \"To evaluate the candidate's understanding and practical experience with reinforcement learning techniques.\"}, \"3\": {\"question\": \"Describe a project where you implemented a reinforcement learning algorithm.\", \"objective\": \"To gauge the candidate's hands-on experience in deploying reinforcement learning.\"}, \"4\": {\"question\": \"What are the main challenges in training reinforcement learning models?\", \"objective\": \"To assess the candidate's awareness of challenges in this field.\"}, \"5\": {\"question\": \"How do you ensure that a machine learning model generalizes well to new data?\", \"objective\": \"To understand the candidate's knowledge of model validation and generalization.\"}, \"6\": {\"question\": \"What tools and libraries do you prefer for machine learning development?\", \"objective\": \"To gauge the candidate's familiarity with ML tools and libraries.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"content writer\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"SEO and keyword research\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with SEO content writing?\", \"objective\": \"To evaluate the candidate's understanding of SEO principles in content writing.\"}, \"3\": {\"question\": \"How do you perform keyword research for a new topic?\", \"objective\": \"To assess the candidate's approach to keyword research.\"}, \"4\": {\"question\": \"Can you provide examples of your previous writing work?\", \"objective\": \"To gauge the candidate's writing skills and style.\"}, \"5\": {\"question\": \"What tools do you use to optimize content for search engines?\", \"objective\": \"To understand the candidate's familiarity with SEO tools.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"technical writer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"API documentation and developer guides\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with API documentation?\", \"objective\": \"To evaluate the candidate's expertise in documenting technical content.\"}, \"3\": {\"question\": \"How do you ensure that developer guides are clear and easy to understand?\", \"objective\": \"To gauge the candidate's ability to simplify complex information.\"}, \"4\": {\"question\": \"Can you provide an example of a complex document you created?\", \"objective\": \"To assess the candidate's writing style and clarity.\"}, \"5\": {\"question\": \"What tools do you use for technical writing and documentation?\", \"objective\": \"To understand the candidate's familiarity with technical writing tools.\"}, \"6\": {\"question\": \"How do you handle feedback from developers and other stakeholders?\", \"objective\": \"To evaluate the candidate's ability to manage feedback and revisions.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"sales manager\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"B2B sales strategies\", \"question_count\": 9}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What experience do you have with B2B sales?\", \"objective\": \"To evaluate the candidate's understanding of B2B sales dynamics.\"}, \"3\": {\"question\": \"How do you develop and execute a sales strategy?\", \"objective\": \"To assess the candidate's strategic thinking in sales.\"}, \"4\": {\"question\": \"Can you describe a time when you successfully closed a difficult deal?\", \"objective\": \"To understand the candidate's negotiation skills.\"}, \"5\": {\"question\": \"What metrics do you use to measure sales performance?\", \"objective\": \"To evaluate the candidate's approach to performance measurement.\"}, \"6\": {\"question\": \"How do you build and maintain relationships with key clients?\", \"objective\": \"To assess the candidate's relationship-building skills.\"}, \"7\": {\"question\": \"What tools do you use for managing your sales pipeline?\", \"objective\": \"To understand the candidate's familiarity with sales tools.\"}, \"8\": {\"question\": \"Describe a time you had to adapt your sales strategy to changing market conditions.\", \"objective\": \"To evaluate the candidate's adaptability.\"}, \"9\": {\"question\": \"How do you motivate your sales team to achieve their targets?\", \"objective\": \"To gauge the candidate's leadership and motivational skills.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"AI researcher\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Computer vision and deep learning\", \"question_count\": 10}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with computer vision projects.\", \"objective\": \"To evaluate the candidate's technical expertise in computer vision.\"}, \"3\": {\"question\": \"How have you applied deep learning techniques in your research?\", \"objective\": \"To assess the candidate's experience with deep learning models.\"}, \"4\": {\"question\": \"Can you explain a challenging research problem you worked on and how you solved it?\", \"objective\": \"To gauge the candidate's problem-solving skills.\"}, \"5\": {\"question\": \"What are your thoughts on the current trends in AI research?\", \"objective\": \"To understand the candidate's knowledge of AI research trends.\"}, \"6\": {\"question\": \"How do you stay updated with the latest advancements in AI?\", \"objective\": \"To assess the candidate's commitment to continuous learning.\"}, \"7\": {\"question\": \"What tools and libraries do you use for developing AI models?\", \"objective\": \"To understand the candidate's familiarity with AI tools.\"}, \"8\": {\"question\": \"How do you validate and test AI models?\", \"objective\": \"To evaluate the candidate's approach to model validation.\"}, \"9\": {\"question\": \"Describe a time when your research led to a significant breakthrough.\", \"objective\": \"To assess the candidate's impact on the field of AI.\"}, \"10\": {\"question\": \"What ethical considerations do you take into account in your AI research?\", \"objective\": \"To understand the candidate's awareness of ethical issues in AI.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"QA tester\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Automation testing using Selenium\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What is your experience with automation testing using Selenium?\", \"objective\": \"To understand the candidate's familiarity with automation testing tools and methodologies.\"}, \"3\": {\"question\": \"How do you determine the best test cases to automate?\", \"objective\": \"To evaluate the candidate's critical thinking and prioritization skills.\"}, \"4\": {\"question\": \"Describe a scenario where you found a critical bug. How did you handle it?\", \"objective\": \"To assess the candidate's problem-solving skills in identifying and resolving defects.\"}, \"5\": {\"question\": \"What tools or strategies do you use for performance testing?\", \"objective\": \"To understand the candidate's approach to performance and load testing.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"cloud engineer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"AWS and Azure experience\", \"question_count\": 7}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with AWS and Azure services.\", \"objective\": \"To gauge the candidate's hands-on experience with major cloud platforms.\"}, \"3\": {\"question\": \"How would you approach a multi-cloud deployment strategy?\", \"objective\": \"To evaluate the candidate's strategic thinking in leveraging multiple cloud services.\"}, \"4\": {\"question\": \"What are the key security considerations in cloud computing?\", \"objective\": \"To assess the candidate's understanding of cloud security principles.\"}, \"5\": {\"question\": \"How do you optimize cloud resource usage for cost efficiency?\", \"objective\": \"To evaluate the candidate's ability to manage cloud resources effectively.\"}, \"6\": {\"question\": \"What tools do you use for monitoring and managing cloud infrastructure?\", \"objective\": \"To understand the candidate's familiarity with cloud management tools.\"}, \"7\": {\"question\": \"Describe a challenging cloud migration project you were involved in. What were the key challenges and how did you address them?\", \"objective\": \"To assess the candidate's experience in complex cloud migration scenarios.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"project manager\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Managing cross-functional teams\", \"question_count\": 9}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"How do you handle conflicts within a cross-functional team?\", \"objective\": \"To evaluate the candidate's conflict resolution and leadership skills.\"}, \"3\": {\"question\": \"Can you describe a project where you successfully managed a diverse team?\", \"objective\": \"To understand the candidate's experience in managing multi-disciplinary teams.\"}, \"4\": {\"question\": \"What methodologies do you use to ensure effective communication across teams?\", \"objective\": \"To assess the candidate's communication strategies and their effectiveness.\"}, \"5\": {\"question\": \"How do you measure project success beyond just meeting deadlines?\", \"objective\": \"To evaluate the candidate's understanding of broader success metrics.\"}, \"6\": {\"question\": \"What steps do you take to mitigate project risks?\", \"objective\": \"To understand the candidate's approach to risk management.\"}, \"7\": {\"question\": \"How do you manage changes in project scope?\", \"objective\": \"To assess the candidate's adaptability and flexibility in project management.\"}, \"8\": {\"question\": \"Describe a situation where a project did not go as planned. How did you handle it?\", \"objective\": \"To evaluate the candidate's problem-solving skills and resilience.\"}, \"9\": {\"question\": \"What tools do you use for project management, and why?\", \"objective\": \"To gauge the candidate's familiarity with project management tools.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"software engineer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Proficiency in Python and Java\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Explain your experience with Python and Java programming languages.\", \"objective\": \"To evaluate the candidate's technical expertise in Python and Java.\"}, \"3\": {\"question\": \"How do you ensure code quality and maintainability?\", \"objective\": \"To assess the candidate's understanding of coding standards and best practices.\"}, \"4\": {\"question\": \"Describe a complex software problem you solved and the approach you took.\", \"objective\": \"To evaluate the candidate's problem-solving abilities and critical thinking.\"}, \"5\": {\"question\": \"What software development methodologies are you most familiar with?\", \"objective\": \"To understand the candidate's knowledge of various software development methodologies.\"}, \"6\": {\"question\": \"How do you manage version control in your projects?\", \"objective\": \"To gauge the candidate's familiarity with version control systems like Git.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"UI/UX designer\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Expertise in user research and prototyping\", \"question_count\": 10}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your process for conducting user research.\", \"objective\": \"To understand the candidate's experience in gathering and analyzing user needs.\"}, \"3\": {\"question\": \"How do you use prototyping tools to communicate design concepts?\", \"objective\": \"To evaluate the candidate's proficiency in using prototyping tools.\"}, \"4\": {\"question\": \"Can you provide an example of a project where your design significantly improved user engagement?\", \"objective\": \"To assess the candidate's impact on user engagement through design.\"}, \"5\": {\"question\": \"What methods do you use to validate your design decisions?\", \"objective\": \"To understand the candidate's approach to design validation and testing.\"}, \"6\": {\"question\": \"How do you handle feedback from multiple stakeholders?\", \"objective\": \"To evaluate the candidate's ability to incorporate and balance diverse feedback.\"}, \"7\": {\"question\": \"What are the most important aspects of a user-centered design?\", \"objective\": \"To assess the candidate's knowledge of user-centered design principles.\"}, \"8\": {\"question\": \"Describe a challenging design problem you faced and how you solved it.\", \"objective\": \"To evaluate the candidate's problem-solving skills in design.\"}, \"9\": {\"question\": \"How do you stay updated on current design trends and best practices?\", \"objective\": \"To understand the candidate's commitment to continuous learning and improvement.\"}, \"10\": {\"question\": \"What tools and techniques do you use to ensure accessibility in your designs?\", \"objective\": \"To gauge the candidate's understanding and implementation of accessible design practices.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"robotics engineer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Robotics control systems and sensor integration\", \"question_count\": 7}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Describe your experience with robotics control systems.\", \"objective\": \"To understand the candidate's practical knowledge in designing and managing control systems.\"}, \"3\": {\"question\": \"How do you integrate sensors into a robotics platform?\", \"objective\": \"To evaluate the candidate's expertise in sensor integration and data acquisition.\"}, \"4\": {\"question\": \"What challenges have you faced in real-time control of robots?\", \"objective\": \"To assess the candidate's experience with real-time robotics challenges.\"}, \"5\": {\"question\": \"Can you describe a project where you improved a robot's accuracy and precision?\", \"objective\": \"To understand the candidate's problem-solving skills in robotics optimization.\"}, \"6\": {\"question\": \"How do you ensure safety and reliability in your robotic designs?\", \"objective\": \"To evaluate the candidate's knowledge of safety standards in robotics.\"}, \"7\": {\"question\": \"What are your thoughts on the future of robotics and AI?\", \"objective\": \"To gauge the candidate's perspective on industry trends and future developments.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"designer\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"User-centered design principles\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What do you understand by user-centered design principles?\", \"objective\": \"To evaluate the candidate's foundational knowledge in design principles and their approach to design thinking.\"}, \"3\": {\"question\": \"How do you gather user requirements for a design project?\", \"objective\": \"To understand the candidate's methods for gathering and incorporating user needs into their designs.\"}, \"4\": {\"question\": \"Can you describe a design project you have worked on that successfully met user needs?\", \"objective\": \"To assess the candidate's practical experience and success in applying user-centered design.\"}, \"5\": {\"question\": \"How do you handle feedback from stakeholders during the design process?\", \"objective\": \"To evaluate the candidate's ability to manage feedback and adapt designs accordingly.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"developer\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Experience with React and Node.js\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"Can you describe your experience with React?\", \"objective\": \"To gauge the candidate's familiarity and hands-on experience with React.\"}, \"3\": {\"question\": \"How have you used Node.js in past projects?\", \"objective\": \"To understand the candidate's experience with backend development using Node.js.\"}, \"4\": {\"question\": \"What challenges have you faced while developing with these technologies, and how did you overcome them?\", \"objective\": \"To assess problem-solving skills and adaptability to technological challenges.\"}, \"5\": {\"question\": \"Describe a project where you optimized the performance of a web application.\", \"objective\": \"To evaluate the candidate's ability to optimize and improve software performance.\"}, \"6\": {\"question\": \"How do you ensure security best practices while developing a web application?\", \"objective\": \"To understand the candidate's knowledge and application of security principles.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"data scientist\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Deep learning and NLP expertise\", \"question_count\": 7}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What is your experience with deep learning frameworks like TensorFlow or PyTorch?\", \"objective\": \"To evaluate the candidate's technical expertise in deep learning frameworks.\"}, \"3\": {\"question\": \"Can you explain a natural language processing project you have worked on?\", \"objective\": \"To understand the candidate's experience in NLP and their ability to convey complex information.\"}, \"4\": {\"question\": \"How do you stay current with advancements in data science and AI?\", \"objective\": \"To assess the candidate's commitment to continuous learning and staying updated in their field.\"}, \"5\": {\"question\": \"Describe a time when your analysis provided critical insights that impacted business decisions.\", \"objective\": \"To evaluate the candidate's ability to apply data science in real-world scenarios.\"}, \"6\": {\"question\": \"How do you handle missing data in a dataset?\", \"objective\": \"To assess the candidate's problem-solving skills in data preprocessing.\"}, \"7\": {\"question\": \"What is your approach to evaluating the performance of a machine learning model?\", \"objective\": \"To understand the candidate's knowledge of model evaluation techniques.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"network engineer\", \"difficulty\": \"junior\", \"language\": \"en\", \"additionalInfo\": \"Familiar with Cisco and Juniper equipment\", \"question_count\": 5}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What is your experience with Cisco and Juniper network equipment?\", \"objective\": \"To evaluate the candidate's practical experience with industry-standard network equipment.\"}, \"3\": {\"question\": \"How would you handle network outages or downtimes?\", \"objective\": \"To understand the candidate's problem-solving skills and response to critical situations.\"}, \"4\": {\"question\": \"What tools do you use for network monitoring and troubleshooting?\", \"objective\": \"To gauge the candidate's familiarity with network management tools.\"}, \"5\": {\"question\": \"Can you describe a network project you worked on and your role in it?\", \"objective\": \"To assess the candidate's experience in network engineering projects.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"product manager\", \"difficulty\": \"mid-level\", \"language\": \"en\", \"additionalInfo\": \"Experience in agile methodologies and user research\", \"question_count\": 6}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"How do you prioritize product features in an agile environment?\", \"objective\": \"To evaluate the candidate's understanding of agile practices and prioritization techniques.\"}, \"3\": {\"question\": \"Can you provide an example of a user research study you conducted?\", \"objective\": \"To understand the candidate's experience with user research and data-driven decision-making.\"}, \"4\": {\"question\": \"How do you manage stakeholder expectations during product development?\", \"objective\": \"To assess the candidate's communication and negotiation skills.\"}, \"5\": {\"question\": \"What methods do you use to track the success of a product post-launch?\", \"objective\": \"To evaluate the candidate's ability to measure product success and iterate.\"}, \"6\": {\"question\": \"Describe a time you had to pivot from an initial product strategy. What was the outcome?\", \"objective\": \"To understand the candidate's adaptability and decision-making process.\"}}"
+        }
+    ]
+},
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "PLACEHOLDER"
+        },
+        {
+            "role": "user",
+            "content": "{\"jobType\": \"cybersecurity analyst\", \"difficulty\": \"senior\", \"language\": \"en\", \"additionalInfo\": \"Focus on penetration testing and threat analysis\", \"question_count\": 8}"
+        },
+        {
+            "role": "model",
+            "content": "{\"1\": {\"question\": \"Introduce yourself\", \"objective\": \"To assess the candidate's ability to present themselves clearly and confidently.\"}, \"2\": {\"question\": \"What methodologies do you use for penetration testing?\", \"objective\": \"To evaluate the candidate's knowledge and application of penetration testing techniques.\"}, \"3\": {\"question\": \"How do you approach threat analysis in an organization?\", \"objective\": \"To assess the candidate's understanding and execution of threat analysis processes.\"}, \"4\": {\"question\": \"Describe a security incident you handled and how you resolved it.\", \"objective\": \"To understand the candidate's hands-on experience in managing security incidents.\"}, \"5\": {\"question\": \"How do you ensure compliance with security standards and regulations?\", \"objective\": \"To evaluate the candidate's knowledge of security compliance and regulatory requirements.\"}, \"6\": {\"question\": \"What are the key factors to consider in a cybersecurity risk assessment?\", \"objective\": \"To assess the candidate's understanding of risk assessment in cybersecurity.\"}, \"7\": {\"question\": \"How do you stay updated on the latest cybersecurity threats?\", \"objective\": \"To evaluate the candidate's commitment to staying informed about current threats.\"}, \"8\": {\"question\": \"What tools do you use for monitoring network traffic and identifying potential threats?\", \"objective\": \"To assess the candidate's proficiency with cybersecurity monitoring tools.\"}}"
+        }
+    ]
+}
+]

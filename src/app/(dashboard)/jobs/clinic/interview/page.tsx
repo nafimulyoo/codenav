@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Landing from "@/app/(dashboard)/jobs/clinic/interview/components/landing"
 import PlaceholderContent from "@/components/demo/placeholder-content";
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
 import {
@@ -12,6 +13,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export default function InterviewPreparationPage() {
+
   return (
     <ContentLayout title="Interview Preparation">
       <Breadcrumb>
@@ -30,7 +32,7 @@ export default function InterviewPreparationPage() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/clinic">Clinic</Link>
+              <Link href="/jobs/clinic">Clinic</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
@@ -41,7 +43,7 @@ export default function InterviewPreparationPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <PlaceholderContent />
+      <Landing />
     </ContentLayout>
   );
 }
