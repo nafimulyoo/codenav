@@ -7,14 +7,22 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { BrainCircuit } from "lucide-react";
+import { Icons } from "@/components/icons"; 
 
 export default function Landing() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [jobType, setJobType] = useState('');
+  const [customJobType, setCustomJobType] = useState('');
   const [difficulty, setDifficulty] = useState('');
   const [language, setLanguage] = useState('');
   const [additionalInfo, setAdditionalInfo] = useState('');
+  const [questionCount, setQuestionCount] = useState(5);
+  const [interviewQuestion, setInterviewQuestion] = useState('');
+  const [formError, setFormError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [debounceTimeout, setDebounceTimeout] = useState<any>(null); // For debouncing input
 
   const handleStartInterview = () => {
     setIsModalOpen(true);
@@ -22,14 +30,65 @@ export default function Landing() {
 
   const handleModalClose = () => {
     setIsModalOpen(false);
+    setFormError('');
   };
 
-  const handleFormSubmit = () => {
-    const settingsData = { jobType, difficulty, language, additionalInfo };
+  const handleFormSubmit = async () => {
+    if (!jobType || (jobType === 'other' && !customJobType) || !difficulty || !language || questionCount < 5 || questionCount > 15) {
+      setFormError('Please fill in all required fields and ensure the number of questions is between 5 and 15.');
+      return;
+    }
+
+    setIsLoading(true);
+    const jobTypeToSend = jobType === 'other' ? customJobType : jobType;
+    const settingsData = { "jobType": jobTypeToSend, "difficulty": difficulty, "language" : language, "additionalInfo": additionalInfo, "question_count": questionCount };
     console.log("Settings Submitted: ", settingsData);
-    // Send settingsData to AI or other services here
+    const interviewQuestionFromAI: any = await getInterviewQuestion(settingsData);
+
+    setInterviewQuestion(interviewQuestionFromAI);
+    console.log("SET")
+    console.log(interviewQuestionFromAI);
     setIsModalOpen(false);
+    setIsLoading(false);
   };
+
+  const getInterviewQuestion = async (data: any) => {
+    try {
+      console.log("SENT THIS DATA:");
+      console.log(JSON.stringify({ data }));
+      const response = await fetch('https://generateinterviewquestion-jcwlynaixa-uc.a.run.app', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify({ message : JSON.stringify({data}) }),
+      });
+
+      console.log("RAW RESULT")
+      const questionsObject = (await response.json()).result;
+      const questionsArray = Object.keys(questionsObject).map(key => ({
+        question: questionsObject[key].question,
+        objective: questionsObject[key].objective,
+      }));
+      console.log("RESULT")
+      console.log(questionsArray);
+      return questionsArray;
+    } catch (error) {
+      console.error('Error submitting survey:', error);
+      setIsLoading(false);
+    }
+  };
+
+  const handleQuestionCountChange = (value: number) => {
+    if (value < 5) {
+      setQuestionCount(5);
+    } else if (value > 15) {
+      setQuestionCount(15);
+    } else {
+      setQuestionCount(value);
+  }
+};
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -91,7 +150,6 @@ export default function Landing() {
         </div>
       </section>
 
-
       {/* Settings Modal */}
       {isModalOpen && (
         <Dialog open={isModalOpen} onOpenChange={handleModalClose}>
@@ -101,18 +159,31 @@ export default function Landing() {
               {/* Job Type Selection */}
               <div>
                 <label className="block text-sm font-medium">Job Type</label>
-                <Select onValueChange={setJobType} value={jobType} defaultValue="">
+                <Select onValueChange={(value) => { setJobType(value); if (value !== 'other') setCustomJobType(''); }} value={jobType} defaultValue="">
                   <SelectTrigger>
                     <SelectValue placeholder="Select a job type or industry" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="developer">Software Developer</SelectItem>
-                    <SelectItem value="designer">UI/UX Designer</SelectItem>
-                    <SelectItem value="manager">IT Manager</SelectItem>
-                    <SelectItem value="analyst">Data Analyst</SelectItem>
-                    {/* Add more options as needed */}
+                    <SelectItem value="Software Developer">Software Developer</SelectItem>
+                    <SelectItem value="UI/UX Designer">UI/UX Designer</SelectItem>
+                    <SelectItem value="IT Manager">IT Manager</SelectItem>
+                    <SelectItem value="Data Analyst">Data Analyst</SelectItem>
+                    <SelectItem value="Network Engineer">Network Engineer</SelectItem>
+                    <SelectItem value="Consultant">Consultant</SelectItem>
+                    <SelectItem value="Solution Architect">Solution Architect</SelectItem>
+                    <SelectItem value="Product Manager">Product Manager</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
+                {jobType === 'other' && (
+                  <div className="mt-2">
+                    <Input 
+                      placeholder="Please specify your job type" 
+                      value={customJobType} 
+                      onChange={(e) => setCustomJobType(e.target.value)} 
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Difficulty Level Selection */}
@@ -140,9 +211,21 @@ export default function Landing() {
                   <SelectContent>
                     <SelectItem value="en">English</SelectItem>
                     <SelectItem value="id">Bahasa Indonesia</SelectItem>
-                    {/* Add more languages as needed */}
                   </SelectContent>
                 </Select>
+              </div>
+
+              {/* Question Count Input */}
+              <div>
+                <label className="block text-sm font-medium">Number of Questions (5-15)</label>
+                <Input
+                  type="number"
+                  className="pr-4"
+                  value={questionCount}
+                  min={5}
+                  max={15}
+                  onChange={(e) => handleQuestionCountChange(Number(e.target.value))}
+                />
               </div>
 
               {/* Additional Information */}
@@ -154,12 +237,22 @@ export default function Landing() {
                   placeholder="Any specific areas you'd like to focus on during the interview?"
                 />
               </div>
+
+              {/* Error Message */}
+              {formError && (
+                <p className="text-red-500 text-sm">{formError}</p>
+              )}
             </div>
             <div className="flex justify-end mt-6">
               <Button className="mr-2" onClick={handleModalClose}>
                 Cancel
               </Button>
-              <Button onClick={handleFormSubmit}>Submit</Button>
+              <Button onClick={handleFormSubmit} disabled={isLoading}>
+                {isLoading && (
+                  <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                )}
+                Submit
+              </Button>
             </div>
           </DialogContent>
         </Dialog>
