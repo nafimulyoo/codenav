@@ -34,7 +34,6 @@ const useSpeechRecognition = () => {
         recognizer.onresult = (event: any) => {
           const userTranscript = event.results[0][0].transcript;
           setTranscript(userTranscript);
-          console.log("User speech done:", userTranscript);
           setIsListening(false);
         };
 
@@ -86,7 +85,6 @@ export default function InterviewPage() {
       answer: transcript,
     });
 
-    console.log("AI Feedback:", feedbackText);
     updateChatHistory(feedbackText);
     saveResult(currentQuestion.question, currentQuestion.objective, transcript, feedbackText);
     await textToSpeech(feedbackText);
@@ -113,8 +111,6 @@ export default function InterviewPage() {
 
   const getReview = async (data: any) => {
     try {
-      console.log("THIS")
-      console.log(JSON.stringify({ message: JSON.stringify(data) }))
       const response = await fetch('https://generateinterviewreview-jcwlynaixa-uc.a.run.app', {
         method: 'POST',
         headers: {
@@ -176,13 +172,11 @@ export default function InterviewPage() {
         searchParams.get("questions") as string
       );
       setQuestions(parsedQuestions);
-      console.log("List of Questions:", parsedQuestions);
     }
 
     const handleSpacebar = (e: KeyboardEvent) => {
       if (e.code === "Space" && !isAITalking && isInterviewStarted) {
         e.preventDefault();
-        console.log("User speech started...");
         startListening();
       }
     };
@@ -212,7 +206,6 @@ export default function InterviewPage() {
   const startInterview = () => {
     setIsInterviewStarted(true);
     if (questions.length > 0) {
-      console.log("AI starts with:", questions[0].question);
       textToSpeech(questions[0].question);
       setChatHistory([{ sender: "AI", message: questions[0].question }]);
     }
@@ -238,7 +231,6 @@ export default function InterviewPage() {
   };
 
   const finishInterview = async () => {
-    console.log("Interview completed");
     const finalMessage = "Thank you for the interview!";
     setChatHistory((prev) => [
       ...prev,
@@ -246,12 +238,8 @@ export default function InterviewPage() {
     ]);
     await textToSpeech(finalMessage);
     setIsInterviewFinished(true);
-    console.log("RESULTS:")
-    console.log(results);
     const review = await getReview(results);
     setReview(review)
-    console.log("Review:")
-    console.log(review)
   };
 
   const saveResult = (question: string, objective: string, answer: string, feedback: string) => {
@@ -272,7 +260,6 @@ export default function InterviewPage() {
         <Button
           variant="ghost"
           className="px-2 py-1 rounded-md"
-          onClick={() => console.log("Spoiler clicked")}
         >
           <FileQuestionIcon className="w-5 h-5" />
         </Button>
@@ -330,7 +317,6 @@ export default function InterviewPage() {
             if (!isInterviewStarted) {
               startInterview();
             } else if (!isAITalking && !isInterviewFinished) {
-              console.log("User speech started...");
               startListening();
             }
           }}
@@ -367,7 +353,7 @@ export default function InterviewPage() {
             </Button>
           </Link>
           <Link href="/jobs/clinic">
-            <Button onClick={() => console.log("Return to Clinic menu")}>
+            <Button>
               Return to Interview Menu
             </Button>
           </Link>
