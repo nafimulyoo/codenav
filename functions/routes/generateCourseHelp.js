@@ -5,7 +5,7 @@ async function generateCourseHelp (req, res)  {
   try {
     // Initialize Vertex with your Cloud project and location
   const vertex_ai = new VertexAI({project: '972945849581', location: 'us-central1'});
-  const model = 'projects/972945849581/locations/us-central1/endpoints/6971854797657866240';
+  const model = 'projects/972945849581/locations/us-central1/endpoints/5776712046544420864';
 
   const { message } = req.body;
 
