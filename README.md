@@ -1,4 +1,4 @@
-# [CodeNav](https://) &middot; [![Nafi Mulyo Kusumo](https://img.shields.io/badge/Author-Nafi-%3C%3E)](https://linktr.ee/portofolionafi)
+# [CodeNav](https://codenav.vercel.app/) &middot; [![Nafi Mulyo Kusumo](https://img.shields.io/badge/Author-Nafi-%3C%3E)](https://linktr.ee/portofolionafi)
 
 **CodeNav** is a career development platform powered by AI, designed to help both beginner and professional developers enhance their coding skills and elevate their careers. Our platform provides personalized learning roadmaps, real-time AI assistance, and tailored career development tools to ensure developers achieve their professional goals efficiently.
 
