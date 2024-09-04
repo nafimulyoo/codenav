@@ -63,8 +63,8 @@ const useSpeechRecognition = () => {
 
 export default function InterviewPage() {
   const searchParams = useSearchParams();
-  const { isListening, transcript, startListening } = useSpeechRecognition();
-  const [questions, setQuestions]: any= useState([]);
+  const { isListening, transcript, startListening, stopListening } = useSpeechRecognition();
+  const [questions, setQuestions]: any = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isAITalking, setIsAITalking] = useState(false);
   const [isInterviewStarted, setIsInterviewStarted] = useState(false);
@@ -72,6 +72,8 @@ export default function InterviewPage() {
   const [isInterviewFinished, setIsInterviewFinished] = useState(false);
   const [results, setResults] = useState<any[]>([]);
   const [review, setReview] = useState([]);
+  const [confirmTranscript, setConfirmTranscript] = useState("");
+  const [isMicDisabled, setIsMicDisabled] = useState(false);
 
   const feedbackHelper = async (
     nextQuestion: () => void,
@@ -192,14 +194,10 @@ export default function InterviewPage() {
     if (!isListening && transcript) {
       setChatHistory((prev) => [
         ...prev,
-        { sender: "You", message: transcript },
+        { sender: "You", message: transcript, isConfirmable: true },
       ]);
-      handleFeedback(
-        nextQuestion,
-        (message) =>
-          setChatHistory((prev) => [...prev, { sender: "AI", message }]),
-        transcript
-      );
+      setConfirmTranscript(transcript);
+      setIsMicDisabled(true); // Disable mic button when waiting for confirmation
     }
   }, [isListening, transcript]);
 
@@ -253,14 +251,31 @@ export default function InterviewPage() {
     setChatHistory((prev) => [...prev, { sender: "AI", message }]);
   };
 
+  const confirmMessage = () => {
+    handleFeedback(
+      nextQuestion,
+      (message) => setChatHistory((prev) => [...prev, { sender: "AI", message }]),
+      confirmTranscript
+    );
+    setChatHistory((prev) =>
+      prev.map((entry) =>
+        entry.isConfirmable ? { ...entry, isConfirmable: false } : entry
+      )
+    );
+    setIsMicDisabled(false); // Re-enable mic button after confirmation
+  };
+
+  const restartListening = () => {
+    setConfirmTranscript("");
+    setChatHistory((prev) => prev.filter((entry) => !entry.isConfirmable)); // Remove confirmable chat bubble
+    setIsMicDisabled(false); // Re-enable mic button after restart
+    startListening();
+  };
+
   return (
     <div className="flex flex-col h-screen w-full mx-auto">
-      {/* Header */}
       <header className="sticky top-0 z-10 bg-background px-4 py-3 border-b border-muted flex items-center justify-between">
-        <Button
-          variant="ghost"
-          className="px-2 py-1 rounded-md"
-        >
+        <Button variant="ghost" className="px-2 py-1 rounded-md">
           <FileQuestionIcon className="w-5 h-5" />
         </Button>
         <div className="font-medium">Interview</div>
@@ -269,16 +284,10 @@ export default function InterviewPage() {
         </Button>
       </header>
 
-      {/* Chat Area */}
       <div className="flex-1 overflow-auto p-4 space-y-4">
         <ScrollArea className="h-full w-full">
           {chatHistory.map((entry, index) => (
-            <div
-              key={index}
-              className={`flex items-start gap-4 ${
-                entry.sender === "You" ? "" : "justify-end"
-              }`}
-            >
+            <div key={index} className={`flex items-start gap-4 ${entry.sender === "You" ? "" : "justify-end"}`}>
               {entry.sender === "You" && (
                 <Avatar className="w-8 h-8 border">
                   <AvatarImage src="/placeholder-user.jpg" alt="Image" />
@@ -296,6 +305,12 @@ export default function InterviewPage() {
                 <div className="prose">
                   <p>{entry.message}</p>
                 </div>
+                {entry.isConfirmable && (
+                  <div className="flex gap-2 mt-2">
+                    <Button variant="default" onClick={confirmMessage}>Confirm</Button>
+                    <Button variant="ghost" onClick={restartListening}>Restart</Button>
+                  </div>
+                )}
               </div>
               {entry.sender !== "You" && (
                 <Avatar className="w-8 h-8 border">
@@ -308,7 +323,6 @@ export default function InterviewPage() {
         </ScrollArea>
       </div>
 
-      {/* Talk/Start Button */}
       <div className="sticky bottom-0 bg-background py-3 px-4">
         <Button
           variant="default"
@@ -320,7 +334,7 @@ export default function InterviewPage() {
               startListening();
             }
           }}
-          disabled={isAITalking || isInterviewFinished}
+          disabled={isMicDisabled || isAITalking || isInterviewFinished}
         >
           {isInterviewStarted ? (
             isListening ? (
@@ -334,7 +348,6 @@ export default function InterviewPage() {
         </Button>
       </div>
 
-      {/* Interview Completion Modal */}
       <Dialog open={isInterviewFinished} onOpenChange={setIsInterviewFinished}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -344,19 +357,15 @@ export default function InterviewPage() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-          <Link href={{
+            <Link href={{
               pathname: "/jobs/clinic/interview/review",
               query: { review: review }
             }}>
-            <Button>
-              See Review
-            </Button>
-          </Link>
-          <Link href="/jobs/clinic">
-            <Button>
-              Return to Interview Menu
-            </Button>
-          </Link>
+              <Button>See Review</Button>
+            </Link>
+            <Link href="/jobs/clinic">
+              <Button>Return to Interview Menu</Button>
+            </Link>
           </DialogFooter>
         </DialogContent>
       </Dialog>

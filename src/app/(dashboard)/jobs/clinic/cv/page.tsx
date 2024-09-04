@@ -16,6 +16,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { BriefcaseBusiness } from "lucide-react";
 
 export default function CVHelperPage() {
   const [file, setFile] = useState(null);
@@ -278,6 +279,20 @@ export default function CVHelperPage() {
                     {feedback.suggestions.map((item: any, index: any) => (
                       <div key={index}>
                         <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-card p-6 rounded-lg shadow-sm col-span-2">
+                  <div className="flex items-center gap-4 mb-6">
+                    <BriefcaseBusiness className="h-10 w-10 text-primary" />
+                    <h2 className="text-2xl font-bold">Other Job Recommendation</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {feedback.otherJobRecommendations.map((item: any, index: any) => (
+                      <div key={index}>
+                        <h3 className="text-lg font-semibold">{item.jobTitle}</h3>
                         <p className="text-muted-foreground">{item.description}</p>
                       </div>
                     ))}
