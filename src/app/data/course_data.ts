@@ -10,37 +10,20 @@ export const courses = [
     content: [
       {
         step: 1,
-        title: "Introduction to Software Development",
-        type: "video",
+        title: "Introduction to HTML",
+        type: "text",
         duration: "15 mins",
         content: "https://example.com/video1",
-        caption: "Introduction to the field of software development.",
-        description: "An overview of what software development entails and the importance of this field."
+        caption: "Introduction to HTML",
+        description: "An overview of basics of HTML."
       },
       {
         step: 2,
-        title: "Programming Languages Overview",
-        type: "text",
-        duration: "10 mins",
-        content: "Introduction to Programming Languages",
-        description: "Learn about various programming languages and their applications."
-      },
-      {
-        step: 3,
-        title: "Coding Basics",
+        title: "Introduction to CSS",
         type: "video",
-        duration: "20 mins",
-        content: "https://example.com/video2",
-        caption: "Basics of coding in software development.",
-        description: "Understand the fundamental concepts of coding, including syntax and logic."
-      },
-      {
-        step: 4,
-        title: "Debugging Techniques",
-        type: "text",
-        duration: "15 mins",
-        content: "Debugging Techniques",
-        description: "Learn the techniques used to identify and fix bugs in software."
+        duration: "10 mins",
+        content: "Introduction to CSS",
+        description: "Learn about various CSS design and layouting."
       }
     ]
   },

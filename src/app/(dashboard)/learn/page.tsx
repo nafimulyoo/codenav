@@ -88,7 +88,7 @@ export default function LearnPage() {
           </Link>
           </div>
           <Image
-            src="/home/roadmap-generator.png"
+            src="/home/learning-assist.png"
             width={640}
             height={1280}
             alt="Hero Image"

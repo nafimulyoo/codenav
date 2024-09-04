@@ -83,12 +83,12 @@ export default function ClinicPage() {
             <p className="max-w-[600px] text-muted-foreground md:text-md mt-0 pt-0 mb-6">
             Get instant, AI-powered feedback on the delivery of your answer when you practice.
             </p>
-                      <Link href="/learn/course">
+          <Link href="/jobs/clinic/interview">
             <Button className="mt-2">Prepare Your Interview with AI</Button>
           </Link>
           </div>
           <Image
-            src="/home/roadmap-generator.png"
+            src="/home/interview-review.png"
             width={640}
             height={1280}
             alt="Hero Image"
@@ -112,12 +112,12 @@ export default function ClinicPage() {
             <p className="max-w-[600px] text-muted-foreground md:text-md mt-0 pt-0 mb-6">
             Get instant, AI-powered feedback on the effectiveness of your Curriculum Vitae.
             </p>
-                      <Link href="/learn/course">
+                      <Link href="/jobs/clinic/cv">
             <Button className="mt-2">Get Feedback with AI</Button>
           </Link>
           </div>
           <Image
-            src="/home/roadmap-generator.png"
+            src="/home/cv-feedback.png"
             width={640}
             height={1280}
             alt="Hero Image"

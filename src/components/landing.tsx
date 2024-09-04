@@ -236,10 +236,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/home/interest-finder.png")}
+              onClick={() => handleImageClick("/home/interview-review.png")}
             >
               <Image
-                src="/home/interest-finder.png"
+                src="/home/interview-review.png"
                 width={640}
                 height={360}
                 alt="Interview Trainer"
@@ -251,10 +251,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/home/interest-finder.png")}
+              onClick={() => handleImageClick("/home/course.png")}
             >
               <Image
-                src="/home/interest-finder.png"
+                src="/home/course.png"
                 width={640}
                 height={360}
                 alt="Learning Courses"
@@ -266,10 +266,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/home/interest-finder.png")}
+              onClick={() => handleImageClick("/home/learning-assist.png")}
             >
               <Image
-                src="/home/interest-finder.png"
+                src="/home/learning-assist.png"
                 width={640}
                 height={360}
                 alt="Learning Assistant"
@@ -281,10 +281,10 @@ export default function Landing() {
             </div>
             <div
               className="relative cursor-pointer"
-              onClick={() => handleImageClick("/home/interest-finder.png")}
+              onClick={() => handleImageClick("/home/cv-feedback.png")}
             >
               <Image
-                src="/home/interest-finder.png"
+                src="/home/cv-feedback.png"
                 width={640}
                 height={360}
                 alt="CV Helper"
