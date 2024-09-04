@@ -7,7 +7,7 @@
 ## Key Features
 
 - **Personalized Learning Roadmap**: Create customized learning paths based on your career goals and interests.
-- **AI-Powered Learning Assistant**: Get instant help from our AI chatbot for any coding or career-related queries.
+- **Learning Assistant**: Get instant help from our AI chatbot for any coding or career-related queries.
 - **Interest Finder**: Discover your professional interests and receive recommendations tailored to your career path.
 - **Interview Trainer**: Practice for job interviews with realistic AI-driven sessions and feedback.
 - **CV Helper**: Optimize your resume with suggestions from our AI to stand out to employers.
@@ -46,7 +46,7 @@ Direct demo link: `https://codenav.vercel.app/`
 
 ![Interview Trainer](/screenshots/interview-review.png)
 
-### AI-Powered Learning Assistant
+### Learning Assistant
 
 ![Learning Assistant](/screenshots/learning-assist.png)
 
