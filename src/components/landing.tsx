@@ -13,7 +13,7 @@ import CodeNavIcon from "@/components/code-nav-icon";
 
 export default function Landing() {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedImage, setSelectedImage] = useState(null)
+  const [selectedImage, setSelectedImage]: any = useState(null)
   const handleImageClick = (src: any) => {
     setSelectedImage(src)
     setIsModalOpen(true)

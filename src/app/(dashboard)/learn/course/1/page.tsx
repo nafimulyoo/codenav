@@ -22,7 +22,7 @@ export default function Component() {
   const [userQuestion, setUserQuestion] = useState(""); // State to store user's input
 
   // Function to fetch the YouTube transcript (mocked for this example)
-  const fetchYoutubeTranscript = async (videoId) => {
+  const fetchYoutubeTranscript = async (videoId: string) => {
     try {
       const transcript = `
         Introduction to CSS
@@ -55,7 +55,7 @@ export default function Component() {
     }
   }, [lesson]);
 
-  const getCourseHelp = async (question, courseContent) => {
+  const getCourseHelp = async (question: any, courseContent: string) => {
     try {
       const response = await fetch('https://generatecoursehelp-jcwlynaixa-uc.a.run.app', {
         method: 'POST',
@@ -74,7 +74,7 @@ export default function Component() {
     }
   };
 
-  const courseContent = {
+  const courseContent: any = {
     html: `
       Introduction to HTML
       --------------------
@@ -274,7 +274,7 @@ export default function Component() {
                         <p>{chatResponse}</p>
                       ) : (
                         <p>
-                          Hello! I'm an AI chatbot created to help you with questions about the course. What would you like to know?
+                          Hello! I{"'"}m an AI chatbot created to help you with questions about the course. What would you like to know?
                         </p>
                       )}
                     </div>

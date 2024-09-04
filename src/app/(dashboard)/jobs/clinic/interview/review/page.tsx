@@ -14,9 +14,28 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+interface FeedbackDetails {
+  Score?: number;
+  Reasoning?: string;
+  Improvement?: string;
+}
+
+interface ReviewData {
+  "Overall Evaluation": {
+    "Key Strengths": string;
+    "Areas for Improvement": string;
+    "Fit for the Role": string;
+  };
+  "Question Answers": {
+    [question: string]: {
+      [criteria: string]: FeedbackDetails;
+    };
+  };
+}
+
 export default function ReviewPage() {
   const searchParams = useSearchParams();
-  const reviewData = JSON.parse(searchParams.get('review') || '{}');
+  const reviewData: ReviewData = JSON.parse(searchParams.get('review') || '{}');
 
   // Extract sections from the review data
   const overallEvaluation = reviewData["Overall Evaluation"];
@@ -115,7 +134,7 @@ export default function ReviewPage() {
         <div className="space-y-6">
           {Object.entries(questionAnswers).map(([question, feedback], index) => {
             const averageScore =
-              Object.values(feedback).reduce((sum, { Score }) => sum + (Score || 0), 0) /
+              Object.values(feedback).reduce((sum, { Score }: FeedbackDetails) => sum + (Score || 0), 0) /
               Object.keys(feedback).length;
 
             return (

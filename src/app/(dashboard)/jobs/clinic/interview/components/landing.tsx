@@ -272,7 +272,7 @@ export default function Landing() {
   <p className="text-sm font-semibold mt-4 mb-2">Open below for question spoilers:</p>
   <ScrollArea className="h-72">
     <Accordion type="single" collapsible className="w-full">
-      {interviewQuestions.map((q, index) => (
+      {interviewQuestions.map((q: any, index: any) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger>Question {index + 1}</AccordionTrigger>
           <AccordionContent>

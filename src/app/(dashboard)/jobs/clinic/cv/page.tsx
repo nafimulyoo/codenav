@@ -24,13 +24,13 @@ export default function CVHelperPage() {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const [extractedText, setExtractedText] = useState(""); // State to hold extracted text
   const [isExtracting, setIsExtracting] = useState(false); // State to show extraction status
-  const [feedback, setFeedback] = useState(null); // State to hold feedback data
+  const [feedback, setFeedback] : any= useState(null); // State to hold feedback data
 
   useEffect(() => {
     checkSubmitReady();
   }, [file, jobTitle, jobDescription, extractedText]);
 
-  const getCVFeedback = async (data) => {
+  const getCVFeedback = async (data: any) => {
     try {
       const response = await fetch("https://generatecvfeedback-jcwlynaixa-uc.a.run.app", {
         method: "POST",
@@ -50,7 +50,7 @@ export default function CVHelperPage() {
     }
   };
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event: any) => {
     const uploadedFile = event.target.files[0];
     if (uploadedFile && uploadedFile.type === "application/pdf") {
       setFile(uploadedFile);
@@ -61,11 +61,11 @@ export default function CVHelperPage() {
     }
   };
 
-  const handleJobTitleChange = (event) => {
+  const handleJobTitleChange = (event: any) => {
     setJobTitle(event.target.value);
   };
 
-  const handleJobDescriptionChange = (event) => {
+  const handleJobDescriptionChange = (event: any) => {
     setJobDescription(event.target.value);
   };
 
@@ -77,11 +77,11 @@ export default function CVHelperPage() {
     }
   };
 
-  const extractTextFromPDF = async (file) => {
+  const extractTextFromPDF = async (file: any) => {
     setIsExtracting(true);
     try {
       const fileReader = new FileReader();
-      fileReader.onload = async (e) => {
+      fileReader.onload = async (e: any) => {
         const base64File = e.target.result.split(",")[1];
 
         const payload = {
@@ -302,7 +302,7 @@ export default function CVHelperPage() {
                     <h2 className="text-2xl font-bold">Strengths</h2>
                   </div>
                   <div className="space-y-4">
-                    {feedback.strengths.map((item, index) => (
+                    {feedback.strengths.map((item: any, index: any) => (
                       <div key={index}>
                         <h3 className="text-lg font-semibold">{item.title}</h3>
                         <p className="text-muted-foreground">{item.description}</p>
@@ -316,7 +316,7 @@ export default function CVHelperPage() {
                     <h2 className="text-2xl font-bold">Areas for Improvement</h2>
                   </div>
                   <div className="space-y-4">
-                    {feedback.improvements.map((item, index) => (
+                    {feedback.improvements.map((item: any, index: any) => (
                       <div key={index}>
                         <h3 className="text-lg font-semibold">{item.title}</h3>
                         <p className="text-muted-foreground">{item.description}</p>
@@ -330,7 +330,7 @@ export default function CVHelperPage() {
                     <h2 className="text-2xl font-bold">Optimization Suggestions</h2>
                   </div>
                   <div className="space-y-4">
-                    {feedback.suggestions.map((item, index) => (
+                    {feedback.suggestions.map((item: any, index: any) => (
                       <div key={index}>
                         <h3 className="text-lg font-semibold">{item.title}</h3>
                         <p className="text-muted-foreground">{item.description}</p>
@@ -347,7 +347,7 @@ export default function CVHelperPage() {
   );
 }
 
-function FileIcon(props) {
+function FileIcon(props: any) {
   return (
     <svg
       {...props}
@@ -367,7 +367,7 @@ function FileIcon(props) {
   );
 }
 
-function LightbulbIcon(props) {
+function LightbulbIcon(props: any) {
   return (
     <svg
       {...props}
@@ -388,7 +388,7 @@ function LightbulbIcon(props) {
   );
 }
 
-function WrenchIcon(props) {
+function WrenchIcon(props: any) {
   return (
     <svg
       {...props}

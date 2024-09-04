@@ -65,7 +65,7 @@ const useSpeechRecognition = () => {
 export default function InterviewPage() {
   const searchParams = useSearchParams();
   const { isListening, transcript, startListening } = useSpeechRecognition();
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions]: any= useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isAITalking, setIsAITalking] = useState(false);
   const [isInterviewStarted, setIsInterviewStarted] = useState(false);
@@ -74,7 +74,7 @@ export default function InterviewPage() {
   const [results, setResults] = useState<any[]>([]);
   const [review, setReview] = useState([]);
 
-  const useFeedback = async (
+  const feedbackHelper = async (
     nextQuestion: () => void,
     updateChatHistory: (message: string) => void,
     transcript: string
@@ -89,7 +89,7 @@ export default function InterviewPage() {
     console.log("AI Feedback:", feedbackText);
     updateChatHistory(feedbackText);
     saveResult(currentQuestion.question, currentQuestion.objective, transcript, feedbackText);
-    await useTextToSpeech(feedbackText);
+    await textToSpeech(feedbackText);
     await nextQuestion();
   };
 
@@ -131,7 +131,7 @@ export default function InterviewPage() {
     }
   };
 
-  const useTextToSpeech = async (text: string) => {
+  const textToSpeech = async (text: string) => {
     try {
       setIsAITalking(true);
       const response = await fetch(
@@ -213,7 +213,7 @@ export default function InterviewPage() {
     setIsInterviewStarted(true);
     if (questions.length > 0) {
       console.log("AI starts with:", questions[0].question);
-      useTextToSpeech(questions[0].question);
+      textToSpeech(questions[0].question);
       setChatHistory([{ sender: "AI", message: questions[0].question }]);
     }
   };
@@ -223,7 +223,7 @@ export default function InterviewPage() {
     updateChatHistory: (message: string) => void,
     userInput: string
   ) => {
-    await useFeedback(callback, updateChatHistory, userInput);
+    await feedbackHelper(callback, updateChatHistory, userInput);
   };
 
   const nextQuestion = async () => {
@@ -231,7 +231,7 @@ export default function InterviewPage() {
       setCurrentQuestionIndex((prev) => prev + 1);
       const nextQ = questions[currentQuestionIndex + 1].question;
       setChatHistory((prev) => [...prev, { sender: "AI", message: "Next question, " + nextQ }]);
-      await useTextToSpeech("Next question, " + nextQ);
+      await textToSpeech("Next question, " + nextQ);
     } else {
       finishInterview();
     }
@@ -244,7 +244,7 @@ export default function InterviewPage() {
       ...prev,
       { sender: "AI", message: finalMessage },
     ]);
-    await useTextToSpeech(finalMessage);
+    await textToSpeech(finalMessage);
     setIsInterviewFinished(true);
     console.log("RESULTS:")
     console.log(results);
@@ -378,7 +378,7 @@ export default function InterviewPage() {
   );
 }
 
-function FileQuestionIcon(props) {
+function FileQuestionIcon(props: any) {
   return (
     <svg
       {...props}
@@ -399,7 +399,7 @@ function FileQuestionIcon(props) {
   );
 }
 
-function MicIcon(props) {
+function MicIcon(props: any) {
   return (
     <svg
       {...props}
@@ -420,7 +420,7 @@ function MicIcon(props) {
   );
 }
 
-function SettingsIcon(props) {
+function SettingsIcon(props: any) {
   return (
     <svg
       {...props}
