@@ -37,11 +37,9 @@ export default function ReviewPage() {
   const searchParams = useSearchParams();
   const reviewData: ReviewData = JSON.parse(searchParams.get('review') || '{}');
 
-  // Extract sections from the review data
   const overallEvaluation = reviewData["Overall Evaluation"];
   const questionAnswers = reviewData["Question Answers"];
 
-  // Calculate overall score
   const calculateOverallScore = () => {
     let totalScore = 0;
     let count = 0;

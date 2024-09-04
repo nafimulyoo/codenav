@@ -1,13 +1,11 @@
 const {VertexAI} = require('@google-cloud/vertexai');
 
-// Initialize Vertex with your Cloud project and location
 const vertex_ai = new VertexAI({project: '972945849581', location: 'us-central1'});
 const model = 'projects/972945849581/locations/us-central1/endpoints/5643571084025397248';
 
 const text1_1 = {text: `{\"message\":{\"jobType\":\"Radio Announcer\",\"difficulty\":\"senior\",\"language\":\"en\",\"additionalInfo\":\"\",\"question_count\":10}}`};
 
 
-// Instantiate the models
 const generativeModel = vertex_ai.preview.getGenerativeModel({
   model: model,
   generationConfig: {

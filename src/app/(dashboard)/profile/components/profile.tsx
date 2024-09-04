@@ -38,7 +38,6 @@ export default function Profile() {
         return () => unsubscribe();
       }, []);
 
-    // TODO: Loading
     if (loading) {
         return <div>Loading...</div>;
     }

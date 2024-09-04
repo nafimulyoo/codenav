@@ -33,11 +33,9 @@ export const signInWithGoogle = async () => {
     document.cookie = `token=${token}; path=/`;
     const user = userCredential.user;
 
-    // Check if the user already exists in Firestore
     const userDocRef = doc(db, 'users', user.uid);
     const userDoc = await getDoc(userDocRef);
     if (!userDoc.exists()) {
-      // If the user does not exist, create a new document with the user's information
       await setDoc(userDocRef, {
         uid: user.uid,
         email: user.email,

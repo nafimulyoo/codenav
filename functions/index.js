@@ -25,19 +25,16 @@ exports.generateCVFeedback = onRequest(
   generateCVFeedback
 )
 
-// Function to generate a learning roadmap
 exports.generateLearningRoadmap = onRequest(
   { cors: true },
   generateLearningRoadmap
   );
 
-// Function to classify interests based on narrative input
 exports.generateInterestClassification = onRequest(
   { cors: true },
   generateInterestClassification
   );
 
-// Function to generate interview question
 exports.generateInterviewQuestion = onRequest(
   { cors: true },
   generateInterviewQuestion

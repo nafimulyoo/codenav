@@ -64,7 +64,6 @@ export function UserNav() {
     }
   }
 
-  // TODO: Loading
   if (loading) {
     return <Skeleton className="relative h-8 w-8 rounded-full" />;
   }

@@ -50,7 +50,6 @@ type Roadmap = {
   edges: Edge[];
 };
 
-// Custom Node Component
 const CustomNode = ({ data }: { data: NodeData }) => {
   const [showResources, setShowResources] = useState(false);
 
@@ -114,12 +113,11 @@ const CustomNode = ({ data }: { data: NodeData }) => {
 
 
 const applyLayout = (roadmap: Roadmap): Roadmap => {
-  const levelHeight = 150; // Vertical spacing between levels
-  const nodeWidth = 150; // Approximate width of a node
-  const horizontalSpacing = 100; // Horizontal spacing between nodes on the same level
+  const levelHeight = 150;
+  const nodeWidth = 150;
+  const horizontalSpacing = 100; 
   const nodesByLevel: { [key: string]: Node[] } = {};
 
-  // Determine levels for each node (based on edges)
   roadmap.nodes.forEach(node => {
     const level = getNodeLevel(node.id, roadmap.edges);
     if (!nodesByLevel[level]) {
@@ -128,7 +126,6 @@ const applyLayout = (roadmap: Roadmap): Roadmap => {
     nodesByLevel[level].push(node);
   });
 
-  // Calculate positions
   let yOffset = 0;
   Object.keys(nodesByLevel).sort((a, b) => parseInt(a) - parseInt(b)).forEach(level => {
     const nodesInLevel = nodesByLevel[level];
@@ -155,8 +152,6 @@ const getNodeLevel = (nodeId: string, edges: Edge[]): number => {
   return Math.max(...levels) + 1;
 };
 
-
-// Home Page Component
 export default function HomePage() {
   const [roadmap, setRoadmap] = useState<Roadmap>({ nodes: [], edges: [] });
   const [goal, setGoal] = useState<string>("");

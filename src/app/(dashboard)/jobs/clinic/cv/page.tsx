@@ -22,9 +22,9 @@ export default function CVHelperPage() {
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
-  const [extractedText, setExtractedText] = useState(""); // State to hold extracted text
-  const [isExtracting, setIsExtracting] = useState(false); // State to show extraction status
-  const [feedback, setFeedback] : any= useState(null); // State to hold feedback data
+  const [extractedText, setExtractedText] = useState(""); 
+  const [isExtracting, setIsExtracting] = useState(false);
+  const [feedback, setFeedback] : any= useState(null); 
 
   useEffect(() => {
     checkSubmitReady();
@@ -101,7 +101,7 @@ export default function CVHelperPage() {
         };
 
         const response = await fetch(
-          `https://v2.convertapi.com/convert/pdf/to/txt?Secret=secret_pHWFSizFBqVbEJB2`, // Replace with your actual ConvertAPI secret
+          `https://v2.convertapi.com/convert/pdf/to/txt?Secret=secret_pHWFSizFBqVbEJB2`,
           {
             method: "POST",
             headers: {
@@ -149,62 +149,7 @@ export default function CVHelperPage() {
     
     const feedback = await getCVFeedback(data);
 
-    // Simulate feedback from server or use hardcoded data
-    // const hardcodedFeedback = {
-    //   strengths: [
-    //     {
-    //       title: "Relevant Experience",
-    //       description:
-    //         "Your resume showcases a strong background in the industry, with relevant work experience that aligns with the target role.",
-    //     },
-    //     {
-    //       title: "Skills Showcase",
-    //       description:
-    //         "You have clearly outlined your key skills and competencies, demonstrating your ability to excel in the position.",
-    //     },
-    //     {
-    //       title: "Quantifiable Achievements",
-    //       description:
-    //         "Your resume includes specific, measurable achievements that highlight your impact and value to potential employers.",
-    //     },
-    //   ],
-    //   improvements: [
-    //     {
-    //       title: "Concise Language",
-    //       description:
-    //         "Your resume could benefit from more concise and impactful language, focusing on key accomplishments rather than lengthy descriptions.",
-    //     },
-    //     {
-    //       title: "Tailored Content",
-    //       description:
-    //         "Ensure your resume is tailored to the specific job you are applying for, highlighting the most relevant skills and experiences.",
-    //     },
-    //     {
-    //       title: "Visual Appeal",
-    //       description:
-    //         "Consider enhancing the visual layout and design of your resume to make it more visually appealing and easy to scan.",
-    //     },
-    //   ],
-    //   suggestions: [
-    //     {
-    //       title: "Keyword Optimization",
-    //       description:
-    //         "Incorporate relevant keywords throughout your resume to better align with the job description and improve your chances of being found by recruiters.",
-    //     },
-    //     {
-    //       title: "Professional Formatting",
-    //       description:
-    //         "Ensure your resume follows a clean, professional format with clear section headings, consistent formatting, and appropriate font choices.",
-    //     },
-    //     {
-    //       title: "Online Presence",
-    //       description:
-    //         "Consider including links to your online professional profiles, such as LinkedIn, to provide additional context and information about your background.",
-    //     },
-    //   ],
-    // };
-
-    setFeedback(feedback); // Set hardcoded feedback data
+    setFeedback(feedback);
   };
 
   return (

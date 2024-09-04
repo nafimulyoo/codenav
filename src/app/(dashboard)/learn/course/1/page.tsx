@@ -17,11 +17,10 @@ import {
 export default function Component() {
   const [lesson, setLesson] = useState("html");
   const [cssContent, setCssContent] = useState("");
-  const [isThinking, setIsThinking] = useState(false); // State to manage AI thinking
-  const [chatResponse, setChatResponse] = useState(""); // State to store AI response
-  const [userQuestion, setUserQuestion] = useState(""); // State to store user's input
+  const [isThinking, setIsThinking] = useState(false); 
+  const [chatResponse, setChatResponse] = useState(""); 
+  const [userQuestion, setUserQuestion] = useState(""); 
 
-  // Function to fetch the YouTube transcript (mocked for this example)
   const fetchYoutubeTranscript = async (videoId: string) => {
     try {
       const transcript = `
@@ -49,7 +48,6 @@ export default function Component() {
   };
 
   useEffect(() => {
-    // Fetch transcript when the CSS lesson is selected
     if (lesson === "css") {
       fetchYoutubeTranscript("1PnVor36_40").then(setCssContent);
     }
