@@ -287,16 +287,16 @@ export default function InterviewPage() {
       <div className="flex-1 overflow-auto p-4 space-y-4">
         <ScrollArea className="h-full w-full">
           {chatHistory.map((entry, index) => (
-            <div key={index} className={`flex items-start gap-4 ${entry.sender === "You" ? "" : "justify-end"}`}>
-              {entry.sender === "You" && (
+            <div key={index} className={`flex items-start gap-4 ${entry.sender === "AI" ? "" : "justify-end"}`}>
+              {entry.sender === "AI" && (
                 <Avatar className="w-8 h-8 border">
                   <AvatarImage src="/placeholder-user.jpg" alt="Image" />
-                  <AvatarFallback>YO</AvatarFallback>
+                  <AvatarFallback>AI</AvatarFallback>
                 </Avatar>
               )}
               <div
                 className={`grid gap-1 ${
-                  entry.sender === "You"
+                  entry.sender === "AI"
                     ? "bg-muted"
                     : "bg-primary text-primary-foreground"
                 } p-3 rounded-lg max-w-[80%]`}
@@ -307,15 +307,15 @@ export default function InterviewPage() {
                 </div>
                 {entry.isConfirmable && (
                   <div className="flex gap-2 mt-2">
-                    <Button variant="default" onClick={confirmMessage}>Confirm</Button>
+                    <Button variant="secondary" className="" onClick={confirmMessage}>Confirm</Button>
                     <Button variant="ghost" onClick={restartListening}>Restart</Button>
                   </div>
                 )}
               </div>
-              {entry.sender !== "You" && (
+              {entry.sender !== "AI" && (
                 <Avatar className="w-8 h-8 border">
                   <AvatarImage src="/placeholder-user.jpg" alt="Image" />
-                  <AvatarFallback>OA</AvatarFallback>
+                  <AvatarFallback>YO</AvatarFallback>
                 </Avatar>
               )}
             </div>
