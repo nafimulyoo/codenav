@@ -1,6 +1,5 @@
 const { VertexAI } = require('@google-cloud/vertexai');
 
-// Initialize Vertex AI client directly with project and location
 const vertexAiClient = new VertexAI({project: '972945849581', location: 'us-central1'});
 
 async function generateLearningRoadmap (req, res) {

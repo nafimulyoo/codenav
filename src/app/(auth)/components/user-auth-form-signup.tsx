@@ -35,7 +35,6 @@ export function UserAuthFormSignUp({ className, ...props }: UserAuthFormProps) {
 
     try {
       await signUp(email, password)
-      // Save additional user data to Firestore
       const user = auth.currentUser
       if (user) {
         const userDocRef = doc(db, 'users', user.uid)

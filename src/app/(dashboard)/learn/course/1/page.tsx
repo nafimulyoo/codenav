@@ -110,7 +110,7 @@ export default function Component() {
       Additional Resources
       Visit the official MDN Web Docs to learn more about HTML elements, attributes, and best practices: https://developer.mozilla.org/en-US/docs/Web/HTML
     `,
-    css: cssContent, // The fetched transcript will be stored here
+    css: cssContent, 
   };
 
   const handleNextLesson = () => {
@@ -123,12 +123,12 @@ export default function Component() {
 
   const handleChatbotSubmit = async () => {
     setIsThinking(true);
-    setChatResponse(""); // Clear previous response
+    setChatResponse(""); 
 
-    // Fetch response from AI
+
     const response = await getCourseHelp(userQuestion, courseContent[lesson]);
 
-    setChatResponse(response); // Update with AI response
+    setChatResponse(response); 
     setIsThinking(false);
   };
 
@@ -290,7 +290,7 @@ export default function Component() {
                       className="min-h-[80px] resize-none"
                       disabled={isThinking}
                       value={userQuestion}
-                      onChange={(e) => setUserQuestion(e.target.value)} // Update question state on input change
+                      onChange={(e) => setUserQuestion(e.target.value)}
                     />
                     <Button onClick={handleChatbotSubmit} disabled={isThinking}>
                       {isThinking ? "Thinking..." : "Submit"}

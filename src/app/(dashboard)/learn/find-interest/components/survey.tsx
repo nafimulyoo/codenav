@@ -66,7 +66,7 @@ export default function Survey() {
                 narration += `${subQuestion.question}\nAnswer: ${answers[subQuestion.id]}\n`;
               }
             });
-            narration += '\n'; // Add a newline for better readability
+            narration += '\n'; 
           }
         });
       

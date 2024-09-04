@@ -1,6 +1,5 @@
 const { VertexAI } = require('@google-cloud/vertexai');
 
-// Initialize Vertex AI client directly with project and location
 const vertexAiClient = new VertexAI({
   project: 'codenav-5d344',
   location: 'us-central1',
