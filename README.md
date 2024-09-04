@@ -32,7 +32,7 @@ Direct demo link: `https://codenav.vercel.app/`
 
 ### Landing Page
 
-![Landing](/screenshots/header.jpg)
+![Landing](/screenshots/landing.jpg)
 
 ### Personalized Learning Roadmap
 
