@@ -97,7 +97,6 @@ export default function Survey() {
 
     const getInterestWithAI = async (data: any) => {
         try {
-            console.log('sending request..');
             const response = await fetch('https://generateinterestclassification-jcwlynaixa-uc.a.run.app', {
               method: 'POST',
               headers: {
@@ -116,9 +115,7 @@ export default function Survey() {
 
     const handleSubmit = async () => {
         const narration = generateNarration(survey_questions, responses);
-        console.log(narration);
         const interestsFromAI: any = await getInterestWithAI(narration);
-        console.log(interestsFromAI);
         
         updateCategories(interestsFromAI);
         

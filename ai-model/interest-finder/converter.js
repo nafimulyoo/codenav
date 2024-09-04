@@ -214,4 +214,3 @@ const convertToJSONL = (data) => {
   };
   
   const jsonlData = convertToJSONL(data);
-  console.log(jsonlData);

@@ -172,7 +172,6 @@ export default function HomePage() {
       });
 
       const data = await response.json();
-      console.log(data)
 
       const layouttedRoadmap = applyLayout(data.roadmap);
       setRoadmap(layouttedRoadmap);

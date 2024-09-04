@@ -8,7 +8,6 @@ const vertexAiClient = new VertexAI({
 async function generateInterestClassification (req, res)  {
   try {
     const { message } = req.body;
-    console.log(message)
 
     const model = 'projects/972945849581/locations/us-central1/endpoints/9046075786875895808';
 

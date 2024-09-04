@@ -41,7 +41,6 @@ const chat = generativeModel.startChat({});
 async function sendMessage(message) {
   const streamResult = await chat.sendMessageStream(message);
   process.stdout.write('stream result: ' + JSON.stringify((await streamResult.response).candidates[0].content) + '\n');
-  console.log("finish")
 }
 
 async function generateContent() {

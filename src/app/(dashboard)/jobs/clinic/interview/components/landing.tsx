@@ -53,7 +53,6 @@ export default function Landing() {
     setIsLoading(true);
     const jobTypeToSend = jobType === 'other' ? customJobType : jobType;
     const settingsData = { "jobType": jobTypeToSend, "difficulty": difficulty, "language": language, "additionalInfo": additionalInfo, "question_count": questionCount };
-    console.log("Settings Submitted: ", settingsData);
     const interviewQuestionsFromAI: any = await getInterviewQuestion(settingsData);
 
     setInterviewQuestions(interviewQuestionsFromAI);
@@ -62,8 +61,6 @@ export default function Landing() {
 
   const getInterviewQuestion = async (data: any) => {
     try {
-      console.log("THIS")
-      console.log(JSON.stringify({ message: JSON.stringify({ data }) }))
       const response = await fetch('https://generateinterviewquestion-jcwlynaixa-uc.a.run.app', {
         method: 'POST',
         headers: {
