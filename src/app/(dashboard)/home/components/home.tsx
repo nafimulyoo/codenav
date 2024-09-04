@@ -351,9 +351,9 @@ export default function Home() {
                   <AvatarImage src="/placeholder-user.jpg" />
                   <AvatarFallback>JE</AvatarFallback>
                 </Avatar>
-                <h3 className="text-lg font-semibold">John Eames</h3>
+                <h3 className="text-lg mt-2 font-semibold">Cyber Security Expert</h3>
                 <p className="text-sm text-muted-foreground">
-                  Cyber Security Expert
+                John Eames
                 </p>
                 <p className="text-xs text-muted-foreground">12h 53m · 4.9/5</p>
                 
@@ -372,9 +372,9 @@ export default function Home() {
                   <AvatarImage src="/placeholder-user.jpg" />
                   <AvatarFallback>CR</AvatarFallback>
                 </Avatar>
-                <h3 className="text-lg font-semibold">Curt Rits</h3>
+                <h3 className="text-lg mt-2 font-semibold">DevOps Intermediate</h3>
                 <p className="text-sm text-muted-foreground">
-                  DevOps Intermediate
+                  Curt Rits
                 </p>
                 <p className="text-xs text-muted-foreground">5h 59m · 4.3/5</p>
                 
@@ -393,9 +393,9 @@ export default function Home() {
                   <AvatarImage src="/placeholder-user.jpg" />
                   <AvatarFallback>JD</AvatarFallback>
                 </Avatar>
-                <h3 className="text-lg font-semibold">Jane Doe</h3>
+                <h3 className="text-lg mt-2 font-semibold">AI and Machine Learning</h3>
                 <p className="text-sm text-muted-foreground">
-                  AI and Machine Learning
+                  Jane Doe
                 </p>
                 <p className="text-xs text-muted-foreground">9h 23m · 4.6/5</p>
                 
@@ -414,55 +414,15 @@ export default function Home() {
                   <AvatarImage src="/placeholder-user.jpg" />
                   <AvatarFallback>IB</AvatarFallback>
                 </Avatar>
-                <h3 className="text-lg font-semibold">Ian Brown</h3>
+                <h3 className="text-lg mt-2 font-semibold">Project Management</h3>
                 <p className="text-sm text-muted-foreground">
-                  Project Management
+                Ian Brown
                 </p>
                 <p className="text-xs text-muted-foreground">10h 17m · 4.1/5</p>
                 
               </div>
             </Card>
           </div>
-        </section>
-                <div className="border-b-4 border-muted-foreground opacity-10 pt-5">
-          </div>
-        <section>
-          <h2 className="text-3xl font-bold mt-8">My Learning <span className="text-muted-foreground">(Not Implemented Yet)</span></h2>
-          <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
-            <Card className="flex flex-col md:flex-row">
-              <Image
-                src="/dashboard/agile-project-management.jpeg"
-                height={400}
-                width={640}
-                alt="Agile Project Management"
-                className="w-full h-32 md:w-1/3 object-cover rounded-lg"
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold">
-                  Agile Project Management
-                </h3>
-                <p className="text-sm text-muted-foreground">Clara Manning</p>
-                <Progress value={69} className="mt-2 w-full" />
-                <p className="text-xs text-muted-foreground">69% complete</p>
-              </div>
-            </Card>
-            <Card className="flex flex-col md:flex-row">
-              <Image
-                src="/dashboard/python-fundamentals.webp"
-                height={400}
-                width={640}
-                alt="Python Fundamentals"
-                className="w-full h-32 md:w-1/3 object-cover rounded-lg"
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold">Python Fundamentals</h3>
-                <p className="text-sm text-muted-foreground">Chris Kinley</p>
-                <Progress value={27} className="mt-2 w-full" />
-                <p className="text-xs text-muted-foreground">27% complete</p>
-              </div>
-            </Card>
-          </div>
-          <Button className="mt-4">See All</Button>
         </section>
       </main>
     </div>

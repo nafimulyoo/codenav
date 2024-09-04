@@ -5,8 +5,15 @@ const { generateInterviewQuestion } = require('./routes/generateInterviewQuestio
 const { generateVoiceFromText } = require('./routes/generateVoiceFromText')
 const { generateInterviewFeedback } = require('./routes/generateInterviewFeedback')
 const { generateCVFeedback } = require('./routes/generateCVFeedback')
-const { generateVideoHelp } = require('./routes/generateVideoHelp')
 const { generateInterviewReview } = require('./routes/generateInterviewReview')
+const { generateCourseHelp } = require('./routes/generateCourseHelp')
+
+
+exports.generateCourseHelp = onRequest(
+  { cors: true },
+  generateCourseHelp
+)
+
 
 exports.generateInterviewReview = onRequest(
   { cors: true },
@@ -17,11 +24,6 @@ exports.generateCVFeedback = onRequest(
   { cors: true },
   generateCVFeedback
 )
-
-exports.generateVideoHelp = onRequest(
-  { cors: true },
-  generateVideoHelp
-);
 
 // Function to generate a learning roadmap
 exports.generateLearningRoadmap = onRequest(

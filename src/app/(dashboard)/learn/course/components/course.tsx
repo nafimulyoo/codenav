@@ -20,24 +20,24 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { JobDisplay } from "@/app/(dashboard)/jobs/components/job-display"
-import { JobList } from "@/app/(dashboard)/jobs/components/job-list";
-import { type Job } from "@/app/data/job_data";
-import { useJob } from "@/app/(dashboard)/jobs/use-job";
+import { CourseDisplay } from "@/app/(dashboard)/learn/course/components/course-display"
+import { CourseList } from "@/app/(dashboard)/learn/course/components/course-list"
+import { type Course } from "@/app/data/course_data"
+import { useCourse } from "@/app/(dashboard)/learn/use-course"
 
-interface JobProps {
-  jobs: Job[]
+interface CourseProps {
+  courses: Course[]
   defaultLayout: number[] | undefined
   defaultCollapsed?: boolean
   navCollapsedSize: number
 }
 
-export function Job({
-  jobs,
+export function Course({
+  courses,
   defaultLayout = [440, 655],
   defaultCollapsed = false,
-}: JobProps) {
-  const [job] = useJob()
+}: CourseProps) {
+  const [course] = useCourse()
 
   return (
     <TooltipProvider delayDuration={0}>
@@ -48,18 +48,18 @@ export function Job({
             sizes
           )}`
         }}
-        className="h-full max-h-[540px] items-stretch"
+        className="h-full max-h-[800px] items-stretch"
       >
         <ResizablePanel defaultSize={defaultLayout[0]} minSize={30}>
           <Tabs defaultValue="all">
             <div className="flex items-center px-4 py-2">
-              <h1 className="text-xl font-bold">Jobs</h1>
+              <h1 className="text-xl font-bold">Courses</h1>
               <TabsList className="ml-auto">
                 <TabsTrigger
                   value="all"
                   className="text-zinc-600 dark:text-zinc-200"
                 >
-                  All job
+                  All course
                 </TabsTrigger>
                 <TabsTrigger
                   value="saved"
@@ -79,17 +79,17 @@ export function Job({
               </form>
             </div>
             <TabsContent value="all" className="m-0">
-              <JobList items={jobs} />
+              <CourseList items={courses} />
             </TabsContent>
             <TabsContent value="saved" className="m-0">
-              <JobList items={jobs.filter((item) => !item.saved)} />
+              <CourseList items={courses.filter((item) => !item.saved)} />
             </TabsContent>
           </Tabs>
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={defaultLayout[1]}>
-          <JobDisplay
-            job={jobs.find((item) => item.id === job.selected) || null}
+          <CourseDisplay
+            course={courses.find((item) => item.id === course.selected) || null}
           />
         </ResizablePanel>
       </ResizablePanelGroup>

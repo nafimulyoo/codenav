@@ -39,7 +39,6 @@ export default function Search() {
         <Button className="h-10 px-6">Search</Button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <Link href="/course">
         <Card className="group">
 
           <Image
@@ -47,7 +46,7 @@ export default function Search() {
             alt="Course image"
             width={400}
             height={225}
-            className="rounded-t-md object-cover w-full h-40 group-hover:opacity-80 transition-opacity"
+            className="rounded-t-md object-cover w-full h-40 transition-opacity"
           />
           <CardContent className="p-4">
             <h3 className="text-lg font-semibold mb-2">Introduction to Web Development</h3>
@@ -63,9 +62,7 @@ export default function Search() {
             </div>
           </CardContent>
         </Card>
-        </Link>
-
-        <Link href="/course">
+        
         <Card className="group">
           
           <Image
@@ -73,7 +70,7 @@ export default function Search() {
             alt="Job image"
             width={400}
             height={225}
-            className="rounded-t-md object-cover w-full h-40 group-hover:opacity-80 transition-opacity"
+            className="rounded-t-md object-cover w-full h-40 transition-opacity"
           />
           <CardContent className="p-4">
             <h3 className="text-lg font-semibold mb-2">Frontend Developer - Remote</h3>
@@ -89,16 +86,14 @@ export default function Search() {
             </div>
           </CardContent>
         </Card>
-        </Link>
-        <Link href="/course">
         <Card className="group">
-          
+
           <Image
             src="/placeholder.png"
             alt="Course image"
             width={400}
             height={225}
-            className="rounded-t-md object-cover w-full h-40 group-hover:opacity-80 transition-opacity"
+            className="rounded-t-md object-cover w-full h-40 transition-opacity"
           />
           <CardContent className="p-4">
             <h3 className="text-lg font-semibold mb-2">Advanced Python Programming</h3>
@@ -114,8 +109,7 @@ export default function Search() {
             </div>
           </CardContent>
         </Card>
-        </Link>
-        <Link href="/course">
+        
         <Card className="group">
           
           <Image
@@ -123,7 +117,7 @@ export default function Search() {
             alt="Job image"
             width={400}
             height={225}
-            className="rounded-t-md object-cover w-full h-40 group-hover:opacity-80 transition-opacity"
+            className="rounded-t-md object-cover w-full h-40 transition-opacity"
           />
           <CardContent className="p-4">
             <h3 className="text-lg font-semibold mb-2">UI/UX Designer</h3>
@@ -139,7 +133,7 @@ export default function Search() {
             </div>
           </CardContent>
         </Card>
-        </Link>
+        
       </div>
     </div>
   )

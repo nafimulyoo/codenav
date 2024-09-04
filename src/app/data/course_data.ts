@@ -2,11 +2,11 @@ export const courses = [
   {
     saved: true,
     id: 1,
-    title: "Software Development",
+    title: "HTML & CSS",
     teacher: "John Doe",
     labels: ["Software Development"],
-    description: "Learn the basics of software development, including coding, debugging, and testing applications.",
-    duration: "4 weeks",
+    description: "Learn the basics of HTML & CSS",
+    duration: "1 weeks",
     content: [
       {
         step: 1,
@@ -47,7 +47,7 @@ export const courses = [
   {
     saved: false,
     id: 2,
-    title: "Network and Infrastructure",
+    title: "Network and Infrastructure (Not Implemented Yet)",
     teacher: "Jane Smith",
     labels: ["Network and Infrastructure"],
     description: "Understand the fundamentals of network configuration, management, and infrastructure maintenance.",
@@ -92,7 +92,7 @@ export const courses = [
   {
     saved: false,
     id: 3,
-    title: "Cyber Security",
+    title: "Cyber Security (Not Implemented Yet)",
     teacher: "Alice Johnson",
     labels: ["Cyber Security"],
     description: "Learn how to protect systems and data from cyber threats and implement security measures.",
@@ -137,7 +137,7 @@ export const courses = [
   {
     saved: false,
     id: 4,
-    title: "Data Science",
+    title: "Data Science (Not Implemented Yet)",
     teacher: "Bob Brown",
     labels: ["Data Science"],
     description: "Explore data collection, analysis, and visualization techniques to gain valuable insights.",
@@ -182,7 +182,7 @@ export const courses = [
   {
     saved: false,
     id: 5,
-    title: "DevOps",
+    title: "DevOps (Not Implemented Yet)",
     teacher: "Carol White",
     labels: ["DevOps"],
     description: "Learn the principles of DevOps, including continuous integration and delivery, and automation tools.",
@@ -227,7 +227,7 @@ export const courses = [
   {
     saved: false,
     id: 6,
-    title: "AI and Machine Learning",
+    title: "AI and Machine Learning (Not Implemented Yet)",
     teacher: "David Green",
     labels: ["AI and Machine Learning"],
     description: "Get started with AI and machine learning concepts, including algorithms and practical applications.",
@@ -272,7 +272,7 @@ export const courses = [
   {
     saved: false,
     id: 7,
-    title: "UI/UX Design",
+    title: "UI/UX Design (Not Implemented Yet)",
     teacher: "Eve Martinez",
     labels: ["UI/UX Design"],
     description: "Learn the essentials of UI/UX design, including user research, wireframing, and prototyping.",
@@ -317,7 +317,7 @@ export const courses = [
   {
     saved: true,
     id: 8,
-    title: "IT Management",
+    title: "IT Management (Not Implemented Yet)",
     teacher: "Frank Harris",
     labels: ["IT Management"],
     description: "Understand IT management principles, including project management, leadership, and strategic planning.",
@@ -362,7 +362,7 @@ export const courses = [
   {
     saved: true,
     id: 9,
-    title: "Robotics and IoT",
+    title: "Robotics and IoT (Not Implemented Yet)",
     teacher: "Grace Wilson",
     labels: ["Robotics and IoT"],
     description: "Explore the basics of robotics and the Internet of Things (IoT), including hardware and software integration.",
@@ -407,7 +407,7 @@ export const courses = [
   {
     saved: true,
     id: 10,
-    title: "VR and AR",
+    title: "VR and AR (Not Implemented Yet)",
     teacher: "Henry Johnson",
     labels: ["VR and AR"],
     description: "Learn the fundamentals of Virtual Reality (VR) and Augmented Reality (AR), including development tools and techniques.",
@@ -452,7 +452,7 @@ export const courses = [
   {
     saved: true,
     id: 11,
-    title: "Programming and Scripting",
+    title: "Programming and Scripting (Not Implemented Yet)",
     teacher: "Isabella Clark",
     labels: ["Programming and Scripting"],
     description: "Start learning programming and scripting languages, including syntax, logic, and basic algorithms.",
@@ -497,7 +497,7 @@ export const courses = [
   {
     saved: true,
     id: 12,
-    title: "Database Management",
+    title: "Database Management (Not Implemented Yet)",
     teacher: "Jacob Lewis",
     labels: ["Database Management"],
     description: "Database management involves storing, managing, and maintaining data to ensure its availability, security, and optimal performance.",

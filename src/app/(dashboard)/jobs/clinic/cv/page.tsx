@@ -1,20 +1,212 @@
-import Link from "next/link";
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import PlaceholderContent from "@/components/demo/placeholder-content";
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
 export default function CVHelperPage() {
+  const [file, setFile] = useState(null);
+  const [jobTitle, setJobTitle] = useState("");
+  const [jobDescription, setJobDescription] = useState("");
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [extractedText, setExtractedText] = useState(""); // State to hold extracted text
+  const [isExtracting, setIsExtracting] = useState(false); // State to show extraction status
+  const [feedback, setFeedback] = useState(null); // State to hold feedback data
+
+  useEffect(() => {
+    checkSubmitReady();
+  }, [file, jobTitle, jobDescription, extractedText]);
+
+  const getCVFeedback = async (data) => {
+    try {
+      const response = await fetch("https://generatecvfeedback-jcwlynaixa-uc.a.run.app", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({ message: JSON.stringify(data) }),
+      });
+
+      const feedback = JSON.parse((await response.json()).result);
+
+      setFeedback(feedback); 
+      return feedback;
+    } catch (error) {
+      console.error("Error submitting survey:", error);
+    }
+  };
+
+  const handleFileChange = (event) => {
+    const uploadedFile = event.target.files[0];
+    if (uploadedFile && uploadedFile.type === "application/pdf") {
+      setFile(uploadedFile);
+      extractTextFromPDF(uploadedFile);
+    } else {
+      alert("Please upload a valid PDF file.");
+      setIsSubmitDisabled(true);
+    }
+  };
+
+  const handleJobTitleChange = (event) => {
+    setJobTitle(event.target.value);
+  };
+
+  const handleJobDescriptionChange = (event) => {
+    setJobDescription(event.target.value);
+  };
+
+  const checkSubmitReady = () => {
+    if (file && jobTitle && jobDescription && extractedText) {
+      setIsSubmitDisabled(false);
+    } else {
+      setIsSubmitDisabled(true);
+    }
+  };
+
+  const extractTextFromPDF = async (file) => {
+    setIsExtracting(true);
+    try {
+      const fileReader = new FileReader();
+      fileReader.onload = async (e) => {
+        const base64File = e.target.result.split(",")[1];
+
+        const payload = {
+          Parameters: [
+            {
+              Name: "File",
+              FileValue: {
+                Name: file.name,
+                Data: base64File,
+              },
+            },
+            {
+              Name: "StoreFile",
+              Value: true,
+            },
+          ],
+        };
+
+        const response = await fetch(
+          `https://v2.convertapi.com/convert/pdf/to/txt?Secret=secret_pHWFSizFBqVbEJB2`, // Replace with your actual ConvertAPI secret
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          }
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          const textUrl = data.Files[0].Url;
+
+          const textResponse = await fetch(textUrl);
+          const textContent = await textResponse.text();
+
+          setExtractedText(textContent);
+          setIsExtracting(false);
+        } else {
+          console.error("Failed to convert PDF to text");
+          alert("There was an error converting the PDF. Please try again.");
+          setIsExtracting(false);
+        }
+      };
+      fileReader.readAsDataURL(file);
+    } catch (error) {
+      console.error("Error extracting text from PDF:", error);
+      alert("There was an error converting the PDF. Please try again.");
+      setIsExtracting(false);
+    }
+  };
+
+  const handleSubmit = async () => {
+    if (!file || !jobTitle || !jobDescription || !extractedText) {
+      alert("Please fill out all fields and upload your CV.");
+      return;
+    }
+
+    const data = {
+      "text-from-cv": extractedText,
+      "job-title": jobTitle,
+      "job-description": jobDescription,
+    };
+
+    
+    const feedback = await getCVFeedback(data);
+
+    // Simulate feedback from server or use hardcoded data
+    // const hardcodedFeedback = {
+    //   strengths: [
+    //     {
+    //       title: "Relevant Experience",
+    //       description:
+    //         "Your resume showcases a strong background in the industry, with relevant work experience that aligns with the target role.",
+    //     },
+    //     {
+    //       title: "Skills Showcase",
+    //       description:
+    //         "You have clearly outlined your key skills and competencies, demonstrating your ability to excel in the position.",
+    //     },
+    //     {
+    //       title: "Quantifiable Achievements",
+    //       description:
+    //         "Your resume includes specific, measurable achievements that highlight your impact and value to potential employers.",
+    //     },
+    //   ],
+    //   improvements: [
+    //     {
+    //       title: "Concise Language",
+    //       description:
+    //         "Your resume could benefit from more concise and impactful language, focusing on key accomplishments rather than lengthy descriptions.",
+    //     },
+    //     {
+    //       title: "Tailored Content",
+    //       description:
+    //         "Ensure your resume is tailored to the specific job you are applying for, highlighting the most relevant skills and experiences.",
+    //     },
+    //     {
+    //       title: "Visual Appeal",
+    //       description:
+    //         "Consider enhancing the visual layout and design of your resume to make it more visually appealing and easy to scan.",
+    //     },
+    //   ],
+    //   suggestions: [
+    //     {
+    //       title: "Keyword Optimization",
+    //       description:
+    //         "Incorporate relevant keywords throughout your resume to better align with the job description and improve your chances of being found by recruiters.",
+    //     },
+    //     {
+    //       title: "Professional Formatting",
+    //       description:
+    //         "Ensure your resume follows a clean, professional format with clear section headings, consistent formatting, and appropriate font choices.",
+    //     },
+    //     {
+    //       title: "Online Presence",
+    //       description:
+    //         "Consider including links to your online professional profiles, such as LinkedIn, to provide additional context and information about your background.",
+    //     },
+    //   ],
+    // };
+
+    setFeedback(feedback); // Set hardcoded feedback data
+  };
+
   return (
     <ContentLayout title="CV Helper">
       <Breadcrumb>
@@ -27,13 +219,13 @@ export default function CVHelperPage() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/jobs">Jobs</Link>
+              <Link href="/home">Jobs</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/clinic">Clinic</Link>
+              <Link href="/jobs/clinic">Clinic</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
@@ -54,110 +246,106 @@ export default function CVHelperPage() {
               Upload your resume and receive detailed insights to improve your job application.
             </p>
             <div className="grid gap-4">
-              <Button size="lg" className="w-full">
-                Upload CV
-              </Button>
+              <div className="grid w-full items-center gap-1.5 mx-auto">
+                <Label htmlFor="cv">Upload CV</Label>
+                <Input
+                  id="cv"
+                  type="file"
+                  accept=".pdf"
+                  onChange={handleFileChange}
+                  className="w-full"
+                />
+              </div>
               <div className="grid gap-2">
                 <Label htmlFor="job-to-apply">What job are you applying for?</Label>
-                <Input id="job-to-apply" placeholder="Enter job title" />
+                <Input
+                  id="job-description-to-apply"
+                  placeholder="Enter job title"
+                  value={jobTitle}
+                  onChange={handleJobTitleChange}
+                />
+                <Textarea
+                  id="job-title-to-apply"
+                  placeholder="Enter job description"
+                  value={jobDescription}
+                  onChange={handleJobDescriptionChange}
+                />
               </div>
+              {isExtracting && (
+                <p className="text-yellow-600">Extracting information...</p>
+              )}
+              {!isExtracting && extractedText && (
+                <p className="text-green-600">Information extracted!</p>
+              )}
+              <Button
+                size="lg"
+                className="w-full"
+                onClick={handleSubmit}
+                disabled={isSubmitDisabled}
+              >
+                Submit
+              </Button>
             </div>
           </div>
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-            <div className="bg-card p-6 rounded-lg shadow-sm">
-              <div className="flex items-center gap-4 mb-6">
-                <FileIcon className="h-10 w-10 text-primary" />
-                <h2 className="text-2xl font-bold">Strengths</h2>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-semibold">Relevant Experience</h3>
-                  <p className="text-muted-foreground">
-                    Your resume showcases a strong background in the industry, with relevant work experience that aligns
-                    with the target role.
-                  </p>
+
+          {/* Render Feedback only after submission */}
+          {feedback && (
+            <>
+              <div className="border-b-4 border-muted-foreground opacity-10 pt-5 mx-20"></div>
+              <h1 className="text-2xl mt-10 text-center font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Your CV Feedback
+              </h1>
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+                <div className="bg-card p-6 rounded-lg shadow-sm">
+                  <div className="flex items-center gap-4 mb-6">
+                    <FileIcon className="h-10 w-10 text-primary" />
+                    <h2 className="text-2xl font-bold">Strengths</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {feedback.strengths.map((item, index) => (
+                      <div key={index}>
+                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Skills Showcase</h3>
-                  <p className="text-muted-foreground">
-                    You have clearly outlined your key skills and competencies, demonstrating your ability to excel in
-                    the position.
-                  </p>
+                <div className="bg-card p-6 rounded-lg shadow-sm">
+                  <div className="flex items-center gap-4 mb-6">
+                    <WrenchIcon className="h-10 w-10 text-primary" />
+                    <h2 className="text-2xl font-bold">Areas for Improvement</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {feedback.improvements.map((item, index) => (
+                      <div key={index}>
+                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Quantifiable Achievements</h3>
-                  <p className="text-muted-foreground">
-                    Your resume includes specific, measurable achievements that highlight your impact and value to
-                    potential employers.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm">
-              <div className="flex items-center gap-4 mb-6">
-                <WrenchIcon className="h-10 w-10 text-primary" />
-                <h2 className="text-2xl font-bold">Areas for Improvement</h2>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-semibold">Concise Language</h3>
-                  <p className="text-muted-foreground">
-                    Your resume could benefit from more concise and impactful language, focusing on key accomplishments
-                    rather than lengthy descriptions.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Tailored Content</h3>
-                  <p className="text-muted-foreground">
-                    Ensure your resume is tailored to the specific job you are applying for, highlighting the most
-                    relevant skills and experiences.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Visual Appeal</h3>
-                  <p className="text-muted-foreground">
-                    Consider enhancing the visual layout and design of your resume to make it more visually appealing
-                    and easy to scan.
-                  </p>
+                <div className="bg-card p-6 rounded-lg shadow-sm col-span-2">
+                  <div className="flex items-center gap-4 mb-6">
+                    <LightbulbIcon className="h-10 w-10 text-primary" />
+                    <h2 className="text-2xl font-bold">Optimization Suggestions</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {feedback.suggestions.map((item, index) => (
+                      <div key={index}>
+                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm col-span-2">
-              <div className="flex items-center gap-4 mb-6">
-                <LightbulbIcon className="h-10 w-10 text-primary" />
-                <h2 className="text-2xl font-bold">Optimization Suggestions</h2>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-semibold">Keyword Optimization</h3>
-                  <p className="text-muted-foreground">
-                    Incorporate relevant keywords throughout your resume to better align with the job description and
-                    improve your chances of being found by recruiters.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Professional Formatting</h3>
-                  <p className="text-muted-foreground">
-                    Ensure your resume follows a clean, professional format with clear section headings, consistent
-                    formatting, and appropriate font choices.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Online Presence</h3>
-                  <p className="text-muted-foreground">
-                    Consider including links to your online professional profiles, such as LinkedIn, to provide
-                    additional context and information about your background.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
       </main>
     </ContentLayout>
   );
 }
-
 
 function FileIcon(props) {
   return (
@@ -176,9 +364,8 @@ function FileIcon(props) {
       <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
       <path d="M14 2v4a2 2 0 0 0 2 2h4" />
     </svg>
-  )
+  );
 }
-
 
 function LightbulbIcon(props) {
   return (
@@ -198,9 +385,8 @@ function LightbulbIcon(props) {
       <path d="M9 18h6" />
       <path d="M10 22h4" />
     </svg>
-  )
+  );
 }
-
 
 function WrenchIcon(props) {
   return (

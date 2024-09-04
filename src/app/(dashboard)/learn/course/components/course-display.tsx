@@ -15,6 +15,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { Course, courses } from "@/app/data/course_data"
+import Link from "next/link";
 
 interface CourseDisplayProps {
   course: Course | null
@@ -85,9 +86,20 @@ export function CourseDisplay({ course }: CourseDisplayProps) {
             </div>
           </div>
         </div>
+        {/* if course id is 1, show this */}
+        {course?.id === 1 ? (
           <div className="px-6 text-center w-full ">
-            <Button className="w-full">Enroll Now</Button>
+            <Link href="/learn/course/1">
+              <Button className="w-full">View Course Demo</Button>
+            </Link>
           </div>
+          ) : (
+          <div className="px-6 text-center w-full ">
+            <Button className="w-full" disabled={true}>View Course Demo</Button>
+          </div>
+          )
+        }
+          
         <div className="border-t border-border pt-6 mt-8 mx-8" >
           <h3 className="text-xl font-bold">Course Contents</h3>
           <div className="grid gap-4 mt-4">

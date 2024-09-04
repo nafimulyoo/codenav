@@ -92,11 +92,11 @@ export function JobDisplay({ job }: JobDisplayProps) {
               </div>
               <Separator className="my-2" />
               <div className="flex flex-wrap gap-3">
-                <Button variant="outline">Am I a good fit for this job?</Button>
-                <Button variant="outline">How can I best position myself for this job?</Button>
-                <Button variant="outline">Tell me more about {job.companyName}</Button>
+                <Button variant="outline" disabled={true}>Am I a good fit for this job?</Button>
+                <Button variant="outline" disabled={true}>How can I best position myself for this job?</Button>
+                <Button variant="outline" disabled={true}>Tell me more about {job.companyName}</Button>
               </div>
-              <Button>Apply Now</Button>
+              <Button disabled={true}>Apply Now</Button>
               <Separator className="my-2" />
               <div>
                 <div className="text-sm font-medium text-muted-foreground">Required Skills</div>

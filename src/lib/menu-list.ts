@@ -40,7 +40,7 @@ export function getMenuList(pathname: string): Group[] {
         },
         {
           href: "/search",
-          label: "Search",
+          label: "Search (Not Implemented Yet)",
           active: pathname.includes("/search"),
           icon: Search,
           submenus: []
@@ -59,9 +59,9 @@ export function getMenuList(pathname: string): Group[] {
           icon: BriefcaseBusiness,
           submenus: [
             {
-              href: "/jobs",
-              label: "Jobs Search",
-              active: pathname === "/jobs"
+              href: "/jobs/search",
+              label: "Jobs Search (Not Implemented Yet)",
+              active: pathname === "/jobs/search"
             },
             {
               href: "/jobs/clinic",
@@ -72,7 +72,7 @@ export function getMenuList(pathname: string): Group[] {
         },
         {
           href: "/profile",
-          label: "Profile",
+          label: "Profile (Not Implemented Yet)",
           active: pathname.includes("/profile"),
           icon: User,
           submenus: []

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Job } from "@/app/data/job_data"
-import { useJob } from "@/app/(dashboard)/jobs/use-job"
+import { useJob } from "@/app/(dashboard)/jobs/search/use-job"
 
 interface JobListProps {
   items: Job[]

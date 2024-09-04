@@ -68,14 +68,14 @@ export default function Landing() {
           </div>
           <div className="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl">
             <div className="grid gap-4">
-              <Link href="/home" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
+              <Link href="/learn/roadmap/generator" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
                 <Route className="mb-4 h-8 w-8 text-primary" />
                 <h3 className="text-xl font-semibold">Learning Roadmap</h3>
                 <p className="text-muted-foreground">
                     Our AI creates a personalized learning roadmap tailored to your career goals and interests. ensuring efficient skill development.
                 </p>
               </Link>
-              <Link href="/home" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
+              <Link href="/learn/course" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
                 <Book className="mb-4 h-8 w-8 text-primary" />
                 <h3 className="text-xl font-semibold">Learning Courses</h3>
                 <p className="text-muted-foreground">
@@ -85,14 +85,14 @@ export default function Landing() {
             </div>
 
             <div className="grid gap-4">
-              <Link href="/home" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
+              <Link href="/learn/interest-finder" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
               <MessageSquareHeart className="mb-4 h-8 w-8 text-primary" />
                 <h3 className="text-xl font-semibold">Interest Finder</h3>
                 <p className="text-muted-foreground">
                 Discover your professional interests with our AI-powered interest finder, guiding you towards the most suitable career path.
                 </p>
               </Link>
-              <Link href="/home" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
+              <Link href="/learn/course" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
                 <Lightbulb className="mb-4 h-8 w-8 text-primary" />
                 <h3 className="text-xl font-semibold">Learning Assistant</h3>
                 <p className="text-muted-foreground">
@@ -101,14 +101,14 @@ export default function Landing() {
               </Link>
             </div>
             <div className="grid gap-4">
-              <Link href="/home" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
+              <Link href="/jobs/clinic/interview" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
                 <Headset className="mb-4 h-8 w-8 text-primary" />
                 <h3 className="text-xl font-semibold">Interview Trainer</h3>
                 <p className="text-muted-foreground">
                 Prepare for job interviews with our AI-driven interview trainer, offering realistic practice sessions and feedback.
                 </p>
               </Link>
-              <Link href="/home" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
+              <Link href="/jobs/clinic/cv" className="rounded-lg bg-muted p-6  transition-colors hover:bg-muted/60 hover:shadow-sm">
               <ScrollText className="mb-4 h-8 w-8 text-primary" />
                 <h3 className="text-xl font-semibold">CV Helper</h3>
                 <p className="text-muted-foreground">

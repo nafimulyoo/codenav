@@ -51,7 +51,7 @@ export default function ReviewPage() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/jobs">Jobs</Link>
+              <Link href="/home">Jobs</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />

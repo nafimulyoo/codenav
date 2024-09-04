@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { cookies } from "next/headers"
-import { Job } from "@/app/(dashboard)/jobs/components/job";
+import { Job } from "@/app/(dashboard)/jobs/search/components/job";
 import { jobs } from "@/app/data/job_data";
 
 import { ContentLayout } from "@/app/(dashboard)/components/content-layout";
@@ -22,7 +22,7 @@ export default function JobsPage() {
   const defaultCollapsed = collapsed ? JSON.parse(collapsed.value) : undefined
 
   return (
-    <ContentLayout title="Jobs">
+    <ContentLayout title="Jobs Search">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -32,7 +32,13 @@ export default function JobsPage() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Jobs</BreadcrumbPage>
+            <BreadcrumbLink asChild>
+              <Link href="/home">Jobs</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Jobs Search</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
