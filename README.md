@@ -44,6 +44,7 @@ Direct demo link: `https://codenav.vercel.app/`
 
 ### Interview Trainer
 
+![Interview Settings](/screenshots/interview-intro.png)
 ![Interview Trainer](/screenshots/interview-review.png)
 
 ### Learning Assistant
@@ -52,6 +53,7 @@ Direct demo link: `https://codenav.vercel.app/`
 
 ### CV Helper
 
+![CV Helper](/screenshots/cv-intro.png)
 ![CV Feedback](/screenshots/cv-feedback.png)
 
 ### Learning Courses
